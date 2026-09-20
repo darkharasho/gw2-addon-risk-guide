@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { QUERIES, SEEDS, discover, isGeneratedReportRepo } from '../scripts/discover.mjs'
+import { QUERIES, SEEDS, discover, isGeneratedReportRepo, isPublishable } from '../scripts/discover.mjs'
 
 vi.mock('../scripts/github.mjs', () => ({
   ghPaginate: vi.fn(async (path) =>
@@ -12,6 +12,7 @@ vi.mock('../scripts/github.mjs', () => ({
       : [
           { full_name: 'A/B', pushed_at: '2026-01-01T00:00:00Z' },
           { full_name: 'someone/gw2logs', description: 'AxiBridge Reports' },
+          { full_name: 'darkharasho/went-private', description: 'A GW2 tool', private: true },
         ]),
   ghFetch: vi.fn(async (path) => FETCHED[path] ?? null),
 }))
@@ -81,6 +82,23 @@ describe('the axi suite seeds', () => {
     ghFetch.mockClear()
     await discover({ token: 't', seeds: ['a/b'] })
     expect(ghFetch).not.toHaveBeenCalled()
+  })
+})
+
+describe('repos that have gone private', () => {
+  it('drops one the search returned, rather than publishing its metadata', async () => {
+    const out = await discover({ token: 't', seeds: [] })
+    expect(out.some((r) => r.full_name === 'darkharasho/went-private')).toBe(false)
+  })
+
+  it('keeps public repos publishable', () => {
+    expect(isPublishable({ full_name: 'a/b', description: 'A GW2 tool' })).toBe(true)
+    expect(isPublishable({ full_name: 'a/b', private: false })).toBe(true)
+  })
+
+  it('treats private and generated as independent reasons to drop', () => {
+    expect(isPublishable({ private: true, description: 'A real GW2 addon' })).toBe(false)
+    expect(isPublishable({ private: false, description: 'AxiBridge Reports' })).toBe(false)
   })
 })
 

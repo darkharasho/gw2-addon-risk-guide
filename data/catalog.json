@@ -17,12 +17,12 @@
       "min": 70
     }
   ],
-  "generated_at": "2026-09-20T09:18:26.693Z",
+  "generated_at": "2026-09-20T09:25:16.709Z",
   "scorer_fingerprint": "829933f8e4bc64d4",
   "stats": {
-    "discovered": 672,
-    "reused": 656,
-    "enriched": 16,
+    "discovered": 671,
+    "reused": 669,
+    "enriched": 2,
     "deferred": 0,
     "failures": 0
   },
@@ -495,7 +495,7 @@
       "language": "JavaScript",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T09:11:11Z",
+      "pushed_at": "2026-09-20T09:19:21Z",
       "license": null,
       "points": 65,
       "band": "elevated",
@@ -18111,44 +18111,6 @@
       "override": null
     },
     {
-      "full_name": "darkharasho/arcdps-team-breakdown",
-      "name": "arcdps-team-breakdown",
-      "owner": "darkharasho",
-      "html_url": "https://github.com/darkharasho/arcdps-team-breakdown",
-      "description": "",
-      "topics": [],
-      "language": "Rust",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-05-27T07:18:42Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "darkharasho/arcdps-wiki",
       "name": "arcdps-wiki",
       "owner": "darkharasho",
@@ -19049,7 +19011,7 @@
       "language": "C#",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T04:49:43Z",
+      "pushed_at": "2026-09-20T09:21:41Z",
       "license": null,
       "points": 10,
       "band": "low",
