@@ -25,16 +25,18 @@
   <div id="clauses" aria-busy="true"><p class="loading">Loading&hellip;</p></div>
 </main>
 <script type="module">
-  import { escapeHtml } from './render.js'
+  import { escapeHtml, safeUrl } from './render.js'
   const $ = (id) => document.getElementById(id)
-  fetch('../data/policies.json').then((r) => r.json()).then((doc) => {
+  // Relative, no '../': see the comment in app.js — under a GitHub Pages
+  // project site a '../data/...' fetch is clamped at the origin root.
+  fetch('data/policies.json').then((r) => r.json()).then((doc) => {
     $('count').textContent = `${doc.clauses.length} sourced policy clauses`
     $('clauses').removeAttribute('aria-busy')
     $('clauses').innerHTML = doc.clauses.map((c) => `
       <section class="clause" id="${escapeHtml(c.id)}">
         <h2>${escapeHtml(c.title)}</h2>
         <blockquote class="quote">${escapeHtml(c.quote)}</blockquote>
-        <p class="cite"><a href="${escapeHtml(c.source_url)}" rel="noopener">${escapeHtml(c.source)}</a>
+        <p class="cite"><a href="${escapeHtml(safeUrl(c.source_url))}" rel="noopener">${escapeHtml(c.source)}</a>
           &middot; retrieved ${escapeHtml(c.retrieved)}</p>
       </section>`).join('')
   }).catch((err) => {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { escapeHtml, repoCard, breakdown } from '../site/render.js'
+import { escapeHtml, repoCard, breakdown, safeUrl } from '../site/render.js'
 
 const policies = {
   'ua-third-party-programs': {
@@ -24,21 +24,42 @@ describe('escapeHtml', () => {
   })
 })
 
+describe('safeUrl', () => {
+  it('passes an https url through unchanged', () => {
+    expect(safeUrl('https://example.com/a')).toBe('https://example.com/a')
+  })
+
+  it('rejects a javascript: url', () => {
+    expect(safeUrl('javascript:alert(1)')).toBe('#')
+  })
+
+  it('rejects a malformed url', () => {
+    expect(safeUrl('not a url')).toBe('#')
+  })
+})
+
 describe('repoCard', () => {
+  const now = new Date('2026-10-01T00:00:00Z')
+
   it('shows the band, points and a link', () => {
-    const html = repoCard(repo, policies)
+    const html = repoCard(repo, policies, now)
     expect(html).toContain('elevated')
     expect(html).toContain('45')
     expect(html).toContain('https://github.com/a/b')
   })
 
+  it('renders a known age from a fixed now', () => {
+    const html = repoCard(repo, policies, now)
+    expect(html).toContain('2 months ago')
+  })
+
   it('escapes repo-controlled text', () => {
-    const html = repoCard({ ...repo, description: '<script>alert(1)</script>' }, policies)
+    const html = repoCard({ ...repo, description: '<script>alert(1)</script>' }, policies, now)
     expect(html).not.toContain('<script>')
   })
 
   it('never calls an addon safe or approved', () => {
-    expect(repoCard({ ...repo, band: 'low', points: 0 }, policies).toLowerCase())
+    expect(repoCard({ ...repo, band: 'low', points: 0 }, policies, now).toLowerCase())
       .not.toMatch(/\b(safe|approved|allowed|endorsed)\b/)
   })
 })
