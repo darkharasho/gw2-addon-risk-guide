@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import {
   CONDUCT_TIERS, ADVANTAGE_TIERS, indexAssessments, assessmentFor,
   isContentious, badgeLabel,
-} from '../scripts/conduct.mjs'
+} from '../site/conduct.mjs'
 
 const doc = {
   assessments: {

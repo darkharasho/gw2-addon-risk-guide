@@ -5,7 +5,7 @@ import { discover as realDiscover } from './discover.mjs'
 import { enrich as realEnrich } from './enrich.mjs'
 import { score as realScore, rescore as realRescore, BANDS } from './score.mjs'
 import { SIGNALS } from './signals.mjs'
-import { indexAssessments, assessmentFor } from './conduct.mjs'
+import { indexAssessments, assessmentFor } from '../site/conduct.mjs'
 
 const FAILURE_CEILING = 0.2
 

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
-import { CONDUCT_TIERS, ADVANTAGE_TIERS, indexAssessments, isContentious } from '../scripts/conduct.mjs'
+import { CONDUCT_TIERS, ADVANTAGE_TIERS, indexAssessments, isContentious } from '../site/conduct.mjs'
 
 const doc = JSON.parse(readFileSync('data/conduct.json', 'utf8'))
 const assessments = Object.entries(doc.assessments)
@@ -32,8 +32,9 @@ describe('data/conduct.json', () => {
   })
 
   it('cites a policy clause that exists', () => {
+    // Every verdict, contentious or not, must point at a real clause id -
+    // unlike evidence, which a benign verdict legitimately has none of.
     for (const [key, v] of assessments) {
-      if (!isContentious(v)) continue
       expect(policyIds, `${key} policy`).toContain(v.policy)
     }
   })
@@ -49,7 +50,10 @@ describe('data/conduct.json', () => {
       if (!isContentious(v)) continue
       const repo = repos.get(key.toLowerCase())
       const quote = (v.evidence ?? '').trim().toLowerCase()
-      expect(quote.length, `${key} evidence`).toBeGreaterThan(0)
+      // A quote too short to identify the tool's purpose (e.g. "gw2") would
+      // satisfy the sourcing rule while sourcing nothing, so require enough
+      // characters to actually name what the addon does.
+      expect(quote.length, `${key} evidence`).toBeGreaterThan(12)
       const inDescription = String(repo.description ?? '').toLowerCase().includes(quote)
       const inTopics = (repo.topics ?? []).some((t) => t.toLowerCase() === quote)
       expect(inDescription || inTopics, `${key} evidence not found verbatim in description or topics`).toBe(true)

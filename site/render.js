@@ -5,7 +5,7 @@
 // is untrusted third-party input and must be passed through escapeHtml
 // before it lands in any template string used as innerHTML.
 
-import { badgeLabel, isContentious } from '../scripts/conduct.mjs'
+import { badgeLabel, isContentious } from './conduct.mjs'
 
 export function escapeHtml(s) {
   return String(s ?? '')
@@ -118,6 +118,14 @@ export function assessmentBlock(repo, policies) {
     ? `<p class="vstale">This repo was assessed before its most recent push; the verdict may describe
        an older version.</p>`
     : ''
+  // Data tests require every contentious verdict to carry non-empty evidence,
+  // but the renderer stays defensive in case one somehow lacks it - omit the
+  // line entirely rather than print an empty quote.
+  const evidence = String(a.evidence ?? '').trim()
+  const evidenceLine = evidence
+    ? `<p class="vev">Based on the project&#8217;s own description:
+      &ldquo;${escapeHtml(evidence)}&rdquo;</p>`
+    : ''
   return `<h3>Maintainer&#8217;s assessment</h3>
     <p class="dnote">This is the judgment of this site&#8217;s maintainer, not ArenaNet.
       ArenaNet has not ruled on this class of tool, and silence is neither permission nor
@@ -127,8 +135,7 @@ export function assessmentBlock(repo, policies) {
       <span class="vax"><b>${escapeHtml(a.advantage)}</b> advantage</span>
     </div>
     <p class="vrat">${escapeHtml(a.rationale)}</p>
-    <p class="vev">Based on the project&#8217;s own description:
-      &ldquo;${escapeHtml(a.evidence)}&rdquo;</p>
+    ${evidenceLine}
     ${policyQuote(policies[a.policy])}
     ${stale}
     <p class="vcontest"><a href="${escapeHtml(safeUrl(contest))}" rel="noopener" target="_blank"
