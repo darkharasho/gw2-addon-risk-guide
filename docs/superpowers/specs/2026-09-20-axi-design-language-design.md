@@ -100,9 +100,12 @@ Default values carry over from the GW2 stylesheet: ground `#15181d`, surface
 `#f4f6f9` / `#a7b0be` / `#7c8695`, meta `#4ec3ff`, ok `#2fd38a`, warn
 `#ff7a2f`, danger `#ff5252`, accent `#ffc53d` (overridable).
 
-**Components reference only semantic and form tokens, never the ramp
-directly.** This is what keeps a future light theme a palette file rather than
-a rewrite, and it is enforced by test (see §5).
+**No component file may contain a raw colour literal.** Every colour resolves
+through a token, so a future light theme is a palette swap rather than a
+rewrite. Enforced by test (see §5). Values that are not colours in the
+themeable sense — `transparent`, `currentColor` — are exempt; anything else
+that wants a colour gets a token, including the drawer scrim
+(`--axi-scrim`).
 
 ## 2. `axi.css` contents
 
@@ -185,8 +188,8 @@ ever bites.
 ## 5. Testing
 
 - **Token contract test:** every `--axi-*` token referenced by a component is
-  defined in `tokens.css`, and no component file references a ramp token
-  directly. Enforces the rule from §1.
+  defined in `tokens.css`, and no component file contains a raw colour literal
+  (hex, `rgb()`, `hsl()`). Enforces the rule from §1.
 - **Build test:** `dist/axi.css` is byte-identical to the concatenation of
   `src/` in the declared order (catches a stale committed artifact).
 - **Pattern gallery** as the human visual check before any release tag.
