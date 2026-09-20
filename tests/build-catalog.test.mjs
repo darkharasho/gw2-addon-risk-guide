@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest'
+import { readFileSync } from 'node:fs'
 import { buildCatalog, CALLS_PER_REPO } from '../scripts/build-catalog.mjs'
 
 const NOW = new Date('2026-09-19T00:00:00Z')
@@ -243,5 +244,41 @@ describe('buildCatalog incremental refresh', () => {
   it('records the fingerprint so the next run can trust its own cache', async () => {
     const cat = await buildCatalog(deps)
     expect(cat.scorer_fingerprint).toBe(FP)
+  })
+})
+
+describe('conduct assessments', () => {
+  it('merges a verdict onto the matching repo, case-insensitively', async () => {
+    const cat = await buildCatalog({
+      ...deps,
+      assessments: { assessments: { 'Z/Injector': { conduct: 'directive', advantage: 'some' } } },
+    })
+    expect(cat.repos.find((r) => r.full_name === 'z/injector').assessment)
+      .toEqual({ conduct: 'directive', advantage: 'some' })
+  })
+
+  it('gives every unassessed repo an explicit null rather than a missing key', async () => {
+    const cat = await buildCatalog(deps)
+    for (const r of cat.repos) expect(r.assessment).toBe(null)
+  })
+
+  it('leaves points, band and signals byte-identical', async () => {
+    // The axis is independent by construction, not by convention: if a verdict
+    // can move a score, the number stops being falsifiable from the signals.
+    const scored = (c) => JSON.stringify(
+      c.repos.map((r) => [r.full_name, r.points, r.band, r.signals, r.override]))
+    const without = await buildCatalog(deps)
+    const with_ = await buildCatalog({
+      ...deps,
+      assessments: { assessments: { 'z/injector': { conduct: 'substitutive', advantage: 'strong' } } },
+    })
+    expect(scored(with_)).toBe(scored(without))
+  })
+
+  it('does not fold conduct.mjs into the scorer fingerprint', async () => {
+    // Hashing it would invalidate every cached entry and force a 671-repo
+    // re-enrichment that cannot finish inside the API budget.
+    const src = readFileSync('scripts/build-catalog.mjs', 'utf8')
+    expect(src).toContain("['signals.mjs', 'score.mjs']")
   })
 })
