@@ -5,6 +5,7 @@ import { discover as realDiscover } from './discover.mjs'
 import { enrich as realEnrich } from './enrich.mjs'
 import { score as realScore, rescore as realRescore, BANDS } from './score.mjs'
 import { SIGNALS } from './signals.mjs'
+import { indexAssessments, assessmentFor } from '../site/conduct.mjs'
 
 const FAILURE_CEILING = 0.2
 
@@ -26,7 +27,7 @@ export function scorerFingerprint() {
 
 export async function buildCatalog({
   discover = realDiscover, enrich = realEnrich, score = realScore, rescore = realRescore,
-  now, overrides = {}, token, previous = null, budget = Infinity,
+  now, overrides = {}, assessments = {}, token, previous = null, budget = Infinity,
   fingerprint = scorerFingerprint(),
 } = {}) {
   if (!now) throw new Error('buildCatalog requires an explicit `now`')
@@ -115,6 +116,13 @@ export async function buildCatalog({
   if (attempted > 0 && failures > attempted * FAILURE_CEILING) {
     throw new Error(`too many enrichment failures: ${failures}/${attempted}`)
   }
+  // Applied in one pass after scoring rather than inside entry()/cachedEntry(),
+  // so a verdict reaches fresh, cached and deferred entries identically and
+  // there is exactly one place where the two axes meet. Additive only: nothing
+  // here reads or writes points, band or signals.
+  const conduct = indexAssessments(assessments)
+  for (const r of repos) r.assessment = assessmentFor(conduct, r.full_name)
+
   repos.sort((a, b) => b.points - a.points || a.full_name.localeCompare(b.full_name))
   return {
     bands: BANDS,
@@ -128,12 +136,14 @@ export async function buildCatalog({
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const overrides = JSON.parse(readFileSync('data/overrides.json', 'utf8')).overrides ?? {}
+  const assessments = existsSync('data/conduct.json')
+    ? JSON.parse(readFileSync('data/conduct.json', 'utf8')) : {}
   const previous = existsSync('data/catalog.json')
     ? JSON.parse(readFileSync('data/catalog.json', 'utf8')) : null
   const budget = Number(process.env.ENRICH_BUDGET ?? Infinity)
   const now = new Date()
   const catalog = await buildCatalog({
-    token: process.env.GITHUB_TOKEN, overrides, now, previous, budget,
+    token: process.env.GITHUB_TOKEN, overrides, assessments, now, previous, budget,
   })
   writeFileSync('data/catalog.json', JSON.stringify(catalog, null, 2) + '\n')
   const { discovered, reused, enriched, deferred, failures } = catalog.stats

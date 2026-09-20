@@ -17,12 +17,12 @@
       "min": 70
     }
   ],
-  "generated_at": "2026-09-20T09:25:16.709Z",
+  "generated_at": "2026-09-20T10:35:09.611Z",
   "scorer_fingerprint": "829933f8e4bc64d4",
   "stats": {
-    "discovered": 671,
-    "reused": 669,
-    "enriched": 2,
+    "discovered": 672,
+    "reused": 663,
+    "enriched": 9,
     "deferred": 0,
     "failures": 0
   },
@@ -83,7 +83,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Emisan01/Gw2Purgator",
@@ -151,7 +152,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "michael-stubbs/GW2-UnitFrames",
@@ -219,7 +221,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/serenade",
@@ -277,7 +280,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kxtools/kx-trainer-free",
@@ -328,7 +332,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kxtools/kx-vision",
@@ -374,7 +379,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "bruceli0305/game-macro",
@@ -417,7 +423,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Coding-Dev-Tools/gw2-multibox",
@@ -483,7 +490,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/gw2-addon-risk-guide",
@@ -495,7 +503,7 @@
       "language": "JavaScript",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T09:19:21Z",
+      "pushed_at": "2026-09-20T09:25:56Z",
       "license": null,
       "points": 65,
       "band": "elevated",
@@ -541,7 +549,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Friendly0Fire/GW2Radial",
@@ -579,7 +588,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "DeltaRaidcore/GW2-MumbleInspector",
@@ -661,7 +671,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kxtools/kx-packet-inspector",
@@ -724,7 +735,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nika-qubit/Gamma",
@@ -782,7 +794,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "256shadesofgrey/gw2-linux-music-tools",
@@ -830,7 +843,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "BasaltRobinSky/guild-wars-2-trainer",
@@ -878,7 +892,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "BeDiZoon/GW2-AIO",
@@ -936,7 +951,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "CopraCoperal/Guild-Wars-2-Hellstorm",
@@ -1003,7 +1019,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Coredelprotect/guild-wars-2-trainer",
@@ -1051,7 +1068,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "hazratali-uydevelopers/Grammarly-support-overlay-for-guild-wars-2",
@@ -1109,7 +1127,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PebbleBowyerMotor/guild-wars-2-trainer",
@@ -1157,7 +1176,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SupportWedge/TyrianScript",
@@ -1205,7 +1225,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "typedeck0/Mantra-Alerter",
@@ -1279,7 +1300,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "typedeck0/TagBar",
@@ -1352,7 +1374,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "husnaintariq577/kx-vision",
@@ -1397,7 +1420,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "iGoodie/ArcDPS_Updater_DX11",
@@ -1472,7 +1496,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jiangyi0923/GW2_arcdps_MountTool",
@@ -1540,7 +1565,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "maael/dessa",
@@ -1608,7 +1634,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Quinn80/EchoesUnseen",
@@ -1667,7 +1694,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Seres67/arcdps_giveaway_addon",
@@ -1738,7 +1766,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "alhazmy13/arcdps-squad-notes-plugin",
@@ -1798,7 +1827,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jsantorek/GW2-Alerts",
@@ -1866,7 +1896,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kerismith143/GSiege",
@@ -1924,7 +1955,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nuko2MB/gw2_lfg_filter",
@@ -1982,7 +2014,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "pv42/the-truth-plugin",
@@ -2040,7 +2073,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/GW2-SlashGG",
@@ -2103,7 +2137,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Spruudel/gw2-beetlerace-server",
@@ -2151,7 +2186,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "typedeck0/Know-thy-enemy",
@@ -2215,7 +2251,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "vimodev/GW2SteamRunner",
@@ -2278,7 +2315,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "agaertner/nxa-window-resize",
@@ -2336,7 +2374,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "alarian/arcdps-updater",
@@ -2394,7 +2433,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Artenuvielle/GW2-SCT",
@@ -2442,7 +2482,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "baaron4/GW2-Elite-Insights-Parser",
@@ -2462,7 +2503,7 @@
       "language": "C#",
       "stars": 156,
       "archived": false,
-      "pushed_at": "2026-09-19T19:22:40Z",
+      "pushed_at": "2026-09-20T09:59:46Z",
       "license": "MIT",
       "points": 40,
       "band": "moderate",
@@ -2478,7 +2519,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cheahjs/arcdps-legacy-loader",
@@ -2536,7 +2578,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ChrisnNg/GW2-Arcdps-Updater",
@@ -2594,7 +2637,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/arcdps-axipulse",
@@ -2652,7 +2696,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "DayuGuo/lang5-nexus-cn",
@@ -2710,7 +2755,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "faker-ino/CursorRing",
@@ -2768,7 +2814,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "faker-ino/DrfGoldTracker",
@@ -2826,7 +2873,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "faker-ino/GW2EventCalendar",
@@ -2884,7 +2932,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "FrostyInk/Boonvision-Release",
@@ -2942,7 +2991,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "FrostyInk/Oculus-Release",
@@ -3000,7 +3050,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "FScaley/GW2-Claymore-Asistan",
@@ -3058,7 +3109,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "FScaley/GW2-CLE-Timer",
@@ -3070,7 +3122,7 @@
       "language": "C++",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-18T16:33:09Z",
+      "pushed_at": "2026-09-20T10:07:54Z",
       "license": null,
       "points": 40,
       "band": "moderate",
@@ -3116,7 +3168,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "FScaley/GW2-TP-Assistant",
@@ -3174,7 +3227,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2scratch/arcdps-clears",
@@ -3227,7 +3281,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gwdevcommunity/GW2-CommunityLFG-Releases",
@@ -3290,7 +3345,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gwdevcommunity/GW2-SettingsIndicator-Releases",
@@ -3352,7 +3408,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "imaalej/gw2_persistent_notepad",
@@ -3410,7 +3467,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "iTroy0/arcdps_individual_dps",
@@ -3472,7 +3530,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "JordiBrisbois/VoxTonic",
@@ -3530,7 +3589,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Jorenzo/GW2Nexus-FlipMeister",
@@ -3588,7 +3648,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jsantorek/GW2-Chat",
@@ -3646,7 +3707,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jsantorek/GW2-SquadAttendanceTaker",
@@ -3704,7 +3766,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jsantorek/GW2-TransparentHeartProgress",
@@ -3762,7 +3825,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jsantorek/GW2-TrendyAchievementSuggestions",
@@ -3820,7 +3884,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "leosarra/gw2_launcher",
@@ -3882,7 +3947,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "lotus8777/GW2AddonsInstallTool",
@@ -3940,7 +4006,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "mriot/better-chat-releases",
@@ -4006,7 +4073,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "mriot/combat-cursor-releases",
@@ -4070,7 +4138,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "mriot/pin-point-releases",
@@ -4135,7 +4204,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/crafty_legend",
@@ -4193,7 +4263,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/discordant",
@@ -4251,7 +4322,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/flip_out",
@@ -4309,7 +4381,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/mission_finder",
@@ -4367,7 +4440,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/pie_ui",
@@ -4425,7 +4499,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/realm_report",
@@ -4483,7 +4558,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/thg",
@@ -4541,7 +4617,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "pushpayload/Nexus-HelloWorld",
@@ -4599,7 +4676,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/GW2-Arcdps-Integration",
@@ -4662,7 +4740,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/GW2-Compass",
@@ -4723,7 +4802,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/GW2-MouseLookHandler",
@@ -4786,7 +4866,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "random-throwuser/Gw2-UraShardAddon",
@@ -4848,7 +4929,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Rendannor/Blish-HUB-Speed-Indicator-Module",
@@ -4896,7 +4978,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Rendannor/Blish-HUD-Band-Tape-Module",
@@ -4944,7 +5027,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Retherichus/scuffed-kte",
@@ -5008,7 +5092,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Retherichus/wvw-insights",
@@ -5071,7 +5156,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Seres67/nexus_notes",
@@ -5133,7 +5219,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Sognus/Gw2-Bosses",
@@ -5191,7 +5278,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Todd0042/gw2-accessibility",
@@ -5249,7 +5337,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Adler4me/GW2_SoundEffects",
@@ -5297,7 +5386,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "aIobster/arcdpscds",
@@ -5345,7 +5435,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "albrektsson/gw2-session-tracker",
@@ -5397,7 +5488,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Areos-Hotah/d3d9_arcdps_sct.dll-hotfix-2",
@@ -5445,7 +5537,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "arnalon/arcdps-clears-continued",
@@ -5493,7 +5586,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cheahjs/arcdps-chat-log",
@@ -5541,7 +5635,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cheahjs/arcdps-squad-ready-plugin",
@@ -5589,7 +5684,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cheahjs/arcdps-universal-loader",
@@ -5637,7 +5733,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cheahjs/gw2-addon-profiler",
@@ -5685,7 +5782,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cheahjs/gw2-addon-setup-debug",
@@ -5733,7 +5831,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/arcdps-player-outline",
@@ -5781,7 +5880,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "dermatz/arcdps_enemyCounter",
@@ -5829,7 +5929,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Esteban456-dev/arcdps-files",
@@ -5877,7 +5978,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "fodaveg/tyrian-companion-nexus",
@@ -5925,7 +6027,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Girbilcannon/PewpewsDecoTools",
@@ -5973,7 +6076,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gosferano/gw2-gizmos",
@@ -6025,7 +6129,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2-addon-loader/loader-core",
@@ -6066,7 +6171,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2load/GW2Load",
@@ -6114,7 +6220,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gwdevcommunity/GW2-SlashCommands",
@@ -6165,7 +6272,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jake-greygoose/GW2-WvW-Queue-API-Releases",
@@ -6213,7 +6321,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jakeuj/GW2-Nexus-Upgrade-Value",
@@ -6261,7 +6370,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jsantorek/GW2-TrueWorldCompletion",
@@ -6309,7 +6419,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kc92/gw2-advisor",
@@ -6365,7 +6476,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kevinpetit/GuildRun2",
@@ -6413,7 +6525,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "leonvchan/gw2_birthday_reminder",
@@ -6461,7 +6574,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Linkaaaaa/GW2CombatTimer",
@@ -6509,7 +6623,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "m21248074/GW2-ArcDPS-TChineseUI",
@@ -6557,7 +6672,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Melquiisedeq/my-arcdps-setup",
@@ -6610,7 +6726,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "mriot/mouse-highlight",
@@ -6663,7 +6780,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "mriot/prep-alert",
@@ -6720,7 +6838,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "mutinylaboratories/arcdps-boon-magnifier",
@@ -6768,7 +6887,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/magpie_memo",
@@ -6816,7 +6936,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "qjv/assisted_deployment_and_departure",
@@ -6868,7 +6989,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "qq1ng/rezzOrder",
@@ -6923,7 +7045,15 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": {
+        "conduct": "directive",
+        "advantage": "some",
+        "rationale": "Reads squad state and tells the player when to act, rather than showing state and leaving the decision to them. The information itself is already on screen; what the addon adds is the instruction.",
+        "evidence": "shows whose turn it is to rez",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "RaidcoreGG/GW2-RadialMenus",
@@ -6978,7 +7108,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/GW2-RangeIndicators",
@@ -7030,7 +7161,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/Nexus",
@@ -7088,7 +7220,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Retherichus/gw2-yasctp",
@@ -7136,7 +7269,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Samuron39/gw2-api-overlay-mm",
@@ -7184,7 +7318,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Seres67/nexus_chat_shorts",
@@ -7236,7 +7371,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Seres67/nexus_keyboard_overlay",
@@ -7288,7 +7424,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "special-place-ai-heaven/GW2_Build_Optimizer",
@@ -7336,7 +7473,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SubiqT/GW2LogProofs",
@@ -7384,7 +7522,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "TheGloved1/gw2-nexus-bootstrap",
@@ -7432,7 +7571,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "timothypisarski/Guild-Wars-2-Modding",
@@ -7480,7 +7620,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Todd0042/gw2-Squad-Manager-release",
@@ -7528,7 +7669,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "woaihsw/GW2Nexus-RegionsOfTyria",
@@ -7576,7 +7718,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "wonderra/gw2-wonder",
@@ -7624,7 +7767,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "x4c1/arcdps_buffbar",
@@ -7672,7 +7816,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "xvwyh/SquadRoles",
@@ -7723,7 +7868,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Xydroc-IO/GW2-InGame-Helper",
@@ -7771,7 +7917,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Ydalirsson/gw2-Chatlogger",
@@ -7823,7 +7970,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/arcdps-food-reminder",
@@ -7877,7 +8025,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Anen/GW2MacOverlay",
@@ -7935,7 +8084,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ArmonicPvP/gw2bot",
@@ -7973,7 +8123,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "blish-hud/arcdps-bhud",
@@ -8011,7 +8162,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "BoyC/GW2TacO",
@@ -8049,7 +8201,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "fodaveg/tyrian-companion",
@@ -8087,7 +8240,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2scratch/evtc-tools",
@@ -8145,7 +8299,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2ToolBelt/Screenshot2PNG",
@@ -8207,7 +8362,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gwdevcommunity/GW2-RealTime-API-Releases",
@@ -8249,7 +8405,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "iGoodie/ArcDPS_Updater_CLI",
@@ -8312,7 +8469,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ImDashy/gw2-unitframes",
@@ -8350,7 +8508,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jesspetersen/WvW-Toolbox-Universal",
@@ -8408,7 +8567,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "knoxfighter/arcdps-killproof.me-plugin",
@@ -8449,7 +8609,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "knoxfighter/GW2-ArcDPS-Boon-Table",
@@ -8487,7 +8648,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Krappa322/arcdps_healing_stats",
@@ -8529,7 +8691,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Krappa322/arcdps_unofficial_extras_releases",
@@ -8570,7 +8733,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "mdavey/gw2arcupd",
@@ -8608,7 +8772,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nourlie/GlyphCore",
@@ -8659,7 +8824,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/GW2-CommandersToolkit",
@@ -8701,7 +8867,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "s-sasaki-earthsea-wizard/gw230529-einstein-toolkit-aws-tf",
@@ -8739,7 +8906,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "server-imp/UnhideNPCs",
@@ -8785,7 +8953,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SorryQuick/Gw2-Simple-Addon-Loader",
@@ -8823,7 +8992,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "TaimiHUD/TaimiHUD",
@@ -8873,7 +9043,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/gw2-buddy",
@@ -8917,7 +9088,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/gw2-reffect",
@@ -8961,7 +9133,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Aelto/gw2-build-bank",
@@ -9021,7 +9194,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "daegalus/gw2re",
@@ -9069,7 +9243,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "discretize/gw2-api-extended",
@@ -9127,7 +9302,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ffd114/gw2route",
@@ -9175,7 +9351,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2-addon-loader/Approved-Addons",
@@ -9203,7 +9380,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Iiridayn/gw2-linux-multibox-launcher",
@@ -9241,7 +9419,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PieOrCake/sir_launchalot",
@@ -9279,7 +9458,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "rediche/gw2-ninja",
@@ -9330,7 +9510,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RoboCafaz/Magswag",
@@ -9388,7 +9569,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SorryQuick/external-dx11-overlay",
@@ -9416,7 +9598,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "The-EG/BlishHUD-CopyPasta",
@@ -9464,7 +9647,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "xvwyh/BuildPad",
@@ -9494,7 +9678,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Akkuma/Asgeir",
@@ -9542,7 +9727,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Alice-Lilith/ArcDps_Mechanics_plugin_Auto_Updater",
@@ -9590,7 +9776,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Arcnilya/gw2",
@@ -9638,7 +9825,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Azerys/Profit-Calculator",
@@ -9686,7 +9874,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "BarrinFromKjeld/GW2Skins",
@@ -9734,7 +9923,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "bartimaeusnek/GW2-Material-Upcrafting-Calculator",
@@ -9785,7 +9975,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "brunohstein/gw2-goldmine",
@@ -9833,7 +10024,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "bumbar1/gw2-event-tracker",
@@ -9881,7 +10073,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cweidner3/gw2-scripts",
@@ -9929,7 +10122,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ddc/Gw2Launcher",
@@ -9985,7 +10179,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Dipenkansodaria007/gw2_streamlit",
@@ -10033,7 +10228,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "dlecina/Masque_Pointy",
@@ -10085,7 +10281,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "electaco/overlay",
@@ -10143,7 +10340,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2RP/website",
@@ -10191,7 +10389,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "HardstuckGuild/GW2-API-Issues",
@@ -10239,7 +10438,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "HomunculusK/GW2-BLTC-Bot",
@@ -10295,7 +10495,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ideka/AugTyr",
@@ -10333,7 +10534,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "IronGhost63/gw2-wvw-tools",
@@ -10381,7 +10583,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Jeran1080/gw2mapoverlay",
@@ -10429,7 +10632,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "JoShMiQueL/gw2-api-checker",
@@ -10477,7 +10681,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "joshtylerlowe/gw2",
@@ -10525,7 +10730,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "josrodand/gw2_data",
@@ -10573,7 +10779,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Kakirtog/guildhome",
@@ -10621,7 +10828,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Kaldo/GW2_LiteAddonManager",
@@ -10669,7 +10877,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "KCmilam/GW2-Commander-Overlay-No-Server-",
@@ -10717,7 +10926,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "KDsMoped/GW2LaunchMoped",
@@ -10765,7 +10975,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kenogs/toxic-elitist",
@@ -10818,7 +11029,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "koskev/RustyGw2",
@@ -10866,7 +11078,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "LCrucio/GW2_MiniHelper",
@@ -10914,7 +11127,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "lintonrentfro/gw2_tools",
@@ -10962,7 +11176,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "m10x/Gw2ChatCodeBuddy",
@@ -11020,7 +11235,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "many20/WvWOverlay",
@@ -11068,7 +11284,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Metallis/Only-Fish-Marker-Pack",
@@ -11126,7 +11343,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "mikosramek/GW2-Items",
@@ -11177,7 +11395,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "MrBaummann/GW2-Overlay",
@@ -11225,7 +11444,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Nakasar/gw2rp-tools_API",
@@ -11278,7 +11498,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Nithanim/template-arcdps-cmake-linux",
@@ -11326,7 +11547,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nminchow/gw2-data-pad",
@@ -11374,7 +11596,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "null-coder13/AIOracleModule",
@@ -11422,7 +11645,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "oerdal/gw2_rotato",
@@ -11470,7 +11694,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Phdntom/gw_tools",
@@ -11518,7 +11743,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "prsephton/partybuilder",
@@ -11566,7 +11792,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "pumalooma/Gw2Burrito",
@@ -11614,7 +11841,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Raeid-U/gw2-api-testing-0.1",
@@ -11667,7 +11895,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RedGlow/ColorWars",
@@ -11715,7 +11944,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Rouret/gw2-pvp-overlay",
@@ -11763,7 +11993,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "rsdevigo/guildhall",
@@ -11811,7 +12042,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ruvaldak/Gw2AddonUpdater",
@@ -11859,7 +12091,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "rwhitmire/ArcDpsUpdater",
@@ -11912,7 +12145,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ShinyMeta/Dungeon-Skips-Marker-Pack",
@@ -11960,7 +12194,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "sliker2013/Arcdps-Client-Guild-Wars-2",
@@ -12012,7 +12247,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Snowy1794/Arcdps-killproof-me-plugin-translation-Chinese-simplified",
@@ -12060,7 +12296,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Stukeley/Gw2TpPriceChecker",
@@ -12111,7 +12348,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "telekineticyeti/gw2-api-graphql-wrapper",
@@ -12159,7 +12397,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "thatshaman/daily",
@@ -12213,7 +12452,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "timmy-lee/gw2-tool",
@@ -12261,7 +12501,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "UnknownFreak/GW2CraftingTrackerOverlay",
@@ -12309,7 +12550,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "VayCharr/GW2-PS-AU",
@@ -12357,7 +12599,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "vipansegrouw/provisionerTokensTool",
@@ -12405,7 +12648,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "werdes/Gw2_AddonHelper",
@@ -12453,7 +12697,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Wolf-Fivousix/Black-Wolf-Trading-Tool",
@@ -12501,7 +12746,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "yahoogle/GW2_Dark_Hand_Mobile",
@@ -12549,7 +12795,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Yllelder/GW2traductorcajas",
@@ -12600,7 +12847,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "acbetter/gw2-kdr",
@@ -12646,7 +12894,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Addon-Wars-2/AddonWars2",
@@ -12684,7 +12933,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "al-d3baran/gw2-characters-charts",
@@ -12732,7 +12982,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "aleios/gw2-cursoroverride",
@@ -12776,7 +13027,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "alicialanzms/GW2Wealth",
@@ -12829,7 +13081,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Archomeda/Gw2MumbleLinkReader",
@@ -12874,7 +13127,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "augentism/MinorIllusion",
@@ -12922,7 +13176,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "BenLubar/evtc",
@@ -12963,7 +13218,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "CheshireSwift/croverfield",
@@ -13001,7 +13257,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "coderedart/jokolay",
@@ -13039,7 +13296,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cordbleibaum/ArcDPS-Timer",
@@ -13077,7 +13335,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Crigges/GW2PercentualHP",
@@ -13115,7 +13374,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "csh/ReshadeEffectShaderToggler-GW2",
@@ -13167,7 +13427,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axiroster",
@@ -13215,7 +13476,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axivale",
@@ -13263,7 +13525,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "discretize/discretize-discord-bot-instabilities",
@@ -13306,7 +13569,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "discretize/discretize-guides",
@@ -13349,7 +13613,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "distantstatic/arcdpstool",
@@ -13397,7 +13662,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "dmizelle/arcdps_reporter",
@@ -13445,7 +13711,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "do4k/gw2cli",
@@ -13493,7 +13760,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Drant/GW2Navi",
@@ -13531,7 +13799,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "dzt3/gw2_trading",
@@ -13579,7 +13848,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ehesseboom/gw2-tracker",
@@ -13627,7 +13897,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ErikSchierboom/followswyp",
@@ -13670,7 +13941,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "eternalmists/bulk-uploader",
@@ -13718,7 +13990,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "EvaBleh/Gw2-Trading-Post-Listing-Checker-v2",
@@ -13766,7 +14039,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "FW0912/GW2-Jade-Bot",
@@ -13814,7 +14088,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Gehn/gw2-cerebro",
@@ -13852,7 +14127,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "greaka/addon-loader-arcdps-updater",
@@ -13896,7 +14172,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GuiiDo/Gw2TinyWvwKillCounter",
@@ -13934,7 +14211,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Guild-Wars-2-Offline-Setup-Assistant/guild-wars-2-offline-setup-assistant",
@@ -13982,7 +14260,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2DotNetTools/FailAnalyzer",
@@ -14027,7 +14306,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2tome/gw2tome",
@@ -14081,7 +14361,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "hobinjk/gw2-data",
@@ -14129,7 +14410,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "iboutsikas/gw2-addon-manager",
@@ -14167,7 +14449,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ikn/gw2-tools",
@@ -14205,7 +14488,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "its-felix/gw2-addon-manager",
@@ -14243,7 +14527,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "its-felix/gw2-build-api",
@@ -14281,7 +14566,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "J7U7G7/GW2-legendary-overlay",
@@ -14329,7 +14615,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jlloh/gw2_taco_parser",
@@ -14367,7 +14654,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jsantorek/GW2-AddonBuilder",
@@ -14423,7 +14711,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "karusb/GW2-TP",
@@ -14479,7 +14768,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kenogs/arcdps_updater",
@@ -14520,7 +14810,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kenogs/arcdps-premium-pass",
@@ -14561,7 +14852,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "knoxfighter/arcdps-char-detector",
@@ -14603,7 +14895,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Krappa322/arcdps_squad_manager",
@@ -14644,7 +14937,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Kristoffer-Martinsen/gw2Overlay",
@@ -14692,7 +14986,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kxtools/kx-converter",
@@ -14747,7 +15042,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "LadyElyssa/GW2WikiTool",
@@ -14802,7 +15098,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "LMDavid/Gw2OP",
@@ -14840,7 +15137,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "lusiux/TacoViz",
@@ -14878,7 +15176,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "maael/dedupotron",
@@ -14930,7 +15229,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "maael/guild-wars-2-twitch-overlay",
@@ -14968,7 +15268,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "MattFan-d/GW2-Inventory-searcher",
@@ -15016,7 +15317,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "MerlinScheurer/gw2-api-collector",
@@ -15061,7 +15363,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "MoshiBin/arcdps-autoupdate",
@@ -15103,7 +15406,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "motionsilse/CatBridge",
@@ -15164,7 +15468,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "motionsilse/gw2-korean-patch",
@@ -15222,7 +15527,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Natsku123/ttv-gw2-overlays",
@@ -15260,7 +15566,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ndjone12-asu/GW2API",
@@ -15308,7 +15615,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nemitheasura/gw2timer",
@@ -15356,7 +15664,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nicholasrobertm/gw2-api",
@@ -15394,7 +15703,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "noi-dea/API_GW2",
@@ -15442,7 +15752,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nusphere/gw2-rest-api",
@@ -15480,7 +15791,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/GW2-ArcDPS-CombatDemo",
@@ -15523,7 +15835,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaliasFrost/GW2-Music-Maker",
@@ -15561,7 +15874,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Read101/TACO-2-KX",
@@ -15609,7 +15923,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RedGlow/TheLegendaryQuest",
@@ -15647,7 +15962,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "rgraue/gw2-translator",
@@ -15695,7 +16011,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Rienuaa/Achievements",
@@ -15743,7 +16060,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SamHurne/gw2pao",
@@ -15786,7 +16104,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Selebrator/evtcinfo",
@@ -15829,7 +16148,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Sepytox/GW2-API-Tracker",
@@ -15877,7 +16197,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Seres67/nexus_mouse_overlay",
@@ -15919,7 +16240,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "siemandelc/VerifyBot",
@@ -15965,7 +16287,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Smeat/GW2Overlay",
@@ -16003,7 +16326,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Spawbreaker/KasikLazyMachine",
@@ -16041,7 +16365,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Spruudel/gw2-beetlerace-overlay",
@@ -16079,7 +16404,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "stormalize/gift-of-arcana",
@@ -16130,7 +16456,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "tadthewonderdog/my-gw2e",
@@ -16178,7 +16505,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Taschenbuch/BlishHud-GatheringTools",
@@ -16216,7 +16544,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "tdh1994/GW2api-project",
@@ -16264,7 +16593,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "thatshaman/laurels",
@@ -16307,7 +16637,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "The-EG/EG-Overlay",
@@ -16345,7 +16676,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "TheTianBao/Guild-Wars-2---Auction-House-Calculator",
@@ -16393,7 +16725,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "TJEEPOT/ArcDPS-Update-Checker",
@@ -16434,7 +16767,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "TMcBoyle/GW2-mechanic-timer",
@@ -16472,7 +16806,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "tribalmonkey1/GW2-Wealth-Tracker",
@@ -16520,7 +16855,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "vanwheels/GW2-Squaded",
@@ -16568,7 +16904,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Vbitz/gw2api",
@@ -16616,7 +16953,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "vennekilde/GW2-Tools-WvW-Map",
@@ -16654,7 +16992,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "watbe/gw2-battle-tools",
@@ -16692,7 +17031,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "writzx/gw2-addon-search",
@@ -16740,7 +17080,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "xEcronomus/gw2arcdpsconfig",
@@ -16788,7 +17129,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/arcdps-apm",
@@ -16826,7 +17168,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "42atomys/gw2-markers-pack",
@@ -16869,7 +17212,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "aanntaa/GW2X",
@@ -16907,7 +17251,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Actifuse/gw2viewer",
@@ -16945,7 +17290,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "AdamD7567/Guild-Wars-2-Item-Lookup",
@@ -16990,7 +17336,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "AfflictedAI/GW2-Commander-Kit",
@@ -17028,7 +17375,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "agtendrn/pve_markers",
@@ -17070,7 +17418,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "AlbusNoir/gw2bu",
@@ -17108,7 +17457,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ALJUNXU/gw2-boss-schedule",
@@ -17146,7 +17496,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "allmightychaos/CSV-to-JSON",
@@ -17184,7 +17535,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "aminfallahzadeh/gw2todo-api",
@@ -17222,7 +17574,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Antielite11/gw2-tracker",
@@ -17260,7 +17613,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "api-evangelist/gardens",
@@ -17308,7 +17662,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "api-evangelist/guild-wars-2",
@@ -17350,7 +17705,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "api-evangelist/gw2spidy",
@@ -17392,7 +17748,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Archomeda/gw2-addon-loader",
@@ -17420,7 +17777,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Archomeda/Gw2Sharp",
@@ -17457,7 +17815,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "armorednightmare/arcdps_shares",
@@ -17495,7 +17854,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "armorednightmare/KnowPyEnemy",
@@ -17533,7 +17893,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "AvenDalecrest/Handheld-espresso-maker-gw2f08ou",
@@ -17571,7 +17932,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Azrub/CursorAnchor",
@@ -17609,7 +17971,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "bbgrk/mod",
@@ -17649,7 +18012,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "beardgaming108/gw2wvwlogs",
@@ -17687,7 +18051,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "BenJMcCarty/gw2_api_data_extraction",
@@ -17725,7 +18090,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "berdandy/buildwars",
@@ -17763,7 +18129,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "berdandy/gw2search",
@@ -17801,7 +18168,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Big759/Arcdps-Traduction-FR",
@@ -17842,7 +18210,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "blackjackv8/gw2-stream-state",
@@ -17880,7 +18249,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "captainlinky/GW2API",
@@ -17918,7 +18288,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cdcc-jpg/gw2-ume",
@@ -17956,7 +18327,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "cheahjs/imgui-filedialog-arcdps",
@@ -17994,7 +18366,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ChubbyChuckles/GuildWars2Helper",
@@ -18032,7 +18405,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "CyCyxzs/addon_files",
@@ -18070,7 +18444,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "DarkGammeth/GuildWars2FriendUnlockList",
@@ -18108,7 +18483,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/arcdps-wiki",
@@ -18146,7 +18522,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axiam",
@@ -18184,7 +18561,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axicode",
@@ -18222,7 +18600,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axiforge",
@@ -18260,7 +18639,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axiom",
@@ -18298,7 +18678,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axipulse",
@@ -18336,7 +18717,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axistream",
@@ -18374,7 +18756,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darthmaim/gw2-subtoken-generator",
@@ -18417,7 +18800,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ddgravy-bot/sub-optimal-build-Generator-for-Guildwars2-HTML",
@@ -18455,7 +18839,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "definitelyDefi/soreni-gw2",
@@ -18493,7 +18878,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "demago91/Gw2_Infos_v5",
@@ -18531,7 +18917,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "dev-fritte/gw2-api-test",
@@ -18569,7 +18956,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "dlamkins/gw2pathing-libdef",
@@ -18609,7 +18997,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "DmitriyODS/gw2",
@@ -18647,7 +19036,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "dustfeather/gw2roi",
@@ -18692,7 +19082,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ekoll/gw2-reffect-boosterspack",
@@ -18733,7 +19124,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "EvaBleh/GW2-Event-API",
@@ -18771,7 +19163,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ExVault/Gw2PriceStatsApi",
@@ -18809,7 +19202,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "faulerwulf-ux/GW2-Raid-Auto-Poster",
@@ -18847,7 +19241,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Ferlorin/GW2FOX",
@@ -18885,7 +19280,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "fjhanevo/gw2-tp-project",
@@ -18923,7 +19319,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "fodaveg/tyrian-companion-blish",
@@ -18961,7 +19358,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Freyavf/arcdps_top_stats_parser",
@@ -18999,45 +19397,8 @@
           ]
         }
       ],
-      "override": null
-    },
-    {
-      "full_name": "FScaley/GW2-Claymore-HUD",
-      "name": "GW2-Claymore-HUD",
-      "owner": "FScaley",
-      "html_url": "https://github.com/FScaley/GW2-Claymore-HUD",
-      "description": "",
-      "topics": [],
-      "language": "C#",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-20T09:21:41Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "garettwong/gw26-jd-fo7jmd3nfo",
@@ -19075,7 +19436,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gartkb/Garts-Great-Tools",
@@ -19113,7 +19475,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "georgekoder-mmc/gw2-explorer",
@@ -19151,7 +19514,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Georgi-Kalkovski/GW2Geary",
@@ -19189,7 +19553,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ghc-cloneRepoStaging-scaAndRenovate3/3929_George-Johnson_0920_050605_ghc_gw2_failed",
@@ -19227,7 +19592,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ghc-cloneRepoStaging-scaAndRenovate3/3949_Carlos-Myers_0920_043757_ghc_gw2_failed",
@@ -19265,7 +19631,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Girbilcannon/GW2-Deco-Tools",
@@ -19303,7 +19670,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "godfather76/GuildWars2DataStream",
@@ -19350,7 +19718,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "goyira-lab/GW2-QoL-upgrades",
@@ -19388,7 +19757,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "goyira-lab/GW2-Trader",
@@ -19426,7 +19796,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "greaka/arcdps_bindings",
@@ -19471,7 +19842,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gustavotoigo-max/API-gw2",
@@ -19509,7 +19881,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2-addon-loader/GW2-Addon-Manager",
@@ -19539,7 +19912,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2dui/gw2dui.github.io",
@@ -19577,7 +19951,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2ocs/gw2calendar-ogden",
@@ -19620,7 +19995,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2ocs/gw2trivia",
@@ -19665,7 +20041,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2Raidar/gw2raidar",
@@ -19699,7 +20076,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2RP/nexus",
@@ -19711,7 +20089,7 @@
       "language": "TypeScript",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-19T22:41:58Z",
+      "pushed_at": "2026-09-20T09:40:08Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -19737,7 +20115,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "HDev5/arcdps-graph",
@@ -19775,7 +20154,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "HeavyMetalPirate/GW2Nexus-AddonTemplate-Unix",
@@ -19813,7 +20193,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "HelionQc/DOL",
@@ -19851,7 +20232,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "HelloHell47/Zapret2-DC-YT-GW",
@@ -19889,7 +20271,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Henahax/GW2Tools",
@@ -19929,7 +20312,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Hwingard/gw2-ru",
@@ -19976,7 +20360,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "imaalej/gw2_daily_tracker",
@@ -20014,7 +20399,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "imaalej/gw2_inspire",
@@ -20052,45 +20438,8 @@
           ]
         }
       ],
-      "override": null
-    },
-    {
-      "full_name": "INV-0512471/Renewal-Complete-gw25rjnc",
-      "name": "Renewal-Complete-gw25rjnc",
-      "owner": "INV-0512471",
-      "html_url": "https://github.com/INV-0512471/Renewal-Complete-gw25rjnc",
-      "description": "",
-      "topics": [],
-      "language": null,
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-14T08:37:05Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Invisi/gw2-fotm-instabilities",
@@ -20128,7 +20477,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "invoice12465496/Payment-Horizon-gw2fj42c",
@@ -20166,7 +20516,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Invoice181/Payment-Successfully-Received-gw2rtzml",
@@ -20204,7 +20555,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jackpoz/GW2-ArcdpsMock",
@@ -20242,7 +20594,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Jared-Hinze/gw2-addon-manager",
@@ -20280,7 +20633,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Jonathan-Greve/GuildWarsMapBrowser",
@@ -20335,7 +20689,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "JonesiBlitz/gw2-skill-overlay",
@@ -20373,7 +20728,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "julianmejio/nevthol-node",
@@ -20413,7 +20769,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "JustAChance/GW2-Alternate-Build-Optimization",
@@ -20454,7 +20811,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Kadenar/gw2-combat-simulator",
@@ -20492,7 +20850,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kajouayame/wvw-logs",
@@ -20530,7 +20889,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Kaleopan/GW2_Log_Script",
@@ -20568,7 +20928,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kanapka94/gw2-app",
@@ -20606,7 +20967,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kawafussel/gw2-logs",
@@ -20644,7 +21006,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kdotorourke/RotationOverlay",
@@ -20682,7 +21045,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "keirbhaltair/gw2-zone-map",
@@ -20720,7 +21084,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "killer415tv/gw2-race-tournament",
@@ -20758,7 +21123,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kilpotent/gw2_builds",
@@ -20796,7 +21162,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kittywitch/nix-arcdps-rs-example",
@@ -20834,7 +21201,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Kuihua222/GW2Tool",
@@ -20872,7 +21240,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kurtenj/gw2-fashion-planner",
@@ -20910,7 +21279,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "LadyElyssa/LadyElyssaAchievementGuides",
@@ -20956,7 +21326,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "lazerWolf97/GW2ApiGetter",
@@ -20994,7 +21365,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "LoganWal/GW2-DonBot",
@@ -21036,7 +21408,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "lostspace3/nmchannel",
@@ -21074,7 +21447,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "lovePinesnop/Elite",
@@ -21112,7 +21486,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "lukedcodes/Guildwars2Cardgame",
@@ -21150,7 +21525,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "maelick/gw2fashionista",
@@ -21188,7 +21564,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "marcustyphoon/gw2-rotation-formatter",
@@ -21226,7 +21603,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Marvkop/Gw2AddonManager",
@@ -21264,7 +21642,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Masnuelin/GW2",
@@ -21302,7 +21681,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Metallis/Metal-Marker-Myriad",
@@ -21350,7 +21730,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "meteor-gw2/axibuilds",
@@ -21388,7 +21769,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Michael-R-R/GW2_Tool_Hub",
@@ -21416,7 +21798,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Michael4101/gw2-build-editor",
@@ -21454,7 +21837,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "motionsilse/Arcdps-Translation-KR",
@@ -21492,7 +21876,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "motionsilse/Arcdps-Translations",
@@ -21530,7 +21915,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nawatymula45-glitch/Invoice-gw27qlj7",
@@ -21568,7 +21954,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "NesoHQ/gw2style",
@@ -21612,7 +21999,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Nithanim/gw2-catalogue-archive",
@@ -21650,7 +22038,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "NolvusMadeIt/tpledger",
@@ -21688,7 +22077,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Olivier-Gauvin/GuildWars2_Wasm_WebApp",
@@ -21726,7 +22116,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "otc-cirdan/gw2-items",
@@ -21764,7 +22155,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "OzenAmare/GuildWars2AccountTool",
@@ -21802,7 +22194,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Ozidear/Gw2Addon",
@@ -21840,7 +22233,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PantsOptionalGaming/POG-ArcDPS-Logs",
@@ -21878,7 +22272,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PapiLOCOnightnight/CEEJs-Better-Buffs",
@@ -21916,7 +22311,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "pascalhstein/GuildWars2EventTimerOverlay",
@@ -21954,7 +22350,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "paulpolidoro/gw2controller",
@@ -21992,7 +22389,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PeppsHabender/I.S.A.C.",
@@ -22035,7 +22433,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ProfBits/LogUploader2",
@@ -22079,7 +22478,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ProtonTaleGate/sql-server-managem-gw26",
@@ -22117,7 +22517,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "R-Hidayatullah/castlemist",
@@ -22155,7 +22556,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RatherFancyCat/gw2-browser-redux",
@@ -22193,7 +22595,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "rbucinell/arctivius_automaton",
@@ -22237,7 +22640,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Rhacco/gw2",
@@ -22275,7 +22679,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "rikaschmitt/gw2-numero-da-sorte",
@@ -22313,7 +22718,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Roddygithub/Gw2Analytics",
@@ -22351,7 +22757,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Rosemarielong537/GOG-Galaxy",
@@ -22381,7 +22788,7 @@
       "language": null,
       "stars": 1,
       "archived": false,
-      "pushed_at": "2026-09-18T07:00:54Z",
+      "pushed_at": "2026-09-20T09:43:02Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -22407,7 +22814,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RRRRangeRRRR/RRRRangeRRRR.github.io",
@@ -22445,7 +22853,47 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
+    },
+    {
+      "full_name": "samirmina/MumbleLink-arcDPS",
+      "name": "MumbleLink-arcDPS",
+      "owner": "samirmina",
+      "html_url": "https://github.com/samirmina/MumbleLink-arcDPS",
+      "description": "",
+      "topics": [],
+      "language": null,
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-19T17:28:05Z",
+      "license": null,
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Sepytox/gw2-dashboard",
@@ -22483,7 +22931,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Seres67/arcdps_logs_bot",
@@ -22521,7 +22970,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Seres67/nexus_screenshot_manager",
@@ -22563,7 +23013,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "serializedowen/gw2stats",
@@ -22601,7 +23052,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "shifuguru/GuildWars2GamepadSupport",
@@ -22639,7 +23091,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SimpleHonors/SparkyBot",
@@ -22695,7 +23148,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Snowy1794/Arcdps-boon-table-translation-Chinese-simplified",
@@ -22733,7 +23187,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "spazzy123/GW2WVW",
@@ -22771,7 +23226,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "stormalize/bulwark",
@@ -22812,7 +23268,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "stormalize/enlightened-armory",
@@ -22853,7 +23310,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "stormalize/instinct",
@@ -22894,7 +23352,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "stormalize/tempo",
@@ -22935,7 +23394,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "stormalize/totem",
@@ -22976,7 +23436,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "stormalize/totem-forge",
@@ -23017,7 +23478,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "StupsKiesel/gw2-api-py",
@@ -23055,7 +23517,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SubiqT/GW2QuantifyReleases",
@@ -23093,7 +23556,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "thajcak/gw2-homestead",
@@ -23131,7 +23595,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "thatshaman/CharrioKart",
@@ -23167,7 +23632,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "thatshaman/gixxcel",
@@ -23199,7 +23665,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "theextendedname/Dobbys-Logs",
@@ -23237,7 +23704,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ther0cs/gw2reshade",
@@ -23275,7 +23743,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "therjak/GW2TacO",
@@ -23313,7 +23782,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Thryphore/GW2-Combat-Coach",
@@ -23351,7 +23821,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "trixweiser/gw20ha",
@@ -23389,7 +23860,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "VeeLume/gw2-api",
@@ -23427,7 +23899,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Woody230/GW2Manager",
@@ -23473,7 +23946,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Xarakternuk/GARC",
@@ -23511,7 +23985,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Xyaren/arcdps-log-uploader",
@@ -23555,7 +24030,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "yi-fan-wang/nonlinear-ringdown-GW250114",
@@ -23593,7 +24069,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Yoast79/Tyrian-Lens",
@@ -23631,7 +24108,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "YOUR-INVOICE-GEEK-SQUAD-FA3/repo-gw2n0f7u",
@@ -23669,7 +24147,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "YOUR-PAYMENT-SUCCESSFULLY-dfrkl/repo-gw211n6v",
@@ -23707,7 +24186,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "YOUR-PAYMENT-SUCCESSFULLY-UE56/repo-gw21k9qp",
@@ -23745,7 +24225,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "YOUR-PAYMENT-SUCCESSFULLY-ZERD/repo-gw2jhclr",
@@ -23783,7 +24264,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/arcdps-utils",
@@ -23826,7 +24308,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/gw2-rotation-planner",
@@ -23871,7 +24354,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/gw2-tools",
@@ -23909,7 +24393,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ZiggyStarProgrammer/arcdps-log-browser",
@@ -23947,7 +24432,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zirikly-teaching/algorithms-labs-gw26",
@@ -23985,7 +24471,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "1497105876/Music-gw2",
@@ -24013,7 +24500,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "42atomys/evtc",
@@ -24047,7 +24535,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "a-gansemer/gw2-raid-stats",
@@ -24084,7 +24573,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Abattele/NpcFinder",
@@ -24119,7 +24609,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "AfflictedAI/GW2-Commander-ToolKit",
@@ -24147,7 +24638,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "AmandaHJLIS/tatyana-gw2-bot",
@@ -24175,7 +24667,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ArranPell/Quarry",
@@ -24203,7 +24696,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "azirikly/algorithms-gw26",
@@ -24231,7 +24725,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "BadPingHere/dernal",
@@ -24265,7 +24760,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "BaLaurent/gw2-mcp",
@@ -24293,7 +24789,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "bennieboj/Gw2Unlocks",
@@ -24321,7 +24818,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "bouteillerAlan/observatory",
@@ -24382,7 +24880,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "CerolBrisingr/updateArc",
@@ -24410,7 +24909,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "christhegoalie/GW2_GoPathMaker",
@@ -24448,7 +24948,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axibridge",
@@ -24476,7 +24977,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axilog",
@@ -24504,7 +25006,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "darkharasho/axitools",
@@ -24532,7 +25035,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ddc/DiscordBot",
@@ -24571,7 +25075,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "DeltaRaidcore/ArcDPS-Styles",
@@ -24599,7 +25104,66 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
+    },
+    {
+      "full_name": "delurn-cloud/GW2BuffTimers",
+      "name": "GW2BuffTimers",
+      "owner": "delurn-cloud",
+      "html_url": "https://github.com/delurn-cloud/GW2BuffTimers",
+      "description": "",
+      "topics": [],
+      "language": "C#",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-20T10:32:04Z",
+      "license": "MIT",
+      "points": 5,
+      "band": "low",
+      "signals": [
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null,
+      "assessment": null
+    },
+    {
+      "full_name": "delurn-cloud/GW2JadeProtocolTimer",
+      "name": "GW2JadeProtocolTimer",
+      "owner": "delurn-cloud",
+      "html_url": "https://github.com/delurn-cloud/GW2JadeProtocolTimer",
+      "description": "",
+      "topics": [],
+      "language": "C#",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-20T09:50:38Z",
+      "license": "MIT",
+      "points": 5,
+      "band": "low",
+      "signals": [
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "discretize/discretize-ui",
@@ -24632,7 +25196,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "dominikcz/gw2helper",
@@ -24663,7 +25228,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Drevarr/EVTC_parser",
@@ -24691,7 +25257,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "emythiel/gw2-character-progression",
@@ -24719,7 +25286,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "floydzealous832/guild",
@@ -24763,7 +25331,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "franneck94/GW2HelperBox",
@@ -24791,7 +25360,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "godfat/rest-gw2",
@@ -24819,7 +25389,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "guicaulada/gw2-otel-collector",
@@ -24856,7 +25427,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2auth/gw2auth.com-api",
@@ -24884,7 +25456,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2auth/gw2auth.com-ui",
@@ -24917,7 +25490,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2auth/oauth2-server",
@@ -24950,7 +25524,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2ocs/ogden",
@@ -24984,7 +25559,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2Seali/MinimalCompass",
@@ -25012,7 +25588,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2ToolBelt/GW2ChatLinks",
@@ -25046,7 +25623,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2ToolBelt/link",
@@ -25080,7 +25658,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2Treasures/gw2-chatlink",
@@ -25111,7 +25690,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2Treasures/gw2-markup",
@@ -25143,7 +25723,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2Treasures/gw2-tooltip-html",
@@ -25171,7 +25752,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2Treasures/gw2.me",
@@ -25204,7 +25786,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2Treasures/gw2api",
@@ -25240,7 +25823,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2Treasures/gw2api-ts",
@@ -25268,7 +25852,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "HiredNoobs/app-gw2wingman-uploader",
@@ -25296,7 +25881,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "howar31/gldwrs2",
@@ -25336,7 +25922,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "inooid/ex_gw2",
@@ -25368,7 +25955,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "inthenile/gw2api",
@@ -25426,7 +26014,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Invisi/python-gw2",
@@ -25454,7 +26043,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jeykori/guildwars2-toolkit",
@@ -25482,7 +26072,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jower0815/WvW-Chat-Summary",
@@ -25510,7 +26101,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "keybindr/keybindr.github.io",
@@ -25554,7 +26146,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "killer415tv/gw2_speedometer",
@@ -25582,7 +26175,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Krappa322/arcdps_mock",
@@ -25610,7 +26204,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Kryszak/gwatlin",
@@ -25641,7 +26236,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kxtools/kx-map-studio",
@@ -25682,7 +26278,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "KylePraias/GW2-Bot",
@@ -25710,7 +26307,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "LadyElyssa/LadyElyssaTacoTrails",
@@ -25746,7 +26344,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Linkaaaaa/CrashLogAnalyzer",
@@ -25780,7 +26379,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "lucasyork1/gw2-build-lab",
@@ -25808,7 +26408,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Mahkookeh/LogParser",
@@ -25836,7 +26437,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "marcopicker/TabbyTabs-Converter",
@@ -25872,7 +26474,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "marcustyphoon/gw2-ui",
@@ -25900,7 +26503,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Maselkov/GW2RPC",
@@ -25928,7 +26532,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "MiryksV/gw2-logs-parser-pre-config",
@@ -25966,7 +26571,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Mortalknight/GW2_UI",
@@ -25978,7 +26584,7 @@
       "language": "Lua",
       "stars": 87,
       "archived": false,
-      "pushed_at": "2026-09-20T09:04:58Z",
+      "pushed_at": "2026-09-20T10:31:04Z",
       "license": null,
       "points": 5,
       "band": "low",
@@ -25994,7 +26600,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "mriot/pathfinder",
@@ -26027,7 +26634,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "MuwuM/gw2-raid-tool",
@@ -26067,7 +26675,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "naoxink/Mazs",
@@ -26100,7 +26709,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Nebettadjsr/GW2",
@@ -26128,7 +26738,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "NikeGipple/HeroesAscentGw2Nexus",
@@ -26156,7 +26767,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Northburns/GW2-Api-Proxy",
@@ -26184,7 +26796,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nyakojiru/gw2-bottleneck-lab",
@@ -26227,7 +26840,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Odizinne/GW2AchTracker",
@@ -26255,7 +26869,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "PabloSnchz/gw2-wallet-ligero",
@@ -26296,7 +26911,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Pandraghon/gw2api-namesearch",
@@ -26324,7 +26940,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Plenyx/PlenBotLogUploader",
@@ -26358,7 +26975,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "progamesigner/gw2-dps-report",
@@ -26396,7 +27014,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "progamesigner/rfgames-backend",
@@ -26429,7 +27048,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "progamesigner/rfgames-web",
@@ -26470,7 +27090,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/gw2-mumble-cpp",
@@ -26498,7 +27119,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RaidcoreGG/Nexus-Template-cpp",
@@ -26530,7 +27152,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "raphaelwdrf/ffcheckboxew",
@@ -26562,7 +27185,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "reks-scripts/gw2ap",
@@ -26596,7 +27220,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "RiverHillbug/GW2_Legendaries",
@@ -26657,7 +27282,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Seres67/nexus_template",
@@ -26690,7 +27316,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "silent-ax/gw2-calculator",
@@ -26718,7 +27345,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Silentstrike46/gw2_info_tool",
@@ -26746,7 +27374,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Silentstrike46/gw2_info_tool_py",
@@ -26774,7 +27403,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SilverHalf/infallible-guides",
@@ -26802,7 +27432,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SilverHalf/temple-of-febe",
@@ -26835,7 +27466,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Snappey/maps.gw2.io",
@@ -26871,7 +27503,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Snowy1794/Arcdps-translation-Chinese-simplified",
@@ -26899,7 +27532,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "SocietiDog/G1V3-4W4Y",
@@ -26938,7 +27572,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "sunflower-dreams-123/gw2-cm-clear-tracker",
@@ -26966,7 +27601,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "sunija-dev/warp",
@@ -26994,7 +27630,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Swedemon/MzFightReporter",
@@ -27022,7 +27659,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Syndic0r/gw2-raid-bingo",
@@ -27060,7 +27698,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "theextendedname/arcDPS-Installer",
@@ -27088,7 +27727,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "theextendedname/GW2_Commanders_Watch",
@@ -27116,7 +27756,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "theextendedname/SOCK_BUILDS",
@@ -27144,7 +27785,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "tytusse/ArcDpsDownloader",
@@ -27172,7 +27814,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "voxgig-sdk/guild-wars2-sdk",
@@ -27200,7 +27843,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "wilfredocamacho/zenLogBOT",
@@ -27228,7 +27872,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "xrandox/TehsTrails",
@@ -27265,7 +27910,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "xvwyh/GW2Viewer",
@@ -27297,7 +27943,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "yinej2/evtc-rs",
@@ -27325,7 +27972,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "yurei-so/zenith-app",
@@ -27353,7 +28001,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/evtc-tools",
@@ -27387,7 +28036,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/gw2-mumble-rs",
@@ -27420,7 +28070,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zinn-o-Matics/arcdps-extension",
@@ -27448,7 +28099,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "adriverin/Gw2_secondscreen",
@@ -27496,7 +28148,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "AlteredM1nd/gw2-guild-login",
@@ -27550,7 +28203,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "AsherGlick/Burrito",
@@ -27567,7 +28221,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "blish-hud/Blish-HUD",
@@ -27587,7 +28242,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "breakbarcc/gw2-legendary-tracker",
@@ -27635,7 +28291,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "ClemLB/gw2-api",
@@ -27683,7 +28340,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Darconer1/GW2-crafter",
@@ -27731,7 +28389,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "discretize/discretize-gear-optimizer",
@@ -27756,7 +28415,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Drevarr/GW2_EI_log_combiner",
@@ -27773,7 +28433,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Exceen/gw2api",
@@ -27821,7 +28482,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "fjallnari/gw2-cartographer",
@@ -27873,7 +28535,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "fmartingr/games-screenshot-manager",
@@ -27902,7 +28565,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "fooey/gw2w2w-cloudflare",
@@ -27940,7 +28604,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "giovazz89/gw2-api-event-timers",
@@ -27988,7 +28653,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "greaka/gw2lib",
@@ -28012,7 +28678,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "gw2scratch/evtc",
@@ -28036,7 +28703,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2ToolBelt/api-generator",
@@ -28081,7 +28749,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2ToolBelt/GW2APIClient",
@@ -28126,7 +28795,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2ToolBelt/GW2ML",
@@ -28148,7 +28818,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "GW2Treasures/gw2treasures.com",
@@ -28173,7 +28844,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "hackedd/gw2api",
@@ -28221,7 +28893,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Healix/Gw2Launcher",
@@ -28259,7 +28932,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "iaingalloway/gw2-api-sandbox",
@@ -28320,7 +28994,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "jjanow/GW2ExtractNourishmentTool",
@@ -28358,7 +29033,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "JonesiBlitz/gw2-wardrobe-expansions",
@@ -28406,7 +29082,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "JuxhinDB/gw2-api-interface",
@@ -28434,7 +29111,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Koden02/gw2-crafting-profit-tool",
@@ -28472,7 +29150,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "KoshiirRa/random-gw2-api-stuff",
@@ -28520,7 +29199,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "kxtools/kx-maps",
@@ -28543,7 +29223,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Melquiisedeq/wvw-relink-checker",
@@ -28586,7 +29267,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "MisterWalky/gw2-command-center",
@@ -28643,7 +29325,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Mk-Chan/gw2combat",
@@ -28660,7 +29343,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "MrGunflame/gw2api",
@@ -28714,7 +29398,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "njibhu/t3d",
@@ -28736,7 +29421,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "nkar123412-hub/gw2-mcp",
@@ -28774,7 +29460,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "philipp-meier/gw2-cli",
@@ -28823,7 +29510,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "phlebas0/gw2-flip-tracker",
@@ -28871,7 +29559,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "pipeworx-io/mcp-guild-wars-2",
@@ -28915,7 +29604,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "queicherius/gw2api-client",
@@ -28946,7 +29636,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "sliekens/gw2sdk",
@@ -28976,7 +29667,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Solruu/LegendaryTracker_GW2",
@@ -29014,7 +29706,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "suvodeep12/gw2-optimal-lister",
@@ -29075,7 +29768,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Woody230/GW2Wrapper",
@@ -29120,7 +29814,8 @@
           ]
         }
       ],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "xanthics/gw2craft",
@@ -29140,7 +29835,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     },
     {
       "full_name": "Zerthox/arcdps-rs",
@@ -29164,7 +29860,8 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
+      "override": null,
+      "assessment": null
     }
   ],
   "signal_definitions": [

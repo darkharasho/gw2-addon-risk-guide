@@ -7,7 +7,5 @@ build
 *.log
 .superpowers
 .sai/
-node_modules/
-.DS_Store
-
 .playwright-mcp/
+.worktrees/
