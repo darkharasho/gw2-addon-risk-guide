@@ -55,12 +55,48 @@
     },
     {
       "applies_to": [],
+      "id": "support-benign-tolerance",
+      "quote": "With that said, we are aware that some utilities help players without affecting others; that is, they do not give one player an advantage over another. While, in general, we will not take action on an account for the use of such a utility program or modification, action is subject to ArenaNet's discretion. You use any third-party program at your own risk.",
+      "retrieved": "2026-09-20",
+      "source": "Guild Wars 2 Support: Policy: Third-Party Programs",
+      "source_url": "https://help.guildwars2.com/hc/en-us/articles/360013625034-Policy-Third-Party-Programs",
+      "title": "Utilities that do not affect other players"
+    },
+    {
+      "applies_to": [],
+      "id": "support-advantage-test",
+      "quote": "The best way for you to assess whether a specific third-party program could have any impact on another player is to ask: \"Does this program allow someone to play faster, better, longer, or more accurately than someone who doesn't use the program?\" \"Does this program allow someone to 'play' when he/she is not at the computer?\" \"Does this program allow the user to gain unnatural or undeserved rewards?\"",
+      "retrieved": "2026-09-20",
+      "source": "Guild Wars 2 Support: Policy: Third-Party Programs",
+      "source_url": "https://help.guildwars2.com/hc/en-us/articles/360013625034-Policy-Third-Party-Programs",
+      "title": "The test ArenaNet asks players to apply"
+    },
+    {
+      "applies_to": [],
       "id": "support-macros",
-      "quote": "Attended macro use is permitted as long as it is not exploitative, and as long as it does not provide the user with an unfair advantage over other players. Unattended macro use is prohibited under any circumstances. […] You cannot use macros to fully automate a character (“bot”) in the game. Each macro should represent a single action that requires user input before repeating the action.",
+      "quote": "Attended macro use is permitted as long as it is not exploitative, and as long as it does not provide the user with an unfair advantage over other players. Unattended macro use is prohibited under any circumstances.",
       "retrieved": "2026-09-20",
       "source": "Guild Wars 2 Support: Policy: Macros and Macro Use",
       "source_url": "https://help.guildwars2.com/hc/en-us/articles/360013762153-Policy-Macros-and-Macro-Use",
-      "title": "Macros and macro use"
+      "title": "Macros: attended use permitted, unattended prohibited"
+    },
+    {
+      "applies_to": [],
+      "id": "support-macros-permitted",
+      "quote": "Here are few common macros that are allowed in the game: You may bind dodge and jump to a single key. You may create an auto-clicker that opens or consumes a stack of items. You may use music macros to compose or perform in-game music. As long as the macro is used solely for the composition or performance of in-game music and the account is actively attended by a player, we do not place restrictions on its use.",
+      "retrieved": "2026-09-20",
+      "source": "Guild Wars 2 Support: Policy: Macros and Macro Use",
+      "source_url": "https://help.guildwars2.com/hc/en-us/articles/360013762153-Policy-Macros-and-Macro-Use",
+      "title": "Macros ArenaNet explicitly allows"
+    },
+    {
+      "applies_to": [],
+      "id": "support-macros-prohibited",
+      "quote": "However, here are some of the scenarios that are not permitted in the game: Macro use cannot interfere with the gameplay of other players. You cannot program a macro to perform actions on more than one account at a time. You cannot use macros to automate skill use while away from your computer. You cannot use macros to create skill chains in any competitive environment, including PvP, WvW, open world activities, races, etc. You cannot use macros to participate in activities or events, such as Bell Choir. You cannot use macros for the sole purpose of farming items, currencies, karma, or other benefits in the game, particularly while away from the keyboard (AFK). You cannot use macros to fully automate a character (“bot”) in the game. Each macro should represent a single action that requires user input before repeating the action.",
+      "retrieved": "2026-09-20",
+      "source": "Guild Wars 2 Support: Policy: Macros and Macro Use",
+      "source_url": "https://help.guildwars2.com/hc/en-us/articles/360013762153-Policy-Macros-and-Macro-Use",
+      "title": "Macro uses that are not permitted"
     },
     {
       "applies_to": [
