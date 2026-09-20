@@ -9,3 +9,5 @@ build
 .sai/
 node_modules/
 .DS_Store
+
+.playwright-mcp/
