@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GW2 Addon Risk Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <h1>GW2 Addon Risk Guide</h1>
+  <nav><a href="index.html" aria-current="page">Catalog</a> <a href="policy.html">Policy</a></nav>
+  <p class="disclaimer">ArenaNet does not approve or endorse third-party programs. This site reports
+  observable risk signals from public repository data; a low score is not permission, and nothing
+  here is legal advice. Running any third-party program is at your own risk and may put your account
+  at risk.</p>
+  <p class="disclaimer disclaimer-quote">&ldquo;Note: ArenaNet does not review, approve, or endorse
+  any third-party program. Each use of such a program is made at the account holder&rsquo;s own
+  risk.&rdquo; &mdash;
+  <a href="https://help.guildwars2.com/hc/en-us/articles/360013625034-Policy-Third-Party-Programs" rel="noopener">
+  ArenaNet Support, Policy: Third-Party Programs</a> (retrieved <time datetime="2026-09-19">2026-09-19</time>)</p>
+</header>
+<main>
+  <form id="controls" role="search">
+    <input id="q" type="search" placeholder="Search addons&hellip;" autocomplete="off">
+    <fieldset id="bands"><legend>Risk band</legend></fieldset>
+    <fieldset id="signals"><legend>Signals</legend></fieldset>
+    <label>Maintenance
+      <select id="maintenance">
+        <option value="any">Any</option><option value="active">Actively maintained</option>
+        <option value="stale">Stale</option><option value="archived">Archived</option>
+      </select>
+    </label>
+  </form>
+  <p id="count" aria-live="polite">Loading catalog&hellip;</p>
+  <div id="results" aria-busy="true"><p class="loading">Loading repositories&hellip;</p></div>
+  <p id="generated" class="meta"></p>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+  "_comment": "Thin manual layer. Each entry may only suppress or add signal ids and MUST carry a reason and a source_url. Bands are never set by hand.",
+  "overrides": {}
+}
