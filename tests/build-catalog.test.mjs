@@ -26,8 +26,14 @@ describe('buildCatalog', () => {
   })
 
   it('sorts by points desc then name asc', async () => {
-    const cat = await buildCatalog({ ...deps, discover: async () => ['b/one', 'a/two'] })
-    expect(cat.repos.map((r) => r.full_name)).toEqual(['a/two', 'b/one'])
+    // b/hooked scores 25 (injection); the two 0-point repos then tiebreak by name.
+    const cat = await buildCatalog({
+      ...deps,
+      discover: async () => ['b/hooked', 'z/clean', 'a/clean'],
+      enrich: async (n) => (n === 'b/hooked' ? facts(n, { readme: 'a d3d11 hook' }) : facts(n)),
+    })
+    const got = cat.repos.map((r) => [r.full_name, r.points])
+    expect(got).toEqual([['b/hooked', 25], ['a/clean', 0], ['z/clean', 0]])
   })
 
   it('embeds signal definitions and bands for the UI', async () => {

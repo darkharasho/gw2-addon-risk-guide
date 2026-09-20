@@ -24,8 +24,18 @@ export function safeUrl(u) {
   }
 }
 
-const months = (iso, now) =>
-  Math.round((now.getTime() - new Date(iso).getTime()) / (1000 * 60 * 60 * 24 * 30.44))
+// Returns null rather than NaN when pushed_at is missing or unparseable:
+// signals.mjs tolerates a missing pushed_at, so the card must too instead of
+// rendering "NaN months ago".
+const months = (iso, now) => {
+  const t = new Date(iso ?? '').getTime()
+  return Number.isFinite(t) ? Math.round((now.getTime() - t) / (1000 * 60 * 60 * 24 * 30.44)) : null
+}
+
+export function lastPush(iso, now) {
+  const m = months(iso, now)
+  return m === null ? 'last push unknown' : `last push ${m} months ago`
+}
 
 export function breakdown(repo, policies) {
   const rows = repo.signals.map((s) => {
@@ -57,7 +67,7 @@ export function repoCard(repo, policies, now) {
       <span class="points" title="risk points out of 100">${repo.points}</span>
     </header>
     <p class="desc">${escapeHtml(repo.description)}</p>
-    <p class="meta">${repo.stars} stars &middot; last push ${months(repo.pushed_at, now)} months ago
+    <p class="meta">${repo.stars} stars &middot; ${lastPush(repo.pushed_at, now)}
       &middot; ${escapeHtml(repo.license ?? 'no license')}</p>
     <details><summary>Why this score</summary>${breakdown(repo, policies)}</details>
   </article>`
