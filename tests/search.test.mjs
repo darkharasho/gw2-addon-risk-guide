@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { tokenize, indexRepos, filterRepos } from '../site/search.js'
+import { tokenize, indexRepos, filterRepos, sortRepos } from '../site/search.js'
 
 const repo = (full_name, over = {}) => ({
   full_name, name: full_name.split('/')[1], description: '', topics: [],
@@ -46,5 +46,37 @@ describe('filterRepos', () => {
     expect(names({ maintenance: 'archived' })).toEqual(['old/dead-tool'])
     expect(names({ maintenance: 'active' }).sort())
       .toEqual(['deltaconnected/arcdps', 'someone/gw2-api-viewer'])
+  })
+})
+
+describe('sortRepos', () => {
+  const repos = [
+    { full_name: 'b/two', points: 10, stars: 5, pushed_at: '2026-01-01T00:00:00Z' },
+    { full_name: 'a/one', points: 40, stars: 1, pushed_at: '2026-06-01T00:00:00Z' },
+    { full_name: 'c/three', points: 10, stars: 90, pushed_at: '2025-01-01T00:00:00Z' },
+  ]
+  const names = (order) => sortRepos(repos, order).map((r) => r.full_name)
+
+  it('orders by risk, then by name so equal scores are stable', () => {
+    expect(names('risk')).toEqual(['a/one', 'b/two', 'c/three'])
+  })
+
+  it('reverses for lowest risk first', () => {
+    expect(names('risk-asc')).toEqual(['b/two', 'c/three', 'a/one'])
+  })
+
+  it('orders by stars and by recency', () => {
+    expect(names('stars')).toEqual(['c/three', 'b/two', 'a/one'])
+    expect(names('recent')).toEqual(['a/one', 'b/two', 'c/three'])
+  })
+
+  it('falls back to the risk ordering for an unknown sort key', () => {
+    expect(names('nonsense')).toEqual(names('risk'))
+  })
+
+  it('does not mutate the array it was given', () => {
+    const before = repos.map((r) => r.full_name)
+    sortRepos(repos, 'stars')
+    expect(repos.map((r) => r.full_name)).toEqual(before)
   })
 })

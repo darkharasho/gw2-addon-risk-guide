@@ -32,3 +32,20 @@ export function filterRepos(indexed, { query = '', bands = [], signals = [], mai
     })
     .map(({ repo }) => repo)
 }
+
+// Sorting is presentation, not scoring: the catalog ships sorted by risk, and
+// every other order is derived here so the data file stays canonical. Ties
+// always fall back to name, so a given filter+sort pair renders identically
+// on every load rather than depending on the engine's sort stability.
+const BY_NAME = (a, b) => a.full_name.localeCompare(b.full_name)
+const ORDERINGS = {
+  risk: (a, b) => b.points - a.points || BY_NAME(a, b),
+  'risk-asc': (a, b) => a.points - b.points || BY_NAME(a, b),
+  stars: (a, b) => (b.stars ?? 0) - (a.stars ?? 0) || BY_NAME(a, b),
+  recent: (a, b) => String(b.pushed_at ?? '').localeCompare(String(a.pushed_at ?? '')) || BY_NAME(a, b),
+  name: BY_NAME,
+}
+
+export function sortRepos(repos, order = 'risk') {
+  return repos.slice().sort(ORDERINGS[order] ?? ORDERINGS.risk)
+}
