@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { escapeHtml, repoCard, repoDrawer, breakdown, safeUrl, lastPush, shortAge } from '../site/render.js'
+import { escapeHtml, repoCard, repoDrawer, breakdown, safeUrl, lastPush, shortAge,
+  assessmentBadge, assessmentBlock } from '../site/render.js'
 
 const policies = {
   'ua-third-party-programs': {
@@ -162,5 +163,87 @@ describe('breakdown', () => {
   it('surfaces a manual override with its reason', () => {
     const html = breakdown({ ...repo, override: { reason: 'maintainer confirmed', source_url: 'https://e.com' } }, policies)
     expect(html).toContain('maintainer confirmed')
+  })
+})
+
+const assessed = (a) => ({ ...repo, assessment: a })
+const directive = {
+  conduct: 'directive', advantage: 'some',
+  rationale: 'Tells the player when to act rather than leaving the decision to them.',
+  evidence: 'shows whose turn it is to rez',
+  policy: 'ua-third-party-programs', assessed_at: '2026-09-20',
+}
+
+describe('assessmentBadge', () => {
+  it('renders the fired axis as an outlined badge', () => {
+    const html = assessmentBadge(assessed(directive))
+    expect(html).toContain('directive')
+    expect(html).toContain('vbadge')
+  })
+
+  it('renders nothing for a benign verdict or an unassessed repo', () => {
+    expect(assessmentBadge(assessed({ conduct: 'assistive', advantage: 'none' }))).toBe('')
+    expect(assessmentBadge(assessed(null))).toBe('')
+    expect(assessmentBadge(repo)).toBe('')
+  })
+})
+
+describe('assessmentBlock', () => {
+  it('attributes the judgment to the maintainer, not to ArenaNet', () => {
+    const html = assessmentBlock(assessed(directive), policies)
+    expect(html).toContain('Maintainer&#8217;s assessment')
+    expect(html).toMatch(/ArenaNet has not ruled/)
+  })
+
+  it('shows both axes, the rationale and the quoted evidence', () => {
+    const html = assessmentBlock(assessed(directive), policies)
+    expect(html).toContain('directive')
+    expect(html).toContain('some')
+    expect(html).toContain('leaving the decision to them')
+    expect(html).toContain('shows whose turn it is to rez')
+  })
+
+  it('offers a contest link that names the repo', () => {
+    const html = assessmentBlock(assessed(directive), policies)
+    expect(html).toContain('issues/new')
+    expect(html).toContain(encodeURIComponent(repo.full_name))
+  })
+
+  it('flags a verdict older than the repo’s last push', () => {
+    const stale = assessed({ ...directive, assessed_at: '2026-01-01' })
+    expect(assessmentBlock({ ...stale, pushed_at: '2026-08-01T00:00:00Z' }, policies))
+      .toMatch(/assessed before/)
+  })
+
+  it('renders nothing for a benign verdict or an unassessed repo', () => {
+    expect(assessmentBlock(assessed(null), policies)).toBe('')
+    expect(assessmentBlock(assessed({ conduct: 'none', advantage: 'none' }), policies)).toBe('')
+  })
+
+  it('escapes author-controlled rationale and evidence', () => {
+    const xss = assessed({ ...directive, rationale: '<img src=x onerror="y">', evidence: '<b>z</b>' })
+    const html = assessmentBlock(xss, policies)
+    expect(html).not.toContain('<img')
+    expect(html).not.toContain('<b>z</b>')
+    expect(html).toContain('&lt;img')
+  })
+})
+
+describe('repoCard with an assessment', () => {
+  it('carries the badge', () => {
+    expect(repoCard(assessed(directive), policies, new Date('2026-09-20T00:00:00Z')))
+      .toContain('vbadge')
+  })
+
+  it('carries no badge when unassessed, so absence is the signal', () => {
+    expect(repoCard(repo, policies, new Date('2026-09-20T00:00:00Z')))
+      .not.toContain('vbadge')
+  })
+})
+
+describe('repoDrawer with an assessment', () => {
+  it('carries the assessment block', () => {
+    expect(repoDrawer(assessed(directive), policies, new Date('2026-09-20T00:00:00Z')))
+      .toContain('Maintainer&#8217;s assessment')
   })
 })

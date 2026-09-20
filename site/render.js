@@ -5,6 +5,8 @@
 // is untrusted third-party input and must be passed through escapeHtml
 // before it lands in any template string used as innerHTML.
 
+import { badgeLabel, isContentious } from '../scripts/conduct.mjs'
+
 export function escapeHtml(s) {
   return String(s ?? '')
     .replaceAll('&', '&amp;').replaceAll('<', '&lt;')
@@ -88,6 +90,52 @@ export function breakdown(repo, policies) {
   return `${ov}<h3>Why this score</h3>${none}${risks.map((s) => signalRow(s, policies)).join('')}${mit}`
 }
 
+const ISSUE_BASE = 'https://github.com/darkharasho/gw2-addon-risk-guide/issues/new'
+
+// A second, differently-sourced claim, so it is drawn as annotation rather
+// than as score: outlined, never filled like a band chip, and absent unless
+// something actually fired. A card with no badge is the common case, which is
+// what keeps the badge from reading as a list of the accused.
+export function assessmentBadge(repo) {
+  const label = badgeLabel(repo?.assessment)
+  return label ? `<span class="vbadge">${escapeHtml(label)}</span>` : ''
+}
+
+// A verdict older than the repo's last push may be describing software that no
+// longer exists. Saying so is cheaper, and more honest, than re-assessing on
+// every push.
+const assessedBeforeLastPush = (a, repo) => {
+  const pushed = String(repo?.pushed_at ?? '').slice(0, 10)
+  return !!a?.assessed_at && !!pushed && a.assessed_at < pushed
+}
+
+export function assessmentBlock(repo, policies) {
+  const a = repo?.assessment
+  if (!isContentious(a)) return ''
+  const contest = `${ISSUE_BASE}?title=${encodeURIComponent(`Contest assessment: ${repo.full_name}`)}`
+    + `&body=${encodeURIComponent(`Repository: ${repo.full_name}\n\nWhat the assessment gets wrong:\n`)}`
+  const stale = assessedBeforeLastPush(a, repo)
+    ? `<p class="vstale">This repo was assessed before its most recent push; the verdict may describe
+       an older version.</p>`
+    : ''
+  return `<h3>Maintainer&#8217;s assessment</h3>
+    <p class="dnote">This is the judgment of this site&#8217;s maintainer, not ArenaNet.
+      ArenaNet has not ruled on this class of tool, and silence is neither permission nor
+      prohibition.</p>
+    <div class="vaxes">
+      <span class="vax"><b>${escapeHtml(a.conduct)}</b> conduct</span>
+      <span class="vax"><b>${escapeHtml(a.advantage)}</b> advantage</span>
+    </div>
+    <p class="vrat">${escapeHtml(a.rationale)}</p>
+    <p class="vev">Based on the project&#8217;s own description:
+      &ldquo;${escapeHtml(a.evidence)}&rdquo;</p>
+    ${policyQuote(policies[a.policy])}
+    ${stale}
+    <p class="vcontest"><a href="${escapeHtml(safeUrl(contest))}" rel="noopener" target="_blank"
+      >Contest this assessment &#8599;</a>
+      <span class="vdate">assessed ${escapeHtml(a.assessed_at)}</span></p>`
+}
+
 // The framing constraint the whole site exists under, restated at the moment
 // someone has just read a list of findings about an addon they may install.
 const MEANING = `These signals come from public repository data &mdash; the README, file listing,
@@ -124,6 +172,7 @@ export function repoDrawer(repo, policies, now) {
   </div>
   <div class="dbody">
     ${breakdown(repo, policies)}
+    ${assessmentBlock(repo, policies)}
     <h3>What this means</h3><p class="dnote">${MEANING}</p>
   </div>`
 }
@@ -141,7 +190,7 @@ export function repoCard(repo, policies, now) {
         <span class="lb">${escapeHtml(repo.band)}</span></span>
     </span>
     <p class="desc">${escapeHtml(repo.description) || '<em>No description</em>'}</p>
-    <span class="sigs">${signals.map((s) =>
+    <span class="sigs">${assessmentBadge(repo)}${signals.map((s) =>
       `<span class="sig ${chipClass(s.weight)}">${escapeHtml(s.label)}</span>`).join('')}</span>
     <span class="cmeta">
       <span class="it">&#9733; ${escapeHtml(repo.stars ?? 0)}</span>
