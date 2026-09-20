@@ -46,4 +46,38 @@ describe('buildCatalog', () => {
     expect(r.signals.map((s) => s.id)).not.toContain('injection')
     expect(r.override.reason).toBe('r')
   })
+
+  it('fails rather than silently using the live clock when now is omitted', async () => {
+    await expect(buildCatalog({ ...deps, now: undefined })).rejects.toThrow(/now/i)
+  })
+
+  it('skips a repo whose enrich throws and still builds the rest of the catalog', async () => {
+    const cat = await buildCatalog({
+      ...deps,
+      discover: async () => [
+        'z/injector', 'boom/repo', 'a/clean', 'c/three', 'd/four', 'e/five',
+      ],
+      enrich: async (n) => {
+        if (n === 'boom/repo') throw new Error('502 bad gateway')
+        return n === 'z/injector' ? facts(n, { readme: 'a d3d11 hook' }) : facts(n)
+      },
+    })
+    expect(cat.repos.map((r) => r.full_name)).toEqual([
+      'z/injector', 'a/clean', 'c/three', 'd/four', 'e/five',
+    ])
+  })
+
+  it('throws when failures exceed the 20% ceiling', async () => {
+    const names = Array.from({ length: 10 }, (_, i) => `owner/repo${i}`)
+    await expect(
+      buildCatalog({
+        ...deps,
+        discover: async () => names,
+        enrich: async (n) => {
+          if (Number(n.replace('owner/repo', '')) < 3) throw new Error('boom')
+          return facts(n)
+        },
+      })
+    ).rejects.toThrow(/failures/i)
+  })
 })
