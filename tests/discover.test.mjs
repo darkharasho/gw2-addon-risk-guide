@@ -4,8 +4,12 @@ import { QUERIES, discover } from '../scripts/discover.mjs'
 vi.mock('../scripts/github.mjs', () => ({
   ghPaginate: vi.fn(async (path) =>
     path.includes('arcdps')
-      ? [{ full_name: 'Deltaconnected/ArcDPS' }, { full_name: 'a/b' }]
-      : [{ full_name: 'A/B' }]),
+      ? [
+          { full_name: 'Deltaconnected/ArcDPS', pushed_at: '2026-09-01T00:00:00Z',
+            stargazers_count: 900, archived: false, license: { spdx_id: 'MIT' } },
+          { full_name: 'a/b', pushed_at: '2026-01-01T00:00:00Z' },
+        ]
+      : [{ full_name: 'A/B', pushed_at: '2026-01-01T00:00:00Z' }]),
   ghFetch: vi.fn(),
 }))
 
@@ -17,6 +21,23 @@ describe('discover', () => {
 
   it('dedupes case-insensitively and returns sorted lowercase names', async () => {
     const out = await discover({ token: 't' })
-    expect(out).toEqual(['a/b', 'deltaconnected/arcdps'])
+    expect(out.map((r) => r.full_name)).toEqual(['a/b', 'deltaconnected/arcdps'])
+  })
+
+  it('carries the metadata search already gives us, so re-scoring costs nothing', async () => {
+    const out = await discover({ token: 't' })
+    expect(out.find((r) => r.full_name === 'deltaconnected/arcdps')).toEqual({
+      full_name: 'deltaconnected/arcdps',
+      pushed_at: '2026-09-01T00:00:00Z',
+      stars: 900,
+      archived: false,
+      license: 'MIT',
+    })
+  })
+
+  it('defaults the fields a sparse search result omits', async () => {
+    const out = await discover({ token: 't' })
+    expect(out.find((r) => r.full_name === 'a/b'))
+      .toMatchObject({ stars: 0, archived: false, license: null })
   })
 })

@@ -13,9 +13,14 @@ jobs:
         with: { node-version: '22', cache: npm }
       - run: npm ci
       - run: npm test
+      # The workflow GITHUB_TOKEN gets 1,000 REST calls an hour and enrichment
+      # costs 5 per repo, so a run may re-read at most ~190 repos. 150 leaves
+      # headroom for discovery and retries. Repos beyond the budget keep serving
+      # their cached content; their metadata signals are still recomputed free.
       - run: npm run catalog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ENRICH_BUDGET: '150'
       - name: Guard against a catastrophically shrunken catalog
         run: |
           node -e "

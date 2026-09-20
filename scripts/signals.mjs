@@ -240,6 +240,34 @@ const text = (f) =>
 
 const hit = (id, ev) => ({ ...byId[id], evidence: ev })
 
+// The signals that need nothing but the metadata the catalog already stores -
+// no README, no file listing, no API call. Splitting them out is what lets an
+// unchanged repo be re-scored for free on every run: stars drift and the
+// staleness clock ticks without anyone pushing a commit, and re-reading a
+// whole repo to notice that would cost five API calls for a number we already
+// had.
+export const METADATA_SIGNAL_IDS = new Set([
+  'archived', 'stale_24m', 'stale_12m', 'no_license', 'obscure', 'popular_maintained',
+])
+
+export function detectMetadata(facts, now) {
+  const out = []
+  const push = (id, ev) => out.push(hit(id, ev))
+
+  if (facts.archived) push('archived', ['repository is archived on GitHub'])
+
+  const months = (now - new Date(facts.pushed_at)) / MONTH
+  if (months >= 24) push('stale_24m', [`last push ${Math.round(months)} months ago`])
+  else if (months >= 12) push('stale_12m', [`last push ${Math.round(months)} months ago`])
+
+  if (!facts.license) push('no_license', ['no license detected by GitHub'])
+  if ((facts.stars ?? 0) < 10) push('obscure', [`${facts.stars ?? 0} stars`])
+  if ((facts.stars ?? 0) >= 200 && months < 6) {
+    push('popular_maintained', [`${facts.stars} stars, last push ${Math.round(months)} months ago`])
+  }
+  return out
+}
+
 export function detect(facts, now) {
   const body = text(facts)
   const out = []
@@ -260,14 +288,7 @@ export function detect(facts, now) {
   const bins = (facts.release_assets ?? []).filter((n) => /\.(dll|exe)$/i.test(String(n)))
   if (bins.length) push('unsigned_binaries', [`release asset ${bins[0]}`])
 
-  if (facts.archived) push('archived', ['repository is archived on GitHub'])
-
-  const months = (now - new Date(facts.pushed_at)) / MONTH
-  if (months >= 24) push('stale_24m', [`last push ${Math.round(months)} months ago`])
-  else if (months >= 12) push('stale_12m', [`last push ${Math.round(months)} months ago`])
-
-  if (!facts.license) push('no_license', ['no license detected by GitHub'])
-  if ((facts.stars ?? 0) < 10) push('obscure', [`${facts.stars ?? 0} stars`])
+  for (const s of detectMetadata(facts, now)) push(s.id, s.evidence)
 
   // A mention of the official API only earns the mitigator when nothing
   // suggests the repo also touches the client: no invasive/cheat signal and
@@ -283,8 +304,5 @@ export function detect(facts, now) {
     .some((n) => /\.(dll|exe)$/i.test(String(n)))
   const api = matchFor('api_only', body)
   if (api && !invasive && !native) push('api_only', [`matched "${snippet(api)}"`])
-  if ((facts.stars ?? 0) >= 200 && months < 6) {
-    push('popular_maintained', [`${facts.stars} stars, last push ${Math.round(months)} months ago`])
-  }
   return out
 }

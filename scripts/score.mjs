@@ -1,4 +1,4 @@
-import { SIGNALS, detect } from './signals.mjs'
+import { SIGNALS, detect, detectMetadata, METADATA_SIGNAL_IDS } from './signals.mjs'
 
 export const BANDS = [
   { id: 'low', min: 0 },
@@ -15,8 +15,11 @@ export function bandFor(points) {
   return band
 }
 
-export function score(facts, { now, override = null }) {
-  let signals = detect(facts, now)
+// Shared tail of both scoring paths: apply the manual override, then total and
+// band the result. Keeping it in one place is what guarantees a cached repo and
+// a freshly-enriched one are scored by identical arithmetic.
+function finalize(detected, override) {
+  let signals = detected
   if (override) {
     const drop = new Set(override.suppress ?? [])
     signals = signals.filter((s) => !drop.has(s.id))
@@ -33,4 +36,26 @@ export function score(facts, { now, override = null }) {
     signals,
     override: override ? { reason: override.reason, source_url: override.source_url } : null,
   }
+}
+
+export function score(facts, { now, override = null }) {
+  return finalize(detect(facts, now), override)
+}
+
+// Re-score a repo we did not re-read this run. Its content signals are whatever
+// the last enrichment found - they cannot have changed, because an unchanged
+// `pushed_at` is the precondition for taking this path - while every metadata
+// signal is recomputed from the summary the search API hands us for free.
+export function rescore(cached, summary, { now, override = null }) {
+  const content = cached.signals.filter((s) => !METADATA_SIGNAL_IDS.has(s.id))
+  const meta = detectMetadata(
+    {
+      archived: summary.archived,
+      pushed_at: summary.pushed_at ?? cached.pushed_at,
+      license: summary.license,
+      stars: summary.stars,
+    },
+    now
+  )
+  return finalize([...content, ...meta], override)
 }

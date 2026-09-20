@@ -17,7 +17,15 @@
       "min": 70
     }
   ],
-  "generated_at": "2026-09-20T07:21:12.567Z",
+  "generated_at": "2026-09-20T07:48:04.668Z",
+  "scorer_fingerprint": "829933f8e4bc64d4",
+  "stats": {
+    "discovered": 678,
+    "reused": 0,
+    "enriched": 678,
+    "deferred": 0,
+    "failures": 0
+  },
   "repos": [
     {
       "full_name": "x4c1/arcdps_esp",
@@ -472,6 +480,64 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "2 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "darkharasho/gw2-addon-risk-guide",
+      "name": "gw2-addon-risk-guide",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/gw2-addon-risk-guide",
+      "description": "",
+      "topics": [],
+      "language": "JavaScript",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-20T07:40:58Z",
+      "license": null,
+      "points": 65,
+      "band": "elevated",
+      "signals": [
+        {
+          "id": "packet",
+          "label": "Network/packet handling",
+          "weight": 30,
+          "policy": "ua-modify-client",
+          "explain": "Inspects or alters traffic between the client and the servers.",
+          "evidence": [
+            "matched \"packet\""
+          ]
+        },
+        {
+          "id": "injection",
+          "label": "Client injection or hooking",
+          "weight": 25,
+          "policy": "ua-third-party-programs",
+          "explain": "Loads code into the game process, typically via a proxy DLL or graphics hook.",
+          "evidence": [
+            "matched \"injection\""
+          ]
+        },
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
           ]
         }
       ],
@@ -16322,7 +16388,7 @@
       "language": "JavaScript",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T07:19:28Z",
+      "pushed_at": "2026-09-20T07:52:16Z",
       "license": null,
       "points": 15,
       "band": "low",
@@ -16334,7 +16400,7 @@
           "policy": "support-own-risk",
           "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
           "evidence": [
-            "release asset gw2.wealth.tracker_0.5.2_x64-setup.exe"
+            "release asset gw2.wealth.tracker_0.5.3_x64-setup.exe"
           ]
         },
         {
@@ -18187,44 +18253,6 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-08-27T06:16:00Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "darkharasho/gw2-addon-risk-guide",
-      "name": "gw2-addon-risk-guide",
-      "owner": "darkharasho",
-      "html_url": "https://github.com/darkharasho/gw2-addon-risk-guide",
-      "description": "",
-      "topics": [],
-      "language": null,
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-20T01:01:00Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -21766,7 +21794,7 @@
       "language": "Shell",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-19T07:16:21Z",
+      "pushed_at": "2026-09-20T07:41:11Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -24985,7 +25013,7 @@
       "language": "Go",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T05:37:08Z",
+      "pushed_at": "2026-09-20T07:32:37Z",
       "license": "Apache-2.0",
       "points": 5,
       "band": "low",

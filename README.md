@@ -19,11 +19,45 @@ npm test          # run the test suite (vitest, capped at 2 forks)
 npm run catalog   # rebuild data/catalog.json from GitHub (needs a token)
 ```
 
-`npm run catalog` calls the GitHub REST/Search API several hundred times to discover and enrich repos, so set a `GITHUB_TOKEN` with at least public read access before running it:
+`npm run catalog` calls the GitHub REST/Search API to discover and enrich repos, so set a `GITHUB_TOKEN` with at least public read access before running it:
 
 ```bash
 GITHUB_TOKEN=ghp_xxx npm run catalog
+
+# Cap how many repos a single run re-reads (5 REST calls each):
+ENRICH_BUDGET=150 GITHUB_TOKEN=ghp_xxx npm run catalog
 ```
+
+### Incremental refresh
+
+A full pass enriches every repo at 5 REST calls each — roughly 3,400 calls for
+the current catalog. A personal token gets 5,000 REST calls an hour and can
+manage that; the workflow's built-in `GITHUB_TOKEN` gets only 1,000 and cannot.
+So a run treats the committed `data/catalog.json` as a cache:
+
+- **Discovery is the free tier.** GitHub's search endpoint returns full repo
+  objects, so every run learns each repo's current `pushed_at`, stars, archived
+  flag and license at no extra cost.
+- **Unchanged `pushed_at` means unchanged content**, so the cached README-derived
+  signals are reused verbatim — zero calls for that repo.
+- **Metadata signals are always recomputed** (`archived`, `stale_12m`,
+  `stale_24m`, `no_license`, `obscure`, `popular_maintained`). They depend only
+  on fields discovery already handed us, so a repo can age into a staleness band
+  or cross a star threshold without being re-read.
+- **`ENRICH_BUDGET` caps re-reads per run.** Never-seen-before repos are spent
+  on first, then the most recently pushed. Anything beyond the budget keeps
+  serving cached content and is picked up by a later run.
+- **A scorer change invalidates everything.** The catalog stores a
+  `scorer_fingerprint` hashed from `scripts/signals.mjs` and `scripts/score.mjs`;
+  if it does not match, no cached signal is trusted. After editing either file,
+  regenerate the catalog locally with a personal token so the committed catalog
+  carries the new fingerprint — otherwise the next scheduled run starts from a
+  cold cache it cannot afford to fill.
+- **Repos with a manual override are always re-read**, since their cached signal
+  list has already had the override applied.
+
+Each run reports the split, e.g. `discovered 678, reused 671, enriched 7 ≈35
+calls, deferred 0, failures 0`.
 
 The site itself has no build step, but `data/` is not a sibling of `site/index.html` in this repo layout, and the pages fetch `data/*.json` with page-relative paths (no `../`). Stage a directory first, then serve that:
 
@@ -42,5 +76,5 @@ Signals are detected automatically; overrides are a thin manual layer for the ra
 
 ## CI
 
-- `.github/workflows/refresh-catalog.yml` runs weekly (and on demand via `workflow_dispatch`) to rebuild `data/catalog.json` and commit it to `main` if it changed, guarding against a catastrophically shrunken catalog before committing.
+- `.github/workflows/refresh-catalog.yml` runs weekly (and on demand via `workflow_dispatch`) to rebuild `data/catalog.json` and commit it to `main` if it changed, guarding against a catastrophically shrunken catalog before committing. It runs with `ENRICH_BUDGET=150` (750 REST calls) to stay inside the workflow token's 1,000-per-hour limit; see [Incremental refresh](#incremental-refresh).
 - `.github/workflows/pages.yml` deploys `site/` and `data/` to GitHub Pages on every push to `main`, and also runs automatically when the refresh workflow above completes (a commit made with the default `GITHUB_TOKEN` does not itself trigger `push` events, so this second trigger is what gets the refreshed catalog live). The deploy is skipped if the refresh run failed.
