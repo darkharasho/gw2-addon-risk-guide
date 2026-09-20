@@ -4,10 +4,24 @@
 // Pure functions only - no I/O, no DOM - so the same module backs the catalog
 // build, the browser, and the tests that enforce the file's integrity.
 
-// Ordered from "no bearing on play decisions" to "acts for you". The pivot
-// that matters is assistive -> directive: showing information versus prompting
-// an action. ArenaNet tolerates DPS meters, which makes assistive a known
-// tolerated tier and directive the first contentious one.
+// Ordered from "no bearing on play decisions" to "acts for you".
+//
+// The top of the ladder is anchored by ArenaNet's own rule of thumb: one
+// action per one click. A tool may do whatever it likes up to the point where
+// a single input produces a sequence the player did not individually make -
+// that is the substitutive line, and it is the one ArenaNet states outright.
+//
+// Below it, directive vs assistive is a judgment about instruction, not about
+// input: both leave every keypress with the player. Directive tells them what
+// to do at a moment that bears on a contested outcome - who to rez, when to
+// dodge - which is the tool making the play call. Assistive reports state and
+// leaves the call with them; ArenaNet tolerates DPS meters, which anchors it
+// as a known tolerated tier.
+//
+// Notifications, reminders and threshold alerts are assistive. An earlier
+// reading treated any prompt to act as directive, which filed buff reminders
+// and trading post alerts next to automation - two rungs above where the
+// one-click rule actually puts them.
 export const CONDUCT_TIERS = ['none', 'assistive', 'directive', 'substitutive']
 
 // A severity grade, not a taxonomy. What *kind* of edge a tool confers lives
