@@ -17,12 +17,12 @@
       "min": 70
     }
   ],
-  "generated_at": "2026-09-20T07:48:04.668Z",
+  "generated_at": "2026-09-20T09:18:26.693Z",
   "scorer_fingerprint": "829933f8e4bc64d4",
   "stats": {
-    "discovered": 678,
-    "reused": 0,
-    "enriched": 678,
+    "discovered": 672,
+    "reused": 656,
+    "enriched": 16,
     "deferred": 0,
     "failures": 0
   },
@@ -495,7 +495,7 @@
       "language": "JavaScript",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T07:40:58Z",
+      "pushed_at": "2026-09-20T09:11:11Z",
       "license": null,
       "points": 65,
       "band": "elevated",
@@ -3716,7 +3716,7 @@
       "language": "C++",
       "stars": 4,
       "archived": false,
-      "pushed_at": "2026-07-17T17:03:03Z",
+      "pushed_at": "2026-09-20T08:33:54Z",
       "license": null,
       "points": 40,
       "band": "moderate",
@@ -3774,7 +3774,7 @@
       "language": "C++",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-07-16T16:41:45Z",
+      "pushed_at": "2026-09-20T08:44:05Z",
       "license": null,
       "points": 40,
       "band": "moderate",
@@ -6974,7 +6974,7 @@
           "policy": "support-own-risk",
           "explain": "No pushes in over a year.",
           "evidence": [
-            "last push 13 months ago"
+            "last push 14 months ago"
           ]
         }
       ],
@@ -13170,6 +13170,102 @@
       "override": null
     },
     {
+      "full_name": "darkharasho/axiroster",
+      "name": "axiroster",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axiroster",
+      "description": "",
+      "topics": [],
+      "language": "TypeScript",
+      "stars": 1,
+      "archived": false,
+      "pushed_at": "2026-09-12T18:52:33Z",
+      "license": null,
+      "points": 15,
+      "band": "low",
+      "signals": [
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset axiroster-1.2.5-win-x64.exe"
+          ]
+        },
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "1 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "darkharasho/axivale",
+      "name": "axivale",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axivale",
+      "description": "",
+      "topics": [],
+      "language": "TypeScript",
+      "stars": 1,
+      "archived": false,
+      "pushed_at": "2026-09-12T18:52:36Z",
+      "license": null,
+      "points": 15,
+      "band": "low",
+      "signals": [
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset axivale-setup-1.4.0.exe"
+          ]
+        },
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "1 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "discretize/discretize-discord-bot-instabilities",
       "name": "discretize-discord-bot-instabilities",
       "owner": "discretize",
@@ -16388,7 +16484,7 @@
       "language": "JavaScript",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T07:52:16Z",
+      "pushed_at": "2026-09-20T08:38:04Z",
       "license": null,
       "points": 15,
       "band": "low",
@@ -17708,44 +17804,6 @@
       "override": null
     },
     {
-      "full_name": "berryolive/arcdps",
-      "name": "arcdps",
-      "owner": "berryolive",
-      "html_url": "https://github.com/berryolive/arcdps",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-06-15T15:19:38Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "Big759/Arcdps-Traduction-FR",
       "name": "Arcdps-Traduction-FR",
       "owner": "Big759",
@@ -17825,44 +17883,6 @@
       "override": null
     },
     {
-      "full_name": "BMignon/GW2Logs",
-      "name": "GW2Logs",
-      "owner": "BMignon",
-      "html_url": "https://github.com/BMignon/GW2Logs",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-19T05:16:34Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "captainlinky/GW2API",
       "name": "GW2API",
       "owner": "captainlinky",
@@ -17895,44 +17915,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "1 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "carvis-SnS/SnS-arcdps-log-reports",
-      "name": "SnS-arcdps-log-reports",
-      "owner": "carvis-SnS",
-      "html_url": "https://github.com/carvis-SnS/SnS-arcdps-log-reports",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-19T22:13:50Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
           ]
         }
       ],
@@ -18015,44 +17997,6 @@
       "override": null
     },
     {
-      "full_name": "cherryblossom2016/GuildWars2logs",
-      "name": "GuildWars2logs",
-      "owner": "cherryblossom2016",
-      "html_url": "https://github.com/cherryblossom2016/GuildWars2logs",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-16T01:54:12Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "ChubbyChuckles/GuildWars2Helper",
       "name": "GuildWars2Helper",
       "owner": "ChubbyChuckles",
@@ -18063,44 +18007,6 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-08-18T20:23:30Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "coaben2/coaben2",
-      "name": "coaben2",
-      "owner": "coaben2",
-      "html_url": "https://github.com/coaben2/coaben2",
-      "description": "site web crée en colaboration avec thoanny. Blog portofolio et guild wars 2",
-      "topics": [],
-      "language": "Vue",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-08-15T11:33:56Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -18265,6 +18171,234 @@
           "explain": "No declared license, so redistribution and auditing terms are unclear.",
           "evidence": [
             "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "darkharasho/axiam",
+      "name": "axiam",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axiam",
+      "description": "Guild Wars 2 Account Manager",
+      "topics": [],
+      "language": "TypeScript",
+      "stars": 1,
+      "archived": false,
+      "pushed_at": "2026-06-23T01:56:13Z",
+      "license": "GPL-3.0",
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset axiam-setup-1.2.6.exe"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "1 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "darkharasho/axicode",
+      "name": "axicode",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axicode",
+      "description": "Compact binary build code encoder/decoder for Guild Wars 2 builds (AxiCode format)",
+      "topics": [],
+      "language": "JavaScript",
+      "stars": 1,
+      "archived": false,
+      "pushed_at": "2026-03-25T08:10:48Z",
+      "license": null,
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "1 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "darkharasho/axiforge",
+      "name": "axiforge",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axiforge",
+      "description": "",
+      "topics": [],
+      "language": "JavaScript",
+      "stars": 3,
+      "archived": false,
+      "pushed_at": "2026-09-20T00:57:39Z",
+      "license": "GPL-3.0",
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset axiforge-0.24.0.exe"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "3 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "darkharasho/axiom",
+      "name": "axiom",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axiom",
+      "description": "AxiOM — tray launcher for the Axi ecosystem",
+      "topics": [],
+      "language": "TypeScript",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-20T08:24:47Z",
+      "license": "GPL-3.0",
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset axiom-setup-0.3.20.exe"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "darkharasho/axipulse",
+      "name": "axipulse",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axipulse",
+      "description": "Personal GW2 combat analysis dashboard",
+      "topics": [],
+      "language": "TypeScript",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-08-23T07:48:40Z",
+      "license": "GPL-3.0",
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset axipulse-0.2.1-setup.exe"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "darkharasho/axistream",
+      "name": "axistream",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axistream",
+      "description": "",
+      "topics": [],
+      "language": "TypeScript",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-12T18:52:34Z",
+      "license": "MIT",
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset axistream-setup-1.0.6.exe"
           ]
         },
         {
@@ -18448,44 +18582,6 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-05-09T15:10:13Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "dEVIEous/hazardous_gw2",
-      "name": "hazardous_gw2",
-      "owner": "dEVIEous",
-      "html_url": "https://github.com/dEVIEous/hazardous_gw2",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-19T04:22:21Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -18830,44 +18926,6 @@
       "override": null
     },
     {
-      "full_name": "Firestorm333/GW2_Logs",
-      "name": "GW2_Logs",
-      "owner": "Firestorm333",
-      "html_url": "https://github.com/Firestorm333/GW2_Logs",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-19T04:20:40Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "fjhanevo/gw2-tp-project",
       "name": "gw2-tp-project",
       "owner": "fjhanevo",
@@ -19096,44 +19154,6 @@
       "override": null
     },
     {
-      "full_name": "gemini-uwu/gw2-arc",
-      "name": "gw2-arc",
-      "owner": "gemini-uwu",
-      "html_url": "https://github.com/gemini-uwu/gw2-arc",
-      "description": "",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-14T02:27:24Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "georgekoder-mmc/gw2-explorer",
       "name": "gw2-explorer",
       "owner": "georgekoder-mmc",
@@ -19258,44 +19278,6 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-09-20T04:38:01Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "Gibczon/ArcDPSLogs",
-      "name": "ArcDPSLogs",
-      "owner": "Gibczon",
-      "html_url": "https://github.com/Gibczon/ArcDPSLogs",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-06-17T20:09:15Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -19457,44 +19439,6 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-09-14T14:53:38Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "GravNZ/gw2logs",
-      "name": "gw2logs",
-      "owner": "GravNZ",
-      "html_url": "https://github.com/GravNZ/gw2logs",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-14T20:48:14Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -20377,44 +20321,6 @@
       "override": null
     },
     {
-      "full_name": "JayceShikari/ArcDPSLogs",
-      "name": "ArcDPSLogs",
-      "owner": "JayceShikari",
-      "html_url": "https://github.com/JayceShikari/ArcDPSLogs",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-15T02:05:33Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "Jonathan-Greve/GuildWarsMapBrowser",
       "name": "GuildWarsMapBrowser",
       "owner": "Jonathan-Greve",
@@ -20480,44 +20386,6 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-09-17T11:38:08Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "Jorduin/gw2-logs",
-      "name": "gw2-logs",
-      "owner": "Jorduin",
-      "html_url": "https://github.com/Jorduin/gw2-logs",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-17T02:36:39Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -21861,44 +21729,6 @@
       "override": null
     },
     {
-      "full_name": "nthsu/gw2",
-      "name": "gw2",
-      "owner": "nthsu",
-      "html_url": "https://github.com/nthsu/gw2",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-20T06:11:51Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "Olivier-Gauvin/GuildWars2_Wasm_WebApp",
       "name": "GuildWars2_Wasm_WebApp",
       "owner": "Olivier-Gauvin",
@@ -22458,44 +22288,6 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-09-19T22:57:03Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "rikaschmitt/gw2-events-bot",
-      "name": "gw2-events-bot",
-      "owner": "rikaschmitt",
-      "html_url": "https://github.com/rikaschmitt/gw2-events-bot",
-      "description": "Bot para discord da guild [BR] de GW2",
-      "topics": [],
-      "language": "Python",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-13T23:17:25Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -23342,44 +23134,6 @@
       "override": null
     },
     {
-      "full_name": "Sun-Sun/xroads_bot",
-      "name": "xroads_bot",
-      "owner": "Sun-Sun",
-      "html_url": "https://github.com/Sun-Sun/xroads_bot",
-      "description": "Discord bot for signing up for raid trainings on a guild wars 2 training server",
-      "topics": [],
-      "language": "Python",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-08-16T20:41:31Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "thajcak/gw2-homestead",
       "name": "gw2-homestead",
       "owner": "thajcak",
@@ -23792,44 +23546,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "1 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "Xerioux/gw2reports",
-      "name": "gw2reports",
-      "owner": "Xerioux",
-      "html_url": "https://github.com/Xerioux/gw2reports",
-      "description": "AxiBridge Reports",
-      "topics": [],
-      "language": "CSS",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-18T20:05:53Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
           ]
         }
       ],
@@ -24664,6 +24380,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
           "id": "archived",
           "label": "Archived repository",
           "weight": 10,
@@ -24691,16 +24417,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "1 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"api.guildwars2.com\""
           ]
         }
       ],
@@ -24773,6 +24489,34 @@
       "override": null
     },
     {
+      "full_name": "darkharasho/axibridge",
+      "name": "axibridge",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axibridge",
+      "description": "",
+      "topics": [],
+      "language": "HTML",
+      "stars": 13,
+      "archived": false,
+      "pushed_at": "2026-09-20T09:15:24Z",
+      "license": "GPL-3.0",
+      "points": 5,
+      "band": "low",
+      "signals": [
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset axibridge-3.14.0-setup.exe"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "darkharasho/axilog",
       "name": "axilog",
       "owner": "darkharasho",
@@ -24783,6 +24527,34 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-09-12T19:31:49Z",
+      "license": "MIT",
+      "points": 5,
+      "band": "low",
+      "signals": [
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "darkharasho/axitools",
+      "name": "axitools",
+      "owner": "darkharasho",
+      "html_url": "https://github.com/darkharasho/axitools",
+      "description": "",
+      "topics": [],
+      "language": "Python",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-19T09:46:37Z",
       "license": "MIT",
       "points": 5,
       "band": "low",
@@ -25652,6 +25424,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"wiki.guildwars2.com/wiki/API\""
+          ]
+        },
+        {
           "id": "stale_24m",
           "label": "Unmaintained (2+ years)",
           "weight": 10,
@@ -25679,16 +25461,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -26244,7 +26016,7 @@
       "language": "Lua",
       "stars": 87,
       "archived": false,
-      "pushed_at": "2026-09-19T10:45:34Z",
+      "pushed_at": "2026-09-20T09:04:58Z",
       "license": null,
       "points": 5,
       "band": "low",
@@ -26378,7 +26150,7 @@
       "language": "Java",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T05:23:53Z",
+      "pushed_at": "2026-09-20T08:05:33Z",
       "license": "MIT",
       "points": 5,
       "band": "low",
@@ -26883,6 +26655,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"wiki.guildwars2.com/wiki/API\""
+          ]
+        },
+        {
           "id": "stale_24m",
           "label": "Unmaintained (2+ years)",
           "weight": 10,
@@ -26910,16 +26692,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -27732,6 +27504,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"official Guild Wars 2 API\""
+          ]
+        },
+        {
           "id": "no_license",
           "label": "No license",
           "weight": 5,
@@ -27749,16 +27531,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"official Guild Wars 2 API\""
           ]
         }
       ],
@@ -27786,6 +27558,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
           "id": "stale_12m",
           "label": "Slow maintenance (1-2 years)",
           "weight": 5,
@@ -27803,16 +27585,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"api.guildwars2.com\""
           ]
         }
       ],
@@ -27871,6 +27643,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
           "id": "no_license",
           "label": "No license",
           "weight": 5,
@@ -27888,16 +27670,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"api.guildwars2.com\""
           ]
         }
       ],
@@ -27919,6 +27691,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"wiki.guildwars2.com/wiki/API\""
+          ]
+        },
+        {
           "id": "no_license",
           "label": "No license",
           "weight": 5,
@@ -27936,16 +27718,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -27967,6 +27739,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"wiki.guildwars2.com/wiki/API\""
+          ]
+        },
+        {
           "id": "no_license",
           "label": "No license",
           "weight": 5,
@@ -27984,16 +27766,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "1 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -28057,6 +27829,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"official GW2 API\""
+          ]
+        },
+        {
           "id": "stale_12m",
           "label": "Slow maintenance (1-2 years)",
           "weight": 5,
@@ -28074,16 +27856,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"official GW2 API\""
           ]
         }
       ],
@@ -28109,6 +27881,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"official GW2 API\""
+          ]
+        },
+        {
           "id": "stale_12m",
           "label": "Slow maintenance (1-2 years)",
           "weight": 5,
@@ -28126,16 +27908,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "1 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"official GW2 API\""
           ]
         }
       ],
@@ -28186,16 +27958,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "1 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -28203,6 +27965,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "1 stars"
           ]
         }
       ],
@@ -28224,6 +27996,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
           "id": "no_license",
           "label": "No license",
           "weight": 5,
@@ -28241,16 +28023,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "1 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"api.guildwars2.com\""
           ]
         }
       ],
@@ -28327,16 +28099,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "4 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -28344,6 +28106,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"official Guild Wars 2 API\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "4 stars"
           ]
         }
       ],
@@ -28372,16 +28144,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "7 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -28389,6 +28151,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"official Guild Wars 2 API\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "7 stars"
           ]
         }
       ],
@@ -28457,6 +28229,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"wiki.guildwars2.com/wiki/API\""
+          ]
+        },
+        {
           "id": "stale_24m",
           "label": "Unmaintained (2+ years)",
           "weight": 10,
@@ -28474,16 +28256,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "5 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -28546,6 +28318,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
           "id": "stale_12m",
           "label": "Slow maintenance (1-2 years)",
           "weight": 5,
@@ -28574,16 +28356,6 @@
           "evidence": [
             "0 stars"
           ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"api.guildwars2.com\""
-          ]
         }
       ],
       "override": null
@@ -28604,16 +28376,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "1 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -28621,6 +28383,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "1 stars"
           ]
         }
       ],
@@ -28642,6 +28414,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
           "id": "no_license",
           "label": "No license",
           "weight": 5,
@@ -28659,16 +28441,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"api.guildwars2.com\""
           ]
         }
       ],
@@ -28718,16 +28490,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "1 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -28735,6 +28497,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"official Guild Wars 2 API\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "1 stars"
           ]
         }
       ],
@@ -28756,6 +28528,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
           "id": "no_license",
           "label": "No license",
           "weight": 5,
@@ -28773,16 +28555,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"api.guildwars2.com\""
           ]
         }
       ],
@@ -28832,16 +28604,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -28849,6 +28611,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
           ]
         }
       ],
@@ -28889,16 +28661,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -28906,6 +28668,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"official Guild Wars 2 API\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
           ]
         }
       ],
@@ -28950,6 +28722,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"official Guild Wars 2 API\""
+          ]
+        },
+        {
           "id": "stale_12m",
           "label": "Slow maintenance (1-2 years)",
           "weight": 5,
@@ -28967,16 +28749,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "3 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"official Guild Wars 2 API\""
           ]
         }
       ],
@@ -29020,16 +28792,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -29037,6 +28799,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
           ]
         }
       ],
@@ -29069,16 +28841,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "4 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -29086,6 +28848,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"official GW2 API\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "4 stars"
           ]
         }
       ],
@@ -29107,6 +28879,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"official GW2 API\""
+          ]
+        },
+        {
           "id": "no_license",
           "label": "No license",
           "weight": 5,
@@ -29124,16 +28906,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"official GW2 API\""
           ]
         }
       ],
@@ -29161,16 +28933,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -29178,6 +28940,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
           ]
         }
       ],
@@ -29260,16 +29032,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -29277,6 +29039,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"api.guildwars2.com\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
           ]
         }
       ],
@@ -29311,6 +29083,16 @@
       "band": "low",
       "signals": [
         {
+          "id": "api_only",
+          "label": "Official API only",
+          "weight": -15,
+          "policy": "api-terms",
+          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
+          "evidence": [
+            "matched \"official GW2 API\""
+          ]
+        },
+        {
           "id": "stale_12m",
           "label": "Slow maintenance (1-2 years)",
           "weight": 5,
@@ -29328,16 +29110,6 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"official GW2 API\""
           ]
         }
       ],
@@ -29366,16 +29138,6 @@
       "band": "low",
       "signals": [
         {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "2 stars"
-          ]
-        },
-        {
           "id": "api_only",
           "label": "Official API only",
           "weight": -15,
@@ -29383,6 +29145,16 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"wiki.guildwars2.com/wiki/API\""
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "2 stars"
           ]
         }
       ],
