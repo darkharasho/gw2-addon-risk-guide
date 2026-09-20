@@ -13,7 +13,7 @@
 ## Global Constraints
 
 - Node 22+, ESM only (`"type": "module"`). Scripts have **zero runtime dependencies**; Vitest is the only devDependency.
-- Run tests as `npx vitest run --maxWorkers=2` (machine-wide limit, per `~/.claude/CLAUDE.md`).
+- Run tests as `npm test` / `npx vitest run`. Test parallelism is capped at 2 forks by `vitest.config.mjs` (`pool: forks`, `minForks: 1`, `maxForks: 2`) — this machine is memory-constrained, per `~/.claude/CLAUDE.md`. Do not raise the cap and do not pass `--maxWorkers`, which vitest 2.1.9 rejects.
 - No build step for the site. No bundler, no framework, no CDN script tags — the site must work when opened from a static file server.
 - All GitHub API calls go through `scripts/github.mjs`, which honours `GITHUB_TOKEN`, paginates, and backs off on rate limits. No `fetch()` to api.github.com anywhere else.
 - The scorer is a **pure function**: `score(repo) -> {points, band, signals[]}`. No I/O, no clock reads — "now" is passed in.
@@ -60,11 +60,11 @@ These were the spec's open questions. They are resolved as follows; changing one
 ### Task 1: Project skeleton and GitHub API client
 
 **Files:**
-- Create: `package.json`, `scripts/github.mjs`, `tests/github.test.mjs`, `.gitignore` (modify)
+- Create: `package.json`, `vitest.config.mjs`, `scripts/github.mjs`, `tests/github.test.mjs`, `.gitignore` (modify)
 
 **Interfaces:**
 - Consumes: nothing.
-- Produces: `ghFetch(path, {token, search}) -> Promise<any|null>`, `ghPaginate(path, {token, max}) -> Promise<any[]>`. `path` is an api.github.com path like `/repos/foo/bar`. Returns `null` on 404. Throws on other non-2xx after retries.
+- Produces: `ghFetch(path, {token}) -> Promise<any|null>`, `ghPaginate(path, {token, max}) -> Promise<any[]>`. `path` is an api.github.com path like `/repos/foo/bar`. Returns `null` on 404. Throws on other non-2xx after retries.
 
 - [ ] **Step 1: Create package.json**
 
@@ -75,7 +75,7 @@ These were the spec's open questions. They are resolved as follows; changing one
   "type": "module",
   "engines": { "node": ">=22" },
   "scripts": {
-    "test": "vitest run --maxWorkers=2",
+    "test": "vitest run",
     "catalog": "node scripts/build-catalog.mjs"
   },
   "devDependencies": { "vitest": "^2.1.0" }
@@ -142,7 +142,7 @@ describe('ghPaginate', () => {
 
 - [ ] **Step 3: Run test to verify it fails**
 
-Run: `npx vitest run --maxWorkers=2 tests/github.test.mjs`
+Run: `npx vitest run tests/github.test.mjs`
 Expected: FAIL — "Failed to resolve import ../scripts/github.mjs"
 
 - [ ] **Step 4: Implement `scripts/github.mjs`**
@@ -204,7 +204,7 @@ export async function ghPaginate(path, { max = Infinity, ...opts } = {}) {
 
 - [ ] **Step 5: Run tests to verify they pass**
 
-Run: `npx vitest run --maxWorkers=2 tests/github.test.mjs`
+Run: `npx vitest run tests/github.test.mjs`
 Expected: PASS (5 tests)
 
 - [ ] **Step 6: Commit**
@@ -271,7 +271,7 @@ describe('discover', () => {
 
 - [ ] **Step 2: Run it to verify it fails**
 
-Run: `npx vitest run --maxWorkers=2 tests/discover.test.mjs`
+Run: `npx vitest run tests/discover.test.mjs`
 Expected: FAIL — cannot resolve `../scripts/discover.mjs`
 
 - [ ] **Step 3: Implement `scripts/discover.mjs`**
@@ -349,7 +349,7 @@ describe('enrich', () => {
 
 - [ ] **Step 5: Run it to verify it fails**
 
-Run: `npx vitest run --maxWorkers=2 tests/enrich.test.mjs`
+Run: `npx vitest run tests/enrich.test.mjs`
 Expected: FAIL — cannot resolve `../scripts/enrich.mjs`
 
 - [ ] **Step 6: Implement `scripts/enrich.mjs`**
@@ -398,7 +398,7 @@ export async function enrich(fullName, opts = {}) {
 
 - [ ] **Step 7: Run both tests to verify they pass**
 
-Run: `npx vitest run --maxWorkers=2 tests/discover.test.mjs tests/enrich.test.mjs`
+Run: `npx vitest run tests/discover.test.mjs tests/enrich.test.mjs`
 Expected: PASS (4 tests)
 
 - [ ] **Step 8: Commit**
@@ -506,7 +506,7 @@ describe('detect', () => {
 
 - [ ] **Step 2: Run it to verify it fails**
 
-Run: `npx vitest run --maxWorkers=2 tests/signals.test.mjs`
+Run: `npx vitest run tests/signals.test.mjs`
 Expected: FAIL — cannot resolve `../scripts/signals.mjs`
 
 - [ ] **Step 3: Implement `scripts/signals.mjs`**
@@ -594,7 +594,7 @@ export function detect(facts, now = new Date()) {
 
 - [ ] **Step 4: Run tests to verify they pass**
 
-Run: `npx vitest run --maxWorkers=2 tests/signals.test.mjs`
+Run: `npx vitest run tests/signals.test.mjs`
 Expected: PASS (8 tests)
 
 - [ ] **Step 5: Commit**
@@ -651,7 +651,7 @@ describe('data/policies.json', () => {
 
 - [ ] **Step 2: Run it to verify it fails**
 
-Run: `npx vitest run --maxWorkers=2 tests/policies.test.mjs`
+Run: `npx vitest run tests/policies.test.mjs`
 Expected: FAIL — ENOENT `data/policies.json`
 
 - [ ] **Step 3: Populate `data/policies.json` from primary sources**
@@ -687,7 +687,7 @@ Required ids after this step: `ua-third-party-programs`, `ua-modify-client`, `ua
 
 - [ ] **Step 4: Run the policy test to verify it passes**
 
-Run: `npx vitest run --maxWorkers=2 tests/policies.test.mjs`
+Run: `npx vitest run tests/policies.test.mjs`
 Expected: PASS (2 tests)
 
 - [ ] **Step 5: Write the failing scorer test**
@@ -761,7 +761,7 @@ describe('score', () => {
 
 - [ ] **Step 6: Run it to verify it fails**
 
-Run: `npx vitest run --maxWorkers=2 tests/score.test.mjs`
+Run: `npx vitest run tests/score.test.mjs`
 Expected: FAIL — cannot resolve `../scripts/score.mjs`
 
 - [ ] **Step 7: Implement `scripts/score.mjs`**
@@ -814,7 +814,7 @@ export function score(facts, { now = new Date(), override = null } = {}) {
 
 - [ ] **Step 9: Run tests to verify they pass**
 
-Run: `npx vitest run --maxWorkers=2`
+Run: `npx vitest run`
 Expected: PASS (all suites)
 
 - [ ] **Step 10: Commit**
@@ -905,7 +905,7 @@ describe('buildCatalog', () => {
 
 - [ ] **Step 2: Run it to verify it fails**
 
-Run: `npx vitest run --maxWorkers=2 tests/build-catalog.test.mjs`
+Run: `npx vitest run tests/build-catalog.test.mjs`
 Expected: FAIL — cannot resolve `../scripts/build-catalog.mjs`
 
 - [ ] **Step 3: Implement `scripts/build-catalog.mjs`**
@@ -949,7 +949,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 
 - [ ] **Step 4: Run tests to verify they pass**
 
-Run: `npx vitest run --maxWorkers=2 tests/build-catalog.test.mjs`
+Run: `npx vitest run tests/build-catalog.test.mjs`
 Expected: PASS (4 tests)
 
 - [ ] **Step 5: Generate a real catalog and sanity-check it**
@@ -1045,7 +1045,7 @@ describe('filterRepos', () => {
 
 - [ ] **Step 2: Run it to verify it fails**
 
-Run: `npx vitest run --maxWorkers=2 tests/search.test.mjs`
+Run: `npx vitest run tests/search.test.mjs`
 Expected: FAIL — cannot resolve `../site/search.js`
 
 - [ ] **Step 3: Implement `site/search.js`**
@@ -1085,7 +1085,7 @@ export function filterRepos(indexed, { query = '', bands = [], signals = [], mai
 
 - [ ] **Step 4: Run tests to verify they pass**
 
-Run: `npx vitest run --maxWorkers=2 tests/search.test.mjs`
+Run: `npx vitest run tests/search.test.mjs`
 Expected: PASS (7 tests)
 
 - [ ] **Step 5: Commit**
@@ -1103,7 +1103,7 @@ git commit -m "feat: add client-side search and filtering"
 - Create: `site/index.html`, `site/policy.html`, `site/render.js`, `site/app.js`, `site/style.css`, `tests/render.test.mjs`
 
 **Interfaces:**
-- Consumes: `filterRepos`, `indexRepos` (Task 6); `data/catalog.json`, `data/policies.json` fetched at `../data/…` relative to the page.
+- Consumes: `filterRepos`, `indexRepos` (Task 6); `data/catalog.json`, `data/policies.json` fetched at `data/…` relative to the page (sibling dir; NOT `../data/…` — the site deploys under a project-pages base path).
 - Produces: `escapeHtml(s)`, `repoCard(repo, policiesById) -> string`, `breakdown(repo, policiesById) -> string`.
 
 **Disclaimer string — use verbatim on both pages:**
@@ -1178,7 +1178,7 @@ describe('breakdown', () => {
 
 - [ ] **Step 2: Run it to verify it fails**
 
-Run: `npx vitest run --maxWorkers=2 tests/render.test.mjs`
+Run: `npx vitest run tests/render.test.mjs`
 Expected: FAIL — cannot resolve `../site/render.js`
 
 - [ ] **Step 3: Implement `site/render.js`**
@@ -1232,7 +1232,7 @@ export function repoCard(repo, policies) {
 
 - [ ] **Step 4: Run the render tests to verify they pass**
 
-Run: `npx vitest run --maxWorkers=2 tests/render.test.mjs`
+Run: `npx vitest run tests/render.test.mjs`
 Expected: PASS (6 tests)
 
 - [ ] **Step 5: Write `site/index.html`**
@@ -1284,8 +1284,8 @@ import { repoCard, escapeHtml } from './render.js'
 
 const $ = (id) => document.getElementById(id)
 const [catalog, policyDoc] = await Promise.all([
-  fetch('../data/catalog.json').then((r) => r.json()),
-  fetch('../data/policies.json').then((r) => r.json()),
+  fetch('data/catalog.json').then((r) => r.json()),
+  fetch('data/policies.json').then((r) => r.json()),
 ])
 const policies = Object.fromEntries(policyDoc.clauses.map((c) => [c.id, c]))
 const indexed = indexRepos(catalog.repos)
@@ -1323,7 +1323,7 @@ Same `<head>`, header and disclaimer as `index.html` (with `aria-current` on the
 <main><div id="clauses"></div></main>
 <script type="module">
   import { escapeHtml } from './render.js'
-  const doc = await fetch('../data/policies.json').then((r) => r.json())
+  const doc = await fetch('data/policies.json').then((r) => r.json())
   document.getElementById('clauses').innerHTML = doc.clauses.map((c) => `
     <section class="clause" id="${escapeHtml(c.id)}">
       <h2>${escapeHtml(c.title)}</h2>
@@ -1432,10 +1432,20 @@ jobs:
 
 ```bash
 mkdir -p /tmp/_site/data && cp -r site/* /tmp/_site/ && cp data/*.json /tmp/_site/data/
-python3 -m http.server 8001 --directory /tmp/_site &
 ```
 
-Open `http://localhost:8001/index.html`. The page fetches `../data/catalog.json`; from `/index.html` that resolves to `/data/catalog.json`. Expected: catalog renders. If it 404s, change the fetch paths in `app.js`/`policy.html` to `data/…` and re-run this check. Kill the server.
+Do NOT serve `/tmp/_site` directly — that is the origin root, and it hides the base-path bug described below.
+
+Serve it under the project-pages base path this repo actually deploys to, not the origin root:
+
+```bash
+mkdir -p /tmp/pages/gw2-addon-risk-guide && cp -r /tmp/_site/* /tmp/pages/gw2-addon-risk-guide/
+python3 -m http.server 8001 --directory /tmp/pages &
+```
+
+Open `http://localhost:8001/gw2-addon-risk-guide/index.html`. The page must fetch `data/catalog.json` (relative, no leading `../` and no leading `/`), which resolves to `/gw2-addon-risk-guide/data/catalog.json`. Expected: catalog renders.
+
+CORRECTION: an earlier draft of this plan asserted that `../data/catalog.json` resolves correctly from `/index.html`. That is true only for a user/org root site. This repo deploys as a PROJECT page, so the page lives at `/gw2-addon-risk-guide/index.html` and `..` climbs to the origin root, giving `/data/catalog.json` -> 404. Verified empirically. Serving from the origin root hides this bug entirely, which is why this step sets up the base path. Kill the server.
 
 - [ ] **Step 4: Update `README.md`**
 
@@ -1459,7 +1469,7 @@ Expected: the Pages workflow succeeds and the site is live. Trigger the scraper 
 Before calling this done:
 
 ```bash
-npx vitest run --maxWorkers=2
+npx vitest run
 ```
 
 Expected: all suites pass. Then confirm on the deployed URL that search, band/signal filters, the score breakdown with policy quotes, and the policy page all work, and that the disclaimer appears on both pages.
