@@ -90,49 +90,49 @@
       "assessed_at": "2026-09-20"
     },
     "mriot/prep-alert": {
-      "conduct": "directive",
+      "conduct": "assistive",
       "advantage": "none",
-      "rationale": "Reads buff state and prompts the player to act on it rather than displaying it and leaving the call to them. Food and utility buffs are available to everyone, so the prompt confers no edge - this is the directive-without-advantage quadrant.",
+      "rationale": "Reminds the player about food and utility buffs, but every buff still costs the player their own click - one action per one click, which is the line ArenaNet actually draws. A reminder that leaves both the decision and the keypress with the player is assistive, and the buffs are available to everyone, so no advantage attaches.",
       "evidence": "Gw2 buff reminder addon",
       "policy": "ua-third-party-programs",
       "assessed_at": "2026-09-20"
     },
     "fodaveg/tyrian-companion-nexus": {
-      "conduct": "directive",
+      "conduct": "assistive",
       "advantage": "none",
-      "rationale": "Alerts prompt an action rather than presenting state for the player to read. The underlying trading post prices are public through the official API, so no information advantage arises.",
+      "rationale": "Surfaces loot and trading post prices the player would otherwise look up manually. An alert is a notification, not an input: the player still opens the trading post and clicks every buy themselves. The prices are public through the official API, so no advantage attaches either.",
       "evidence": "loot and price alerts inside the game",
       "policy": "ua-third-party-programs",
       "assessed_at": "2026-09-20"
     },
     "fodaveg/tyrian-companion-blish": {
-      "conduct": "directive",
+      "conduct": "assistive",
       "advantage": "none",
-      "rationale": "The Blish HUD build of the same tool, assessed on the same terms: alerting prompts an action, and the prices it alerts on are public through the official API.",
+      "rationale": "The Blish HUD build of the same tool, assessed on the same terms: it notifies, and the player still performs every action by hand. The prices come from the official public API.",
       "evidence": "loot and price alerts over the game",
       "policy": "ua-third-party-programs",
       "assessed_at": "2026-09-20"
     },
     "Stukeley/Gw2TpPriceChecker": {
-      "conduct": "directive",
+      "conduct": "assistive",
       "advantage": "none",
-      "rationale": "Threshold alerts prompt the player to act at a chosen moment. It runs outside the client against public trading post data, so the conduct call carries no advantage with it.",
+      "rationale": "Watches public trading post prices and notifies at a threshold the player set. It runs outside the client and cannot act in it - every trade is the player's own click - so it reports rather than plays.",
       "evidence": "send an alert if the price is below/above set threshold",
       "policy": "ua-third-party-programs",
       "assessed_at": "2026-09-20"
     },
     "Taschenbuch/BlishHud-GatheringTools": {
-      "conduct": "directive",
+      "conduct": "assistive",
       "advantage": "none",
-      "rationale": "A reminder at the logout dialog tells the player to do something before they stop playing. Gathering tool state is already visible in the inventory; what the module adds is the prompt.",
+      "rationale": "Reminds the player at the logout dialog that gathering tools are missing. The state is already visible in the inventory and the module cannot equip anything; it surfaces information at a useful moment and leaves every action to the player.",
       "evidence": "shows a reminder in the Logout Dialog",
       "policy": "ua-third-party-programs",
       "assessed_at": "2026-09-20"
     },
     "FScaley/GW2-TP-Assistant": {
-      "conduct": "directive",
+      "conduct": "assistive",
       "advantage": "none",
-      "rationale": "Describes itself as decision support for flipping and crafting, which is advising an action rather than reporting a state. Trading post data is public, so no advantage attaches.",
+      "rationale": "Presents flipping and crafting analysis over public trading post data. It informs a decision the player then makes and executes themselves, one click per action, and the data it reasons over is available to anyone through the official API.",
       "evidence": "flipping + crafting karar destek araci",
       "policy": "ua-third-party-programs",
       "assessed_at": "2026-09-20"
