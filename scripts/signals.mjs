@@ -131,7 +131,62 @@ const CREDITS = /\b(acknowledge?ments?|credits?|thanks to|thank you to|inspired 
 const NEGATION = /\b(not|never|neither|nor|nothing|without|rather than|instead of)\b|n['’]t\b/i
 const CLAUSE = 80
 
-const negated = (before) => NEGATION.test(before.split(/[.!?;:\n]/).pop().slice(-CLAUSE))
+// Bullet lists are where a project puts its disclaimer, and there the cue is
+// often just "No ..." or a ❌ with no verb at all. Anchoring to the list
+// marker is what makes bare "no" safe to honour here while it stays ignored
+// in running prose, where "no cooldowns" is a trainer describing itself.
+const LIST_DENIAL = /^[\s>]*(?:[-*+]|\d+[.)])\s*(?:[^\w\s]+\s*)*(?:no|none)\b/i
+const DENY_MARK = /[❌⛔🚫]/u
+
+// A "Does not" section denies every bullet under it, and none of those
+// bullets carries a cue of its own — clause scope cannot see this, so the
+// nearest preceding heading gets a say too. The next heading ends the
+// section, so "### Does not ... ### Does" resumes firing without special
+// handling: the nearest heading before a match IS its section.
+// A denying heading governs the disclaimer list beneath it, not the rest of
+// the document. Without this cap, "## Not affiliated with ArenaNet" - one of
+// the most common headings in this corpus - would mute every signal until the
+// next heading, which in a heading-light README is the whole file.
+const SECTION = 1200
+const HEADING = /^[ \t]{0,3}#{1,6}[ \t]+(.*)$/gm
+const HEADING_DENIAL = /\b(no|none|not|never|without|non-?goals?)\b|n['’]t\b/i
+
+const headingFor = (body, index) => {
+  const re = new RegExp(HEADING.source, HEADING.flags)
+  let found = null
+  for (let m; (m = re.exec(body)) && m.index < index; ) {
+    found = m.index + m[0].length > index - SECTION ? m[1] : null
+  }
+  return found
+}
+
+// Citing ArenaNet's own policy is never evidence of breaking it: pie_ui scored
+// 80/high because the words "Macro Use" appear in the title of the rule it
+// links to in order to claim compliance.
+const POLICY_HOST = /(guildwars2\.com|arena\.net|ncsoft\.com)/i
+const MD_LINK = /\[([^\]]*)\]\(\s*([^)\s]+)[^)]*\)/g
+
+let linkCacheBody = null
+let linkCacheRanges = []
+const policyLinkRanges = (body) => {
+  if (body === linkCacheBody) return linkCacheRanges
+  const ranges = []
+  const re = new RegExp(MD_LINK.source, MD_LINK.flags)
+  for (let m; (m = re.exec(body)); ) {
+    if (POLICY_HOST.test(m[2])) ranges.push([m.index, m.index + m[0].length])
+  }
+  linkCacheBody = body
+  linkCacheRanges = ranges
+  return ranges
+}
+
+const negated = (body, index, before) => {
+  const clause = before.split(/[.!?;:\n]/).pop()
+  if (NEGATION.test(clause.slice(-CLAUSE))) return true
+  if (LIST_DENIAL.test(clause) || DENY_MARK.test(clause)) return true
+  const heading = headingFor(body, index)
+  return heading != null && HEADING_DENIAL.test(heading.replace(/[*_`~]/g, ' '))
+}
 
 // How much text on either side of a match a guard gets to look at.
 const BEFORE = 200
@@ -161,7 +216,8 @@ function firstMatch(re, body, guard) {
     if (m[0] === '') { g.lastIndex += 1; continue }
     const before = body.slice(Math.max(0, m.index - BEFORE), m.index)
     const after = body.slice(m.index + m[0].length, m.index + m[0].length + AFTER)
-    if (negated(before)) continue
+    if (policyLinkRanges(body).some(([a, b]) => m.index >= a && m.index < b)) continue
+    if (negated(body, m.index, before)) continue
     if (guard && guard(before, after)) continue
     return m[0]
   }
