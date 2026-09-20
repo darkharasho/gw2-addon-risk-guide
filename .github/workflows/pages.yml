@@ -30,6 +30,20 @@ jobs:
           mkdir -p _site/data
           cp -r site/* _site/
           cp data/*.json _site/data/
+      # Browsers hold on to style.css and the JS modules far longer than
+      # they hold on to index.html, so a deploy can pair fresh HTML with a
+      # stale module - and a module that reaches for an element the new HTML
+      # no longer has takes the whole page down. Stamping every internal
+      # reference with the deployed commit gives each deploy its own asset
+      # URLs, so the set a browser loads is always internally consistent.
+      # Only the staged copy is rewritten; the checked-in sources stay clean.
+      - name: Stamp assets with the deployed commit
+        run: |
+          v=$(git rev-parse --short HEAD)
+          find _site \( -name '*.html' -o -name '*.js' -o -name '*.mjs' \) -print0 |
+            xargs -0 sed -i -E \
+              -e "s/(href|src)=\"([A-Za-z0-9_.-]+\.(css|js|mjs))\"/\\1=\"\\2?v=$v\"/g" \
+              -e "s/from '\\.\/([A-Za-z0-9_.-]+\.(js|mjs))'/from '.\/\\1?v=$v'/g"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: _site }
