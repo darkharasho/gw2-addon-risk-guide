@@ -6,10 +6,14 @@
 
 // Ordered from "no bearing on play decisions" to "acts for you".
 //
-// The top of the ladder is anchored by ArenaNet's own rule of thumb: one
-// action per one click. A tool may do whatever it likes up to the point where
-// a single input produces a sequence the player did not individually make -
-// that is the substitutive line, and it is the one ArenaNet states outright.
+// The top of the ladder is anchored by ArenaNet's own rule, stated in the
+// macro policy: "Each macro should represent a single action that requires
+// user input before repeating the action." A tool may do whatever it likes up
+// to the point where a single input produces a sequence the player did not
+// individually make - that is the substitutive line, and it is the one
+// ArenaNet draws in writing. The same article permits attended macro use
+// outright, which is why a tool that merely prompts the player is nowhere
+// near it. Quoted as the `support-macros` clause in data/policies.json.
 //
 // Below it, directive vs assistive is a judgment about instruction, not about
 // input: both leave every keypress with the player. Directive tells them what

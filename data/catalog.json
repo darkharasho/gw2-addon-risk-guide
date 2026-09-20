@@ -3319,7 +3319,7 @@
         "advantage": "none",
         "rationale": "Presents flipping and crafting analysis over public trading post data. It informs a decision the player then makes and executes themselves, one click per action, and the data it reasons over is available to anyone through the official API.",
         "evidence": "flipping + crafting karar destek araci",
-        "policy": "ua-third-party-programs",
+        "policy": "support-macros",
         "assessed_at": "2026-09-20"
       }
     },
@@ -6132,7 +6132,7 @@
         "advantage": "none",
         "rationale": "Surfaces loot and trading post prices the player would otherwise look up manually. An alert is a notification, not an input: the player still opens the trading post and clicks every buy themselves. The prices are public through the official API, so no advantage attaches either.",
         "evidence": "loot and price alerts inside the game",
-        "policy": "ua-third-party-programs",
+        "policy": "support-macros",
         "assessed_at": "2026-09-20"
       }
     },
@@ -6962,7 +6962,7 @@
         "advantage": "none",
         "rationale": "Reminds the player about food and utility buffs, but every buff still costs the player their own click - one action per one click, which is the line ArenaNet actually draws. A reminder that leaves both the decision and the keypress with the player is assistive, and the buffs are available to everyone, so no advantage attaches.",
         "evidence": "Gw2 buff reminder addon",
-        "policy": "ua-third-party-programs",
+        "policy": "support-macros",
         "assessed_at": "2026-09-20"
       }
     },
@@ -12498,7 +12498,7 @@
         "advantage": "none",
         "rationale": "Watches public trading post prices and notifies at a threshold the player set. It runs outside the client and cannot act in it - every trade is the player's own click - so it reports rather than plays.",
         "evidence": "send an alert if the price is below/above set threshold",
-        "policy": "ua-third-party-programs",
+        "policy": "support-macros",
         "assessed_at": "2026-09-20"
       }
     },
@@ -16713,7 +16713,7 @@
         "advantage": "none",
         "rationale": "Reminds the player at the logout dialog that gathering tools are missing. The state is already visible in the inventory and the module cannot equip anything; it surfaces information at a useful moment and leaves every action to the player.",
         "evidence": "shows a reminder in the Logout Dialog",
-        "policy": "ua-third-party-programs",
+        "policy": "support-macros",
         "assessed_at": "2026-09-20"
       }
     },
@@ -19541,7 +19541,7 @@
         "advantage": "none",
         "rationale": "The Blish HUD build of the same tool, assessed on the same terms: it notifies, and the player still performs every action by hand. The prices come from the official public API.",
         "evidence": "loot and price alerts over the game",
-        "policy": "ua-third-party-programs",
+        "policy": "support-macros",
         "assessed_at": "2026-09-20"
       }
     },
