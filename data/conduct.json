@@ -38,7 +38,7 @@
       "advantage": "some",
       "rationale": "Macro tools execute input sequences on the player's behalf, which is acting rather than informing. The quantitative-analysis half would be assistive on its own; the macro half is what sets the tier.",
       "evidence": "Quantitative Analysis Platform and Macro Tools",
-      "policy": "ua-automation",
+      "policy": "support-macros-prohibited",
       "assessed_at": "2026-09-20"
     },
     "kxtools/kx-vision": {
@@ -94,7 +94,7 @@
       "advantage": "none",
       "rationale": "Reminds the player about food and utility buffs, but every buff still costs the player their own click - one action per one click, which is the line ArenaNet actually draws. A reminder that leaves both the decision and the keypress with the player is assistive, and the buffs are available to everyone, so no advantage attaches.",
       "evidence": "Gw2 buff reminder addon",
-      "policy": "ua-third-party-programs",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "fodaveg/tyrian-companion-nexus": {
@@ -102,7 +102,7 @@
       "advantage": "none",
       "rationale": "Surfaces loot and trading post prices the player would otherwise look up manually. An alert is a notification, not an input: the player still opens the trading post and clicks every buy themselves. The prices are public through the official API, so no advantage attaches either.",
       "evidence": "loot and price alerts inside the game",
-      "policy": "ua-third-party-programs",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "fodaveg/tyrian-companion-blish": {
@@ -110,7 +110,7 @@
       "advantage": "none",
       "rationale": "The Blish HUD build of the same tool, assessed on the same terms: it notifies, and the player still performs every action by hand. The prices come from the official public API.",
       "evidence": "loot and price alerts over the game",
-      "policy": "ua-third-party-programs",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "Stukeley/Gw2TpPriceChecker": {
@@ -118,7 +118,7 @@
       "advantage": "none",
       "rationale": "Watches public trading post prices and notifies at a threshold the player set. It runs outside the client and cannot act in it - every trade is the player's own click - so it reports rather than plays.",
       "evidence": "send an alert if the price is below/above set threshold",
-      "policy": "ua-third-party-programs",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "Taschenbuch/BlishHud-GatheringTools": {
@@ -126,7 +126,7 @@
       "advantage": "none",
       "rationale": "Reminds the player at the logout dialog that gathering tools are missing. The state is already visible in the inventory and the module cannot equip anything; it surfaces information at a useful moment and leaves every action to the player.",
       "evidence": "shows a reminder in the Logout Dialog",
-      "policy": "ua-third-party-programs",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "FScaley/GW2-TP-Assistant": {
@@ -134,98 +134,98 @@
       "advantage": "none",
       "rationale": "Presents flipping and crafting analysis over public trading post data. It informs a decision the player then makes and executes themselves, one click per action, and the data it reasons over is available to anyone through the official API.",
       "evidence": "flipping + crafting karar destek araci",
-      "policy": "ua-third-party-programs",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "Zerthox/arcdps-food-reminder": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "Named a reminder, but by its own description it tracks buff food and utility items - showing state, not prompting an action. Assessed on the description rather than the name.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "leonvchan/gw2_birthday_reminder": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "Prompts, but not about game state: character birthdays are an account date, and claiming a gift involves no timing decision with a better or worse answer.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "jsantorek/GW2-Alerts": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "Infrastructure rather than a tool a player reads: it republishes the game's own alerts as Nexus events for other addons to consume. What a consumer does with them is that addon's verdict, not this one's.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "stormalize/tempo": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "The auto-attack in the name is the game's own attack chain, not automation - this is a Reffect display pack showing where in that chain the player is.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "FScaley/GW2-CLE-Timer": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "Meta and boss event timers run on a fixed public schedule that is documented on the wiki and visible in-game. Presenting it more conveniently is not an information advantage.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "cordbleibaum/ArcDPS-Timer": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "A speedrunning timer measures elapsed time after the fact. It reports nothing about game state and prompts nothing.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "csh/ReshadeEffectShaderToggler-GW2": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "ReShade presets are the class where perception advantage usually lives, but this one's stated purpose is the opposite: excluding the game UI from effects. Nothing in its own words claims added clarity.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "Emisan01/Gw2Purgator": {
       "conduct": "none",
       "advantage": "none",
       "rationale": "Startup diagnostics and shader cache cleanup act on the installation, not on play. The injection and memory signals are about how it works, not what it is for.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "ChrisnNg/GW2-Arcdps-Updater": {
       "conduct": "none",
       "advantage": "none",
       "rationale": "Downloads and renames a DLL so arcdps and ReShade can coexist. It is installer plumbing and makes no claim on gameplay.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "faker-ino/DrfGoldTracker": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "Totals the loot and gold a session produced. Accounting after the fact, with no bearing on a decision in play.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "qjv/assisted_deployment_and_departure": {
       "conduct": "none",
       "advantage": "none",
       "rationale": "Launches and cleans up companion processes around the game. It never touches gameplay state.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "Linkaaaaa/GW2CombatTimer": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "Displays time spent in combat, which is a readout of something the player just did rather than information about what to do next.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     },
     "albrektsson/gw2-session-tracker": {
       "conduct": "assistive",
       "advantage": "none",
       "rationale": "A session tracker summarises what a play session yielded. Its own description claims nothing beyond being a Nexus addon.",
-      "policy": "support-own-risk",
+      "policy": "support-benign-tolerance",
       "assessed_at": "2026-09-20"
     }
   }
