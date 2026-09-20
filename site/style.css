@@ -27,6 +27,12 @@
   --band-elevated: #ff7a2f;
   --band-high: #ff5252;
   --r: 10px;
+  /* One page width, shared by the masthead, the disclaimer and the catalog so
+     they cannot drift out of alignment. The gutter is deliberately narrow:
+     the catalog is a dense grid of cards, and width spent on margins is a
+     column not shown. */
+  --page: 1660px;
+  --gutter: 18px;
   --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI Variable", "Segoe UI", Roboto, sans-serif;
 }
 
@@ -53,7 +59,7 @@ a { color: inherit; }
 /* ---------- masthead ---------- */
 .mast { position: sticky; top: 0; z-index: 40; background: var(--bg); border-bottom: 4px solid var(--ink-line); }
 .mast-in {
-  max-width: 1220px; margin: 0 auto; padding: 0 20px;
+  max-width: var(--page); margin: 0 auto; padding: 0 var(--gutter);
   display: flex; align-items: center; gap: 22px; min-height: 66px; flex-wrap: wrap;
 }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
@@ -87,7 +93,7 @@ a { color: inherit; }
 .ghlink:hover { color: var(--ink); }
 
 /* ---------- disclaimer ---------- */
-.notice { max-width: 1220px; margin: 22px auto 0; padding: 0 20px; }
+.notice { max-width: var(--page); margin: 22px auto 0; padding: 0 var(--gutter); }
 .notice-in {
   display: flex; gap: 14px; padding: 15px 18px; background: var(--panel);
   border: 4px solid var(--ink-line); border-radius: var(--r);
@@ -104,7 +110,7 @@ a { color: inherit; }
 .notice cite a { color: var(--gold); font-weight: 600; text-underline-offset: 2px; }
 
 /* ---------- overview ---------- */
-.wrap { max-width: 1220px; margin: 0 auto; padding: 28px 20px 60px; }
+.wrap { max-width: var(--page); margin: 0 auto; padding: 28px var(--gutter) 60px; }
 .ov { display: flex; align-items: baseline; gap: 22px; flex-wrap: wrap; margin-bottom: 16px; }
 .ov h1 { margin: 0; font: 900 30px/1.1 var(--sans); letter-spacing: -.035em; }
 .ov h1 span { color: var(--faint); font-size: 15px; font-weight: 700; letter-spacing: -.01em; }
@@ -136,7 +142,10 @@ a { color: inherit; }
   padding: 14px; background: var(--panel); border: 4px solid var(--ink-line);
   border-radius: var(--r); box-shadow: 6px 6px 0 var(--ink-line);
 }
-.srch { position: relative; flex: 1 1 240px; }
+/* Grows to fill whatever the filters leave, but capped: past this width the
+   search box only pushes controls onto a second row without becoming any
+   more useful. */
+.srch { position: relative; flex: 1 1 200px; max-width: 260px; }
 .srch input {
   width: 100%; padding: 11px 12px 11px 38px; background: var(--bg);
   border: 3px solid var(--ink-line); border-radius: 8px;
@@ -148,11 +157,11 @@ a { color: inherit; }
   color: var(--gold); font-weight: 900;
 }
 
-.pills { display: flex; gap: 5px; flex-wrap: wrap; }
+.pills { display: flex; gap: 4px; flex-wrap: wrap; }
 .pill, .chipbtn, .sel {
-  padding: 10px 11px; border-radius: 8px; border: 3px solid var(--ink-line);
+  padding: 10px 9px; border-radius: 8px; border: 3px solid var(--ink-line);
   background: var(--bg); font: 800 13px/1 var(--sans); color: var(--dim);
-  cursor: pointer; display: flex; align-items: center; gap: 7px;
+  cursor: pointer; display: flex; align-items: center; gap: 6px;
   text-transform: uppercase; letter-spacing: .02em;
 }
 /* Native select chrome adds width the other controls do not carry. */
