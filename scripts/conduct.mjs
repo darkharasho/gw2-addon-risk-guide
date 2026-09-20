@@ -1,0 +1,48 @@
+// The conduct assessment axis: the maintainer's judgment about what an addon
+// does to gameplay, kept deliberately separate from the mechanical score.
+//
+// Pure functions only - no I/O, no DOM - so the same module backs the catalog
+// build, the browser, and the tests that enforce the file's integrity.
+
+// Ordered from "no bearing on play decisions" to "acts for you". The pivot
+// that matters is assistive -> directive: showing information versus prompting
+// an action. ArenaNet tolerates DPS meters, which makes assistive a known
+// tolerated tier and directive the first contentious one.
+export const CONDUCT_TIERS = ['none', 'assistive', 'directive', 'substitutive']
+
+// A severity grade, not a taxonomy. What *kind* of edge a tool confers lives
+// in the verdict's prose, so the schema never has to anticipate every case:
+// revealing withheld information and amplifying perception are two examples of
+// advantage, not the set of them.
+export const ADVANTAGE_TIERS = ['none', 'some', 'strong']
+
+// Discovery lowercases full_name while the catalog preserves GitHub's casing
+// ("qq1ng/rezzOrder"). Exact-match keying would let a verdict silently detach
+// from its repo the first time either side changed case.
+export function indexAssessments(doc) {
+  const entries = Object.entries(doc?.assessments ?? {})
+  return new Map(entries.map(([k, v]) => [k.toLowerCase(), v]))
+}
+
+export const assessmentFor = (index, full_name) =>
+  index.get(String(full_name ?? '').toLowerCase()) ?? null
+
+// Non-none on either axis. A benign verdict is still a verdict - it records
+// that the repo was looked at - but it renders as nothing.
+export const isContentious = (a) => {
+  if (!a) return false
+  const conduct = a.conduct ?? 'none'
+  const advantage = a.advantage ?? 'none'
+  // Directive and substitutive are always contentious. Assistive is only contentious if advantage fires.
+  if (conduct === 'directive' || conduct === 'substitutive') return true
+  return advantage !== 'none'
+}
+
+// Conduct wins when both axes fire: "directive" is a more specific claim than
+// "advantage", and a badge has room for one word.
+export function badgeLabel(a) {
+  if (!isContentious(a)) return null
+  const conduct = a.conduct ?? 'none'
+  if (conduct === 'directive' || conduct === 'substitutive') return conduct
+  return (a.advantage ?? 'none') !== 'none' ? 'advantage' : null
+}

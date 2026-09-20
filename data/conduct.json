@@ -1,0 +1,13 @@
+{
+  "_comment": "Maintainer's judgment, not ArenaNet's. Two axes: conduct (show info vs prompt action) and advantage (how much edge it confers). Every entry non-none on either axis MUST carry an `evidence` string quoted verbatim from that repo's own catalog description or one of its topics - tests/conduct-data.test.mjs enforces it. Scope: repos carrying the `injection` signal, plus anything added by hand.",
+  "assessments": {
+    "qq1ng/rezzOrder": {
+      "conduct": "directive",
+      "advantage": "some",
+      "rationale": "Reads squad state and tells the player when to act, rather than showing state and leaving the decision to them. The information itself is already on screen; what the addon adds is the instruction.",
+      "evidence": "shows whose turn it is to rez",
+      "policy": "ua-third-party-programs",
+      "assessed_at": "2026-09-20"
+    }
+  }
+}
