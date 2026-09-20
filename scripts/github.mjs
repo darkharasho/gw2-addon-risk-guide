@@ -10,27 +10,41 @@ const headers = (token) => ({
 
 const defaultSleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
-export async function ghRaw(path, { token, sleep = defaultSleep, attempts = 3 } = {}) {
+// A secondary-limit `retry-after` is always short, so it stays clamped. A
+// primary-limit reset can legitimately be up to an hour out; clamping it to
+// 60s just burned every attempt and threw. Waiting for a reset is not a
+// failed attempt, so it does not consume one of `attempts` — it is bounded
+// separately by `rateLimitWaits`.
+const MIN_WAIT = 1000
+const MAX_RETRY_AFTER = 60_000
+const MAX_RESET_WAIT = 15 * 60_000
+
+export async function ghRaw(
+  path,
+  { token, sleep = defaultSleep, attempts = 3, rateLimitWaits = 3, now = () => Date.now() } = {}
+) {
   const url = path.startsWith('http') ? path : API + path
-  for (let i = 0; i < attempts; i++) {
+  let waits = 0
+  for (let i = 0; i < attempts; ) {
     const r = await fetch(url, { headers: headers(token) })
     if (r.status === 404) return { res: r, body: null }
     if (r.ok) return { res: r, body: await r.json() }
     const retryAfter = r.headers.get('retry-after')
     const ratelimitRemaining = r.headers.get('x-ratelimit-remaining')
     const limited = retryAfter || r.status === 429 || (r.status === 403 && ratelimitRemaining === '0')
-    if (limited && i < attempts - 1) {
-      let wait
-      if (retryAfter) {
-        wait = Math.min(Math.max(Number(retryAfter) * 1000, 1000), 60_000)
-      } else {
-        const reset = Number(r.headers.get('x-ratelimit-reset') || 0) * 1000
-        wait = Math.min(Math.max(reset - Date.now(), 1000), 60_000)
-      }
+    if (limited && waits < rateLimitWaits) {
+      waits += 1
+      const wait = retryAfter
+        ? Math.min(Math.max(Number(retryAfter) * 1000, MIN_WAIT), MAX_RETRY_AFTER)
+        : Math.min(
+            Math.max(Number(r.headers.get('x-ratelimit-reset') || 0) * 1000 - now(), MIN_WAIT),
+            MAX_RESET_WAIT
+          )
       await sleep(wait)
       continue
     }
-    if (r.status >= 500 && i < attempts - 1) { await sleep(2000 * (i + 1)); continue }
+    i += 1
+    if (r.status >= 500 && i < attempts) { await sleep(2000 * i); continue }
     throw new Error(`GitHub ${r.status} for ${url}`)
   }
   throw new Error(`GitHub retries exhausted for ${url}`)

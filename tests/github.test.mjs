@@ -49,6 +49,80 @@ describe('ghFetch', () => {
   })
 })
 
+describe('ghRaw rate-limit waiting', () => {
+  const NOW = 1_000_000_000_000
+
+  it('waits until x-ratelimit-reset instead of clamping to 60s', async () => {
+    const sleep = vi.fn().mockResolvedValue(undefined)
+    const reset = String((NOW + 40 * 60_000) / 1000)
+    const f = vi.fn()
+      .mockResolvedValueOnce(res(403, {}, { 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': reset }))
+      .mockResolvedValueOnce(res(200, { ok: true }))
+    vi.stubGlobal('fetch', f)
+    expect(await ghFetch('/x', { token: 't', sleep, now: () => NOW })).toEqual({ ok: true })
+    // 40 minutes out, capped by the 15-minute absolute ceiling.
+    expect(sleep).toHaveBeenCalledWith(15 * 60_000)
+  })
+
+  it('tracks a reset that is inside the ceiling exactly', async () => {
+    const sleep = vi.fn().mockResolvedValue(undefined)
+    const reset = String((NOW + 7 * 60_000) / 1000)
+    const f = vi.fn()
+      .mockResolvedValueOnce(res(403, {}, { 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': reset }))
+      .mockResolvedValueOnce(res(200, { ok: true }))
+    vi.stubGlobal('fetch', f)
+    await ghFetch('/x', { token: 't', sleep, now: () => NOW })
+    expect(sleep).toHaveBeenCalledWith(7 * 60_000)
+  })
+
+  it('keeps the secondary-limit retry-after path clamped to 60s', async () => {
+    const sleep = vi.fn().mockResolvedValue(undefined)
+    const f = vi.fn()
+      .mockResolvedValueOnce(res(429, {}, { 'retry-after': '3600' }))
+      .mockResolvedValueOnce(res(200, { ok: true }))
+    vi.stubGlobal('fetch', f)
+    await ghFetch('/x', { token: 't', sleep, now: () => NOW })
+    expect(sleep).toHaveBeenCalledWith(60_000)
+  })
+
+  it('does not let rate-limit waits consume the retry attempts', async () => {
+    const sleep = vi.fn().mockResolvedValue(undefined)
+    const reset = String((NOW + 60_000) / 1000)
+    const limited = () => res(403, {}, { 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': reset })
+    const f = vi.fn()
+      .mockResolvedValueOnce(limited())
+      .mockResolvedValueOnce(limited())
+      .mockResolvedValueOnce(limited())
+      .mockResolvedValueOnce(res(200, { ok: true }))
+    vi.stubGlobal('fetch', f)
+    // attempts: 1 — three rate-limit waits still leave the single attempt intact.
+    expect(await ghFetch('/x', { token: 't', sleep, now: () => NOW, attempts: 1 }))
+      .toEqual({ ok: true })
+    expect(sleep).toHaveBeenCalledTimes(3)
+  })
+
+  it('bounds how many rate-limit waits it tolerates', async () => {
+    const sleep = vi.fn().mockResolvedValue(undefined)
+    const reset = String((NOW + 60_000) / 1000)
+    const f = vi.fn().mockResolvedValue(
+      res(403, {}, { 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': reset }))
+    vi.stubGlobal('fetch', f)
+    await expect(ghFetch('/x', { token: 't', sleep, now: () => NOW, rateLimitWaits: 2 }))
+      .rejects.toThrow('GitHub 403')
+    expect(sleep).toHaveBeenCalledTimes(2)
+  })
+
+  it('never sleeps less than a second on a stale or missing reset header', async () => {
+    const sleep = vi.fn().mockResolvedValue(undefined)
+    const f = vi.fn()
+      .mockResolvedValueOnce(res(403, {}, { 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '0' }))
+      .mockResolvedValueOnce(res(200, { ok: true }))
+    vi.stubGlobal('fetch', f)
+    await ghFetch('/x', { token: 't', sleep, now: () => NOW })
+    expect(sleep).toHaveBeenCalledWith(1000)
+  })
+})
+
 describe('ghPaginate', () => {
   it('follows rel=next and concatenates pages', async () => {
     const f = vi.fn()
