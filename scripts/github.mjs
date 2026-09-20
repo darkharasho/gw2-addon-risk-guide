@@ -16,10 +16,17 @@ export async function ghRaw(path, { token, sleep = defaultSleep, attempts = 3 } 
     const r = await fetch(url, { headers: headers(token) })
     if (r.status === 404) return { res: r, body: null }
     if (r.ok) return { res: r, body: await r.json() }
-    const limited = r.status === 403 || r.status === 429
+    const retryAfter = r.headers.get('retry-after')
+    const ratelimitRemaining = r.headers.get('x-ratelimit-remaining')
+    const limited = retryAfter || r.status === 429 || (r.status === 403 && ratelimitRemaining === '0')
     if (limited && i < attempts - 1) {
-      const reset = Number(r.headers.get('x-ratelimit-reset') || 0) * 1000
-      const wait = Math.min(Math.max(reset - Date.now(), 1000), 60_000)
+      let wait
+      if (retryAfter) {
+        wait = Math.min(Math.max(Number(retryAfter) * 1000, 1000), 60_000)
+      } else {
+        const reset = Number(r.headers.get('x-ratelimit-reset') || 0) * 1000
+        wait = Math.min(Math.max(reset - Date.now(), 1000), 60_000)
+      }
       await sleep(wait)
       continue
     }

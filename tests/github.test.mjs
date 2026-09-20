@@ -21,13 +21,31 @@ describe('ghFetch', () => {
     expect(await ghFetch('/repos/a/b', { token: 't' })).toBeNull()
   })
 
-  it('retries once after a rate-limit response', async () => {
+  it('retries once after a 403 with x-ratelimit-remaining: 0', async () => {
     const f = vi.fn()
       .mockResolvedValueOnce(res(403, {}, { 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '0' }))
       .mockResolvedValueOnce(res(200, { ok: true }))
     vi.stubGlobal('fetch', f)
     expect(await ghFetch('/x', { token: 't', sleep: async () => {} })).toEqual({ ok: true })
     expect(f).toHaveBeenCalledTimes(2)
+  })
+
+  it('throws immediately on plain 403 without rate-limit headers', async () => {
+    const f = vi.fn().mockResolvedValue(res(403, {}))
+    vi.stubGlobal('fetch', f)
+    await expect(ghFetch('/x', { token: 't' })).rejects.toThrow('GitHub 403')
+    expect(f).toHaveBeenCalledTimes(1)
+  })
+
+  it('retries on 429 with retry-after and waits the specified time', async () => {
+    const sleep = vi.fn().mockResolvedValue(undefined)
+    const f = vi.fn()
+      .mockResolvedValueOnce(res(429, {}, { 'retry-after': '2' }))
+      .mockResolvedValueOnce(res(200, { ok: true }))
+    vi.stubGlobal('fetch', f)
+    expect(await ghFetch('/x', { token: 't', sleep })).toEqual({ ok: true })
+    expect(f).toHaveBeenCalledTimes(2)
+    expect(sleep).toHaveBeenCalledWith(2000)
   })
 })
 
