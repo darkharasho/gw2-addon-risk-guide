@@ -84,7 +84,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "some",
+        "rationale": "A client-side minimap built on arcdps draws positional information into the client. The description is too thin to support a stronger claim than that, so the grade stops at some - the repository name suggests more, but a name is not evidence.",
+        "evidence": "ArcDPS addon mini-map",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "Emisan01/Gw2Purgator",
@@ -153,7 +160,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "none",
+        "advantage": "none",
+        "rationale": "Startup diagnostics and shader cache cleanup act on the installation, not on play. The injection and memory signals are about how it works, not what it is for.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "michael-stubbs/GW2-UnitFrames",
@@ -380,7 +393,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "strong",
+        "rationale": "Shows rather than instructs, so conduct stays assistive - but ESP draws player positions the client deliberately occludes, and a gear inspector reads builds the game does not expose. This is the axis-independence case: it issues no order and still confers a decisive edge.",
+        "evidence": "ESP and gear inspector",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "bruceli0305/game-macro",
@@ -795,7 +815,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "substitutive",
+        "advantage": "some",
+        "rationale": "Macro tools execute input sequences on the player's behalf, which is acting rather than informing. The quantitative-analysis half would be assistive on its own; the macro half is what sets the tier.",
+        "evidence": "Quantitative Analysis Platform and Macro Tools",
+        "policy": "ua-automation",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "256shadesofgrey/gw2-linux-music-tools",
@@ -893,7 +920,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "substitutive",
+        "advantage": "strong",
+        "rationale": "A trainer removes the constraints play is made of. Invulnerability, movement speed and cooldowns are not information the player acts on - they are the mechanics the encounter consists of, suspended.",
+        "evidence": "god mode, infinite health, unlimited gold, teleport, speed hack, and instant skill cooldown",
+        "policy": "ua-modify-client",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "BeDiZoon/GW2-AIO",
@@ -1020,7 +1054,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "substitutive",
+        "advantage": "strong",
+        "rationale": "Advertises itself on competitive edge rather than on any function, and its own topic list names bots, ESP, noclip, radar, speedhack and teleport. Nothing here assists a player's own play; it substitutes for it.",
+        "evidence": "give you an edge over your competitors",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "Coredelprotect/guild-wars-2-trainer",
@@ -1069,7 +1110,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "substitutive",
+        "advantage": "strong",
+        "rationale": "Same class as any other trainer: the listed features suspend the mechanics rather than inform the player about them. The educational-purposes disclaimer does not change what the described software does.",
+        "evidence": "god mode, unlimited money, cooldown hacks",
+        "policy": "ua-modify-client",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "hazratali-uydevelopers/Grammarly-support-overlay-for-guild-wars-2",
@@ -1421,7 +1469,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "some",
+        "rationale": "Carries the kx-vision name but claims only a real-time data overlay in its own words. Graded on what this description actually says rather than on what the upstream project does.",
+        "evidence": "enhances gameplay with real-time data",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "iGoodie/ArcDPS_Updater_DX11",
@@ -1897,7 +1952,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "Infrastructure rather than a tool a player reads: it republishes the game's own alerts as Nexus events for other addons to consume. What a consumer does with them is that addon's verdict, not this one's.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "kerismith143/GSiege",
@@ -2638,7 +2699,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "none",
+        "advantage": "none",
+        "rationale": "Downloads and renames a DLL so arcdps and ReShade can coexist. It is installer plumbing and makes no claim on gameplay.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "darkharasho/arcdps-axipulse",
@@ -2874,7 +2941,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "Totals the loot and gold a session produced. Accounting after the fact, with no bearing on a decision in play.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "faker-ino/GW2EventCalendar",
@@ -2992,7 +3065,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "some",
+        "rationale": "Recoloring boons and auras amplifies perception: it makes effects easier to tell apart than the unmodified client presents them. No instruction is issued, so conduct stays assistive.",
+        "evidence": "Boon/Aura/Buff Recoloring",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "FrostyInk/Oculus-Release",
@@ -3169,7 +3249,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "Meta and boss event timers run on a fixed public schedule that is documented on the wiki and visible in-game. Presenting it more conveniently is not an information advantage.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "FScaley/GW2-TP-Assistant",
@@ -3228,7 +3314,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "directive",
+        "advantage": "none",
+        "rationale": "Describes itself as decision support for flipping and crafting, which is advising an action rather than reporting a state. Trading post data is public, so no advantage attaches.",
+        "evidence": "flipping + crafting karar destek araci",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "gw2scratch/arcdps-clears",
@@ -5489,7 +5582,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "A session tracker summarises what a play session yielded. Its own description claims nothing beyond being a Nexus addon.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "Areos-Hotah/d3d9_arcdps_sct.dll-hotfix-2",
@@ -6028,7 +6127,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "directive",
+        "advantage": "none",
+        "rationale": "Alerts prompt an action rather than presenting state for the player to read. The underlying trading post prices are public through the official API, so no information advantage arises.",
+        "evidence": "loot and price alerts inside the game",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "Girbilcannon/PewpewsDecoTools",
@@ -6575,7 +6681,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "Prompts, but not about game state: character birthdays are an account date, and claiming a gift involves no timing decision with a better or worse answer.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "Linkaaaaa/GW2CombatTimer",
@@ -6624,7 +6736,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "Displays time spent in combat, which is a readout of something the player just did rather than information about what to do next.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "m21248074/GW2-ArcDPS-TChineseUI",
@@ -6839,7 +6957,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "directive",
+        "advantage": "none",
+        "rationale": "Reads buff state and prompts the player to act on it rather than displaying it and leaving the call to them. Food and utility buffs are available to everyone, so the prompt confers no edge - this is the directive-without-advantage quadrant.",
+        "evidence": "Gw2 buff reminder addon",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "mutinylaboratories/arcdps-boon-magnifier",
@@ -6990,7 +7115,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "none",
+        "advantage": "none",
+        "rationale": "Launches and cleans up companion processes around the game. It never touches gameplay state.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "qq1ng/rezzOrder",
@@ -8026,7 +8157,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "Named a reminder, but by its own description it tracks buff food and utility items - showing state, not prompting an action. Assessed on the description rather than the name.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "Anen/GW2MacOverlay",
@@ -9044,7 +9181,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "some",
+        "rationale": "Encounter timers and pathing render information the client does not present natively. Markers and pathing are long-tolerated in practice, which is why this grades as some rather than strong.",
+        "evidence": "Pathing, encounter timers and markers",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "Zerthox/gw2-buddy",
@@ -12349,7 +12493,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "directive",
+        "advantage": "none",
+        "rationale": "Threshold alerts prompt the player to act at a chosen moment. It runs outside the client against public trading post data, so the conduct call carries no advantage with it.",
+        "evidence": "send an alert if the price is below/above set threshold",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "telekineticyeti/gw2-api-graphql-wrapper",
@@ -13336,7 +13487,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "A speedrunning timer measures elapsed time after the fact. It reports nothing about game state and prompts nothing.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "Crigges/GW2PercentualHP",
@@ -13428,7 +13585,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "ReShade presets are the class where perception advantage usually lives, but this one's stated purpose is the opposite: excluding the game UI from effects. Nothing in its own words claims added clarity.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "darkharasho/axiroster",
@@ -16545,7 +16708,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "directive",
+        "advantage": "none",
+        "rationale": "A reminder at the logout dialog tells the player to do something before they stop playing. Gathering tool state is already visible in the inventory; what the module adds is the prompt.",
+        "evidence": "shows a reminder in the Logout Dialog",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "tdh1994/GW2api-project",
@@ -16807,7 +16977,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "some",
+        "rationale": "Surfaces encounter mechanic timing as a countdown the game does not display. It shows state and leaves the decision to the player, but the state itself is not otherwise available.",
+        "evidence": "A mechanics timer overlay",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "tribalmonkey1/GW2-Wealth-Tracker",
@@ -19359,7 +19536,14 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "directive",
+        "advantage": "none",
+        "rationale": "The Blish HUD build of the same tool, assessed on the same terms: alerting prompts an action, and the prices it alerts on are public through the official API.",
+        "evidence": "loot and price alerts over the game",
+        "policy": "ua-third-party-programs",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "Freyavf/arcdps_top_stats_parser",
@@ -23395,7 +23579,13 @@
         }
       ],
       "override": null,
-      "assessment": null
+      "assessment": {
+        "conduct": "assistive",
+        "advantage": "none",
+        "rationale": "The auto-attack in the name is the game's own attack chain, not automation - this is a Reffect display pack showing where in that chain the player is.",
+        "policy": "support-own-risk",
+        "assessed_at": "2026-09-20"
+      }
     },
     {
       "full_name": "stormalize/totem",
