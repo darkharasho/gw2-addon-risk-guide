@@ -93,3 +93,47 @@ describe('sortRepos', () => {
     expect(repos.map((r) => r.full_name)).toEqual(before)
   })
 })
+
+describe('the conduct filter', () => {
+  // Its own fixture: the assessment axis is orthogonal to band, signals and
+  // maintenance, and folding these into the shared list would silently move
+  // every other suite's expected counts.
+  const assessed = indexRepos([
+    repo('x/rezzish', { assessment: { conduct: 'directive', advantage: 'some' } }),
+    repo('x/trainer', { band: 'high', assessment: { conduct: 'substitutive', advantage: 'strong' } }),
+    repo('x/meter', { assessment: { conduct: 'assistive', advantage: 'none' } }),
+    repo('x/unassessed'),
+  ])
+  const names = (opts) => filterRepos(assessed, opts).map((r) => r.full_name)
+
+  it('ignores repos that carry no assessment at all', () => {
+    // Most of the catalog is unassessed. An unassessed repo is not the same
+    // claim as one judged to have no bearing on play, so it must never answer
+    // a conduct filter.
+    expect(names({ conduct: ['none'] })).toEqual([])
+  })
+
+  it('selects a single tier', () => {
+    expect(names({ conduct: ['directive'] })).toEqual(['x/rezzish'])
+  })
+
+  it('ORs the selected tiers, the way the band pills do', () => {
+    expect(names({ conduct: ['directive', 'substitutive'] }))
+      .toEqual(['x/rezzish', 'x/trainer'])
+  })
+
+  it('selects a benign tier, which is the only way to reach those verdicts', () => {
+    // An assistive/none verdict renders no badge, so the filter is the only
+    // surface on which a benign judgment is visible at all.
+    expect(names({ conduct: ['assistive'] })).toEqual(['x/meter'])
+  })
+
+  it('ANDs with the other filters rather than replacing them', () => {
+    expect(names({ conduct: ['directive', 'substitutive'], bands: ['high'] }))
+      .toEqual(['x/trainer'])
+  })
+
+  it('is inert when nothing is selected', () => {
+    expect(names({ conduct: [] }).length).toBe(4)
+  })
+})
