@@ -42,7 +42,7 @@ const text = (f) =>
 
 const hit = (id, ev) => ({ ...byId[id], evidence: ev })
 
-export function detect(facts, now = new Date()) {
+export function detect(facts, now) {
   const body = text(facts)
   const out = []
   const fired = new Set()

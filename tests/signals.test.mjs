@@ -54,4 +54,13 @@ describe('detect', () => {
       expect(s.evidence.length).toBeGreaterThan(0)
     }
   })
+
+  it('tolerates a missing pushed_at without firing staleness or maintained signals', () => {
+    const result = detect({ ...base, pushed_at: undefined }, NOW)
+    expect(Array.isArray(result)).toBe(true)
+    const found = result.map((s) => s.id)
+    expect(found).not.toContain('stale_12m')
+    expect(found).not.toContain('stale_24m')
+    expect(found).not.toContain('popular_maintained')
+  })
 })
