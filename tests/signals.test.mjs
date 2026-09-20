@@ -91,6 +91,38 @@ describe('detect', () => {
       .not.toContain('cheat')
   })
 
+  it('does not fire cheat on innocent neighbours of an ambiguous name token', () => {
+    // The name path re-admitted the bare words PATTERNS.cheat carefully
+    // excludes. At 45 points each of these landed in `elevated`.
+    for (const full_name of [
+      'tom/gw2-cheat-sheet',
+      'x/gw2-anti-cheat-notes',
+      'org/gw2-hack-day',
+      'sec/exploit-db-mirror',
+      'wiki/gw2-esp',
+      'someone/gw2-esp-translation',
+    ]) expect(ids({ full_name })).not.toContain('cheat')
+  })
+
+  it('still fires cheat on an undefused name token', () => {
+    expect(ids({ full_name: 'x/gw2-cheat' })).toContain('cheat')
+    expect(ids({ full_name: 'x/gw2-aimbot' })).toContain('cheat')
+    expect(ids({ full_name: 'kxtools/kx-trainer-free' })).toContain('cheat')
+    // A real ESP overlay that spells its own name in lowercase.
+    expect(ids({ full_name: 'x4c1/arcdps_esp', description: 'ArcDPS addon mini-map' }))
+      .toContain('cheat')
+  })
+
+  it('fires automation on a farm bot that merely advertises a Discord', () => {
+    expect(ids({ description: 'gw2 farming bot', topics: ['discord'] })).toContain('automation')
+    expect(ids({ readme: 'A gathering bot. Join our Discord for support.' }))
+      .toContain('automation')
+  })
+
+  it('does not fire automation when the platform is attached to the match', () => {
+    expect(ids({ readme: 'discord-botting utilities' })).not.toContain('automation')
+  })
+
   it('fires injection on a d3d11 proxy dll', () => {
     expect(ids({ readme: 'drop d3d11.dll next to the exe', root_files: ['d3d11.dll'] }))
       .toContain('injection')
@@ -107,16 +139,11 @@ describe('detect', () => {
     expect(ids({ readme: 'api.guildwars2.com plus a d3d11 hook' })).not.toContain('api_only')
   })
 
-  it('withholds api_only from shipped binaries and cheats, but not by language', () => {
+  it('withholds api_only from shipped binaries and cheats', () => {
     const readme = 'Links api.guildwars2.com for item names'
     expect(ids({ readme, release_assets: ['tool.exe'] })).not.toContain('api_only')
     expect(ids({ readme, root_files: ['payload.dll'] })).not.toContain('api_only')
     expect(ids({ readme, full_name: 'x/gw2-trainer' })).not.toContain('api_only')
-    // Language is not evidence of touching the client: the official-API
-    // client libraries are themselves written in C#.
-    expect(ids({ readme, languages: ['C#'] })).toContain('api_only')
-    expect(ids({ readme, languages: ['C++'] })).toContain('api_only')
-    expect(ids({ readme, languages: ['Python'] })).toContain('api_only')
   })
 
   it('grades staleness into one bucket only', () => {
@@ -166,27 +193,26 @@ describe('detect', () => {
   })
 })
 
-describe('api_only gating is not language-based', () => {
+describe('api_only gating turns on shipped binaries, not language', () => {
   const NOW = new Date('2026-09-19T00:00:00Z')
   const ids = (f) => detect({ pushed_at: NOW.toISOString(), stars: 50, license: 'MIT', ...f }, NOW)
     .map((s) => s.id)
 
+  // gw2sdk, Gw2Sharp and gw2cli are pure official-API client libraries that
+  // happen to be C#. Both repos below are C# and mention the same API; only
+  // the one shipping a Windows binary loses the mitigator.
+  const csharp = {
+    language: 'C#',
+    languages: ['C#'],
+    readme: 'Fetches data from https://api.guildwars2.com/v2/items.',
+  }
+
   it('keeps the mitigator for a C# official-API client library', () => {
-    expect(ids({
-      full_name: 'sliekens/gw2sdk',
-      description: 'A .NET client for the official Guild Wars 2 API.',
-      readme: 'Fetches data from https://api.guildwars2.com/v2/items.',
-      language: 'C#',
-      languages: ['C#'],
-    })).toContain('api_only')
+    expect(ids({ ...csharp, full_name: 'sliekens/gw2sdk' })).toContain('api_only')
   })
 
-  it('withholds the mitigator from a repo shipping a Windows binary', () => {
-    expect(ids({
-      full_name: 'someone/gw2-overlay',
-      description: 'Overlay built on api.guildwars2.com data.',
-      readme: 'Uses api.guildwars2.com.',
-      release_assets: ['gw2overlay.exe'],
-    })).not.toContain('api_only')
+  it('withholds it from an otherwise identical repo shipping a Windows binary', () => {
+    expect(ids({ ...csharp, full_name: 'someone/gw2-overlay', release_assets: ['gw2overlay.exe'] }))
+      .not.toContain('api_only')
   })
 })

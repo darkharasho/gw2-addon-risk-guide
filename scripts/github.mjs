@@ -34,8 +34,12 @@ export async function ghRaw(
     const limited = retryAfter || r.status === 429 || (r.status === 403 && ratelimitRemaining === '0')
     if (limited && waits < rateLimitWaits) {
       waits += 1
-      const wait = retryAfter
-        ? Math.min(Math.max(Number(retryAfter) * 1000, MIN_WAIT), MAX_RETRY_AFTER)
+      // `retry-after` may legally be an HTTP-date rather than seconds; that
+      // yields NaN, and sleep(NaN) returns immediately, burning a wait
+      // without waiting. Fall through to the reset header in that case.
+      const retryAfterMs = Number(retryAfter) * 1000
+      const wait = Number.isFinite(retryAfterMs) && retryAfterMs > 0
+        ? Math.min(Math.max(retryAfterMs, MIN_WAIT), MAX_RETRY_AFTER)
         : Math.min(
             Math.max(Number(r.headers.get('x-ratelimit-reset') || 0) * 1000 - now(), MIN_WAIT),
             MAX_RESET_WAIT

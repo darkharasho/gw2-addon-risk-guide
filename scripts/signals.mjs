@@ -64,15 +64,45 @@ const CASE_SENSITIVE_PATTERNS = {
 // (kxtools/kx-maps ships route files "for use with KX Trainer Pro"); naming
 // yourself one is the actual signal.
 const CHEAT_NAME_TOKENS = new Set([
-  'trainer', 'trainers', 'aimbot', 'wallhack', 'wallhacks', 'speedhack', 'speedhacks',
-  'godmode', 'cheat', 'cheats', 'cheater', 'esp', 'hack', 'hacks', 'hacktool',
-  'exploit', 'exploits', 'multibox',
+  'trainer', 'trainers', 'aimbot', 'aimbots', 'wallhack', 'wallhacks',
+  'speedhack', 'speedhacks', 'godmode', 'cheats', 'cheater', 'cheatengine',
+  'hacktool', 'multibox', 'multiboxing',
 ])
 
-const cheatName = (fullName) =>
-  String(fullName ?? '').toLowerCase().split(/[^a-z0-9]+/).find((t) => CHEAT_NAME_TOKENS.has(t)) ?? null
+// These read as cheating on their own but have common innocent neighbours:
+// "cheat sheet", "anti-cheat", "hack day", "exploit-db", "gw2-esp" as a
+// Spanish localization. They fire only when no other token in the name
+// defuses them. The test is any-token rather than adjacent-token because the
+// defusing word is often the owner or a trailing qualifier rather than a
+// neighbour: `wiki/gw2-esp`, `sec/exploit-db-mirror`.
+//
+// `esp` is matched here case-INSENSITIVELY even though prose requires capital
+// ESP, because the token test is exact: "espanol", "esports" and "respawn" are
+// different tokens and never match it. Dropping it entirely would lose
+// x4c1/arcdps_esp, a real ESP overlay that spells its own name lowercase.
+const AMBIGUOUS_NAME_TOKENS = new Set(['cheat', 'hack', 'exploit', 'exploits', 'esp'])
+const DEFUSING_TOKENS = new Set([
+  'anti', 'no', 'not', 'detect', 'detection', 'mitigation', 'report', 'reports',
+  'sheet', 'sheets', 'cheatsheet', 'day', 'days', 'night', 'week', 'athon',
+  'club', 'db', 'news', 'writeup', 'writeups', 'wiki', 'ban', 'bans',
+  // Locale and translation tokens, for `esp`.
+  'es', 'lang', 'language', 'locale', 'i18n', 'l10n', 'translation', 'translations', 'docs',
+])
 
-const CHAT_PLATFORM = /\b(discord|twitch|telegram|slack|matrix|irc)\b/i
+const cheatName = (fullName) => {
+  const tokens = String(fullName ?? '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean)
+  for (let i = 0; i < tokens.length; i++) {
+    const t = tokens[i]
+    if (CHEAT_NAME_TOKENS.has(t)) return t
+    if (!AMBIGUOUS_NAME_TOKENS.has(t)) continue
+    if (tokens.some((n, j) => j !== i && DEFUSING_TOKENS.has(n))) continue
+    return t
+  }
+  return null
+}
+
+const CHAT_PLATFORM_BEFORE = /\b(discord|twitch|telegram|slack|matrix|irc)[ \t\-_/]*$/i
+const CHAT_PLATFORM_AFTER = /^[ \t\-_/]*(discord|twitch|telegram|slack|matrix|irc)\b/i
 const CREDITS = /\b(acknowledge?ments?|credits?|thanks to|thank you to|inspired by|see also)\b/i
 
 // How much text on either side of a match a guard gets to look at.
@@ -86,8 +116,12 @@ const GUARDS = {
   // An out-of-game Discord/Twitch bot is not gameplay automation, and an
   // AutoHotkey tool merely thanked in an ACKNOWLEDGEMENTS section is not
   // this repo's own behaviour.
+  // The chat platform must be ATTACHED to the match ("discord botting"), not
+  // merely nearby: a genuine farm bot routinely advertises a Discord, and a
+  // description as short as "gw2 farming bot" with a `discord` topic puts the
+  // two within any proximity window.
   automation: (before, after) =>
-    CHAT_PLATFORM.test(before.slice(-AFTER) + after) || CREDITS.test(before),
+    CHAT_PLATFORM_BEFORE.test(before) || CHAT_PLATFORM_AFTER.test(after) || CREDITS.test(before),
 }
 
 const globalRe = (re) => new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags + 'g')
@@ -117,7 +151,7 @@ const matchFor = (id, body) =>
   (CASE_SENSITIVE_PATTERNS[id] ? firstMatch(CASE_SENSITIVE_PATTERNS[id], body, GUARDS[id]) : null)
 
 const text = (f) =>
-  [f.description, f.readme, (f.topics ?? []).join(' '), f.full_name].filter(Boolean).join('\n')
+  [f.description, f.readme, (f.topics ?? []).join(', '), f.full_name].filter(Boolean).join('\n')
 
 const hit = (id, ev) => ({ ...byId[id], evidence: ev })
 
@@ -136,10 +170,10 @@ export function detect(facts, now) {
     }
   }
   const dlls = [...(facts.root_files ?? []), ...(facts.release_assets ?? [])]
-    .filter((n) => n.endsWith('.dll'))
+    .filter((n) => /\.dll$/i.test(String(n)))
   if (dlls.length && !fired.has('injection')) push('injection', [`ships ${dlls[0]}`])
 
-  const bins = (facts.release_assets ?? []).filter((n) => /\.(dll|exe)$/.test(n))
+  const bins = (facts.release_assets ?? []).filter((n) => /\.(dll|exe)$/i.test(String(n)))
   if (bins.length) push('unsigned_binaries', [`release asset ${bins[0]}`])
 
   if (facts.archived) push('archived', ['repository is archived on GitHub'])
