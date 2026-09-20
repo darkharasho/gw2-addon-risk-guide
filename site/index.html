@@ -43,10 +43,13 @@
       <input id="q" type="search" placeholder="Search by name, description, or topic&hellip;">
     </div>
     <div class="pills" id="bands" role="group" aria-label="Filter by risk band"></div>
-    <div class="pills" id="conduct" role="group" aria-label="Filter by conduct assessment"></div>
-    <div class="sigwrap">
-      <button type="button" class="chipbtn" id="sigbtn" aria-expanded="false" aria-controls="sigpop">Signals</button>
-      <div class="sigpop" id="sigpop" role="group" aria-label="Filter by signal" hidden></div>
+    <div class="menu">
+      <button type="button" class="menubtn v-btn" id="conductbtn" aria-expanded="false" aria-controls="conduct">Conduct</button>
+      <div class="menupop v-pop" id="conduct" role="group" aria-label="Filter by conduct assessment" hidden></div>
+    </div>
+    <div class="menu">
+      <button type="button" class="menubtn" id="sigbtn" aria-expanded="false" aria-controls="sigpop">Signals</button>
+      <div class="menupop" id="sigpop" role="group" aria-label="Filter by signal" hidden></div>
     </div>
     <label class="sr-only" for="maintenance">Maintenance</label>
     <select class="sel" id="maintenance">

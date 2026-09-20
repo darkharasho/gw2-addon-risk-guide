@@ -158,7 +158,7 @@ a { color: inherit; }
 }
 
 .pills { display: flex; gap: 4px; flex-wrap: wrap; }
-.pill, .chipbtn, .sel {
+.pill, .menubtn, .sel {
   padding: 10px 9px; border-radius: 8px; border: 3px solid var(--ink-line);
   background: var(--bg); font: 800 13px/1 var(--sans); color: var(--dim);
   cursor: pointer; display: flex; align-items: center; gap: 6px;
@@ -166,8 +166,8 @@ a { color: inherit; }
 }
 /* Native select chrome adds width the other controls do not carry. */
 .sel { font-size: 12.5px; }
-.chipbtn { border-style: dashed; background: transparent; }
-.pill:hover, .chipbtn:hover { color: var(--ink); box-shadow: 3px 3px 0 var(--ink-line); transform: translate(-2px, -2px); }
+.menubtn { border-style: dashed; background: transparent; }
+.pill:hover, .menubtn:hover, .sel:hover { color: var(--ink); box-shadow: 3px 3px 0 var(--ink-line); transform: translate(-2px, -2px); }
 /* A pressed band pill fills with its own colour - the filter reads as the
    thing it filters to, rather than as a generic selected state. */
 .pill[aria-pressed="true"] { color: var(--ink-line); box-shadow: 3px 3px 0 var(--ink-line); }
@@ -176,26 +176,42 @@ a { color: inherit; }
 .pill[aria-pressed="true"].b-elevated { background: var(--band-elevated); }
 .pill[aria-pressed="true"].b-high { background: var(--band-high); }
 
-.chipbtn .n {
+.menubtn .n {
   background: var(--gold); color: var(--ink-line); border-radius: 99px;
   padding: 1px 7px; font-size: 11px; font-weight: 900; margin-left: 6px;
 }
+/* The conduct menu carries the assessment axis, so its count badge is drawn
+   in the one cool ink rather than in gold - the same ink the badge on the
+   card uses, and never one a risk band could claim. */
+.menubtn.v-btn .n { background: var(--sky); }
+.menubtn[aria-expanded="true"] { border-style: solid; color: var(--ink); }
 
-/* Signal filter: a disclosure, not 18 permanent checkboxes. */
-.sigwrap { position: relative; }
-.sigpop {
+/* A filter menu: a disclosure, not a row of permanent controls. Two of these
+   exist (signals, conduct) and only one is ever open. */
+.menu { position: relative; }
+.menupop {
   position: absolute; top: calc(100% + 9px); left: 0; z-index: 30; width: 310px;
   max-height: 340px; overflow-y: auto; padding: 8px;
   background: var(--panel-2); border: 4px solid var(--ink-line);
   border-radius: 9px; box-shadow: 6px 6px 0 var(--ink-line);
 }
-.sigpop[hidden] { display: none; }
-.sigpop label {
+.menupop[hidden] { display: none; }
+.menupop label {
   display: flex; gap: 9px; align-items: flex-start; padding: 7px 8px;
   border-radius: 6px; font-size: 13px; font-weight: 600; color: var(--dim); cursor: pointer;
 }
-.sigpop label:hover { background: var(--bg); color: var(--ink); }
-.sigpop input { margin: 3px 0 0; accent-color: var(--gold); }
+.menupop label:hover { background: var(--bg); color: var(--ink); }
+.menupop input { margin: 3px 0 0; accent-color: var(--gold); }
+/* Conduct rows: tier name on the left behind a sky dot, count hard right, so
+   the ladder reads as a ladder and the distribution is still scannable. */
+.menupop.v-pop { width: 260px; }
+.menupop.v-pop input { accent-color: var(--sky); }
+.menupop.v-pop label { align-items: center; text-transform: uppercase; font-weight: 800; letter-spacing: .02em; }
+.menupop.v-pop .dot {
+  width: 9px; height: 9px; flex: none; transform: rotate(45deg);
+  background: var(--sky); border: 3px solid var(--ink-line);
+}
+.menupop.v-pop b { margin-left: auto; color: var(--ink); font-variant-numeric: tabular-nums; }
 
 .resline { display: flex; align-items: baseline; gap: 10px; margin: 20px 2px; font: 600 13px/1.4 var(--sans); color: var(--dim); }
 .resline b { color: var(--ink); font-weight: 900; font-size: 15px; }
@@ -425,14 +441,41 @@ a { color: inherit; }
   .notice-in, .bar, .card { box-shadow: 4px 4px 0 var(--ink-line); }
 }
 
-/* Conduct filter pills. The assessment axis is the site's one cool ink, so
-   these are outlined in --sky rather than in a band colour: pressed, a
-   conduct pill fills with the same ink the badge on the card is drawn in, and
-   it can never be mistaken for a fifth risk band. */
-.pill.v-pill { border-color: var(--sky); color: var(--sky); }
-.pill.v-pill b { font-weight: 800; opacity: .7; }
-.pill.v-pill:hover { color: var(--sky); box-shadow: 3px 3px 0 var(--sky); }
-.pill.v-pill[aria-pressed="true"] {
-  background: var(--sky); color: var(--ink-line); box-shadow: 3px 3px 0 var(--ink-line);
+/* ---------- dropdowns ---------- */
+/* The closed box is ours everywhere: strip the native control and draw the
+   caret, so a select sits in the toolbar as just another outlined chip. */
+.sel {
+  appearance: none; padding-right: 30px; background-image:
+    linear-gradient(45deg, transparent 50%, var(--gold) 50%),
+    linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+  background-position: calc(100% - 16px) calc(50% + 2px), calc(100% - 11px) calc(50% + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
 }
-.pill.v-pill[aria-pressed="true"] b { opacity: .8; }
+/* The popup is OS chrome until the browser lets us style it. Where it does
+   (Chromium's base-select), the list is drawn in the same outline plus hard
+   offset block as .menupop, so both dropdown kinds read as one family; where
+   it does not, the closed box above is still ours and the list is native. */
+@supports (appearance: base-select) {
+  /* base-select draws its own ::picker-icon, so the hand-drawn caret above
+     would be a second arrow. */
+  .sel, .sel::picker(select) { appearance: base-select; }
+  .sel { background-image: none; padding-right: 9px; }
+  .sel::picker-icon { color: var(--gold); transition: none; }
+  .sel::picker(select) {
+    margin-top: 9px; padding: 6px; border: 4px solid var(--ink-line);
+    border-radius: 9px; background: var(--panel-2);
+    box-shadow: 6px 6px 0 var(--ink-line);
+  }
+  .sel option {
+    display: flex; align-items: center; gap: 9px; padding: 8px 9px;
+    border-radius: 6px; background: transparent; color: var(--dim);
+    font: 800 12.5px/1 var(--sans); text-transform: uppercase; letter-spacing: .02em;
+  }
+  .sel option:hover, .sel option:focus { background: var(--bg); color: var(--ink); }
+  /* The page-wide focus ring sits 2px outside its element; inside a picker
+     that is 2px into the neighbouring row, so pull it back in. */
+  .sel option:focus-visible { outline-offset: -3px; }
+  .sel option:checked { color: var(--ink); }
+  .sel option::checkmark { content: "\2713"; color: var(--gold); font-weight: 900; }
+}
