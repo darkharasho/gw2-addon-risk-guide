@@ -1,0 +1,11 @@
+{
+  "name": "gw2-addon-risk-guide",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "vitest run",
+    "catalog": "node scripts/build-catalog.mjs"
+  },
+  "devDependencies": { "vitest": "^2.1.0" }
+}
