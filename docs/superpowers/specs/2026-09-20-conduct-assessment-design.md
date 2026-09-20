@@ -74,12 +74,14 @@ tracker is the mirror: purely `assistive`, but decisive, because the client
 never displays that information. A single ladder would have to lie about one
 of them.
 
-`directive` is where the line sits. Anything non-`none` on either axis is
-contentious.
+`directive` is where the line sits. `directive` and `substitutive` are always
+contentious; `assistive` and `none` are contentious only when `advantage` is
+non-`none`. That keeps `assistive` + `advantage: none` — a DPS meter — benign
+and unrendered, which is the deliberately ArenaNet-tolerated case.
 
 ### Verdicts must quote the repo's own words
 
-Every entry non-`none` on either axis carries `evidence`: a verbatim string
+Every contentious entry carries `evidence`: a verbatim string
 from that repo's catalog `description` or one of its `topics`.
 
 Rationale: this is published opinion about a named person's project. The
@@ -175,8 +177,8 @@ Vitest runs with `--maxWorkers=2` per the repo's standing limit.
 **Card:** a small outlined badge, visually distinct from the filled band
 chip so it reads as annotation rather than score. Text is `directive` or
 `advantage`, whichever axis fired; when both fire, the more serious. Absent
-for `none`/`none` and for unassessed repos, so the badge's presence is itself
-the signal.
+for benign verdicts (see contentiousness rule above) and for unassessed
+repos, so the badge's presence is itself the signal.
 
 **Drawer:** a block headed *Maintainer's assessment* containing both axes,
 the rationale, the quoted evidence attributed to the repo's own description,

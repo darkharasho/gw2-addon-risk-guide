@@ -227,6 +227,13 @@ describe('assessmentBlock', () => {
     expect(html).not.toContain('<b>z</b>')
     expect(html).toContain('&lt;img')
   })
+
+  it('omits the evidence line rather than printing an empty quote when evidence is missing', () => {
+    const noEvidence = assessed({ ...directive, evidence: undefined })
+    const html = assessmentBlock(noEvidence, policies)
+    expect(html).not.toContain('own description')
+    expect(html).not.toContain('&ldquo;&rdquo;')
+  })
 })
 
 describe('repoCard with an assessment', () => {

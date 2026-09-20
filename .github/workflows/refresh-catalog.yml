@@ -12,7 +12,6 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '22', cache: npm }
       - run: npm ci
-      - run: npm test
       # The workflow GITHUB_TOKEN gets 1,000 REST calls an hour and enrichment
       # costs 5 per repo, so a run may re-read at most ~190 repos. 150 leaves
       # headroom for discovery and retries. Repos beyond the budget keep serving
@@ -51,3 +50,13 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: refresh catalog"
           git pull --rebase
           git push
+      # Runs after the catalog build/commit, not before: a hand-authored
+      # data/conduct.json verdict can go orphaned the moment its repo goes
+      # private or is deleted upstream (tests/conduct-data.test.mjs fails on
+      # that). If npm test ran first, that failure would block npm run
+      # catalog every single week until a human fixed conduct.json, freezing
+      # the scheduled refresh indefinitely. Running the build and commit
+      # first means an orphaned verdict still turns this run red (so the
+      # maintainer notices) but can no longer stop the catalog from
+      # refreshing.
+      - run: npm test
