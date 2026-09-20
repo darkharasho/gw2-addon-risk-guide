@@ -19,4 +19,11 @@ describe('data/policies.json', () => {
     const have = new Set(policies.map((c) => c.id))
     for (const s of SIGNALS) expect(have).toContain(s.policy)
   })
+
+  it('keeps applies_to in sync with the signals mapped to each clause', () => {
+    for (const c of policies) {
+      const expected = SIGNALS.filter((s) => s.policy === c.id).map((s) => s.id)
+      expect([...(c.applies_to ?? [])].sort()).toEqual([...expected].sort())
+    }
+  })
 })

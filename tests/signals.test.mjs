@@ -19,6 +19,76 @@ describe('signal table', () => {
 describe('detect', () => {
   it('fires automation on bot language', () => {
     expect(ids({ readme: 'An auto-farm bot for gw2' })).toContain('automation')
+    expect(ids({ readme: 'A gathering bot that plays for you' })).toContain('automation')
+    expect(ids({ readme: 'multiboxing via AutoHotkey macros' })).toContain('automation')
+  })
+
+  it('does not fire automation for an out-of-game chat bot', () => {
+    // ddc/DiscordBot matched on the repo NAME alone under the old bare `bot`.
+    expect(ids({ full_name: 'ddc/DiscordBot', description: 'A Discord bot for GW2' }))
+      .not.toContain('automation')
+    expect(ids({
+      full_name: 'LoganWal/GW2-DonBot',
+      description: 'Discord bot posting arcdps log summaries',
+    })).not.toContain('automation')
+    expect(ids({ full_name: 'Seres67/arcdps_logs_bot', readme: 'uploads logs to Discord' }))
+      .not.toContain('automation')
+  })
+
+  it('does not fire automation for an offline log parser', () => {
+    expect(ids({
+      full_name: 'baaron4/GW2-Elite-Insights-Parser',
+      description: 'Elite Insights is a log parser for GW2 arcdps logs',
+    })).not.toContain('automation')
+  })
+
+  it('does not fire automation when the only match is in an acknowledgements section', () => {
+    const readme = `GW2Radial is a radial menu for mounts and novelties.\n\n` +
+      `## ACKNOWLEDGEMENTS\n\nThanks to someone for the original AutoHotkey-based menu.`
+    expect(ids({ full_name: 'Friendly0Fire/GW2Radial', readme })).not.toContain('automation')
+  })
+
+  it('still fires automation when a credited match is not the only match', () => {
+    const readme = `An auto-farm script.\n\n## Credits\n\nThanks to someone for AutoHotkey help.`
+    expect(ids({ readme })).toContain('automation')
+  })
+
+  it('fires cheat on self-described trainers, hacks and ESP', () => {
+    expect(ids({
+      full_name: 'Coredelprotect/guild-wars-2-trainer',
+      description: 'Guild Wars 2 trainer with god mode, unlimited money, cooldown hacks, and more.',
+    })).toContain('cheat')
+    expect(ids({
+      full_name: 'PebbleBowyerMotor/guild-wars-2-trainer',
+      description: 'godmode, teleport, speedhack, item spawner, no cooldowns',
+    })).toContain('cheat')
+    expect(ids({ full_name: 'SupportWedge/TyrianScript', description: 'Guild Wars 2 Hack 2026' }))
+      .toContain('cheat')
+    expect(ids({ full_name: 'kxtools/kx-vision', description: 'An open-source ESP and gear inspector addon' }))
+      .toContain('cheat')
+    expect(ids({ full_name: 'kxtools/kx-trainer-free', description: 'Open-source gameplay utility' }))
+      .toContain('cheat')
+  })
+
+  it('does not fire cheat on benign repos', () => {
+    expect(ids({ full_name: 'a/b', description: 'A build editor and template sharing site for GW2' }))
+      .not.toContain('cheat')
+    // "hackedd" is a GitHub username, not the word "hack".
+    expect(ids({ full_name: 'hackedd/gw2api', description: 'Python wrapper for the Guild Wars 2 API' }))
+      .not.toContain('cheat')
+    // Route files that merely name a companion product.
+    expect(ids({
+      full_name: 'kxtools/kx-maps',
+      description: 'Official community repository of Guild Wars 2 custom route files for use with KX Trainer Pro',
+    })).not.toContain('cheat')
+    // anti-cheat discussion is not cheating, and `esp` as a substring is not ESP.
+    expect(ids({ readme: 'This is not a cheat and will not trip ArenaNet anti-cheat.' }))
+      .not.toContain('cheat')
+    expect(ids({ readme: 'Traducido al espanol. Respawn timers for esports events.' }))
+      .not.toContain('cheat')
+    // Security repos legitimately discuss exploiting a vulnerability.
+    expect(ids({ readme: 'A writeup on how to exploit a buffer overflow in libfoo.' }))
+      .not.toContain('cheat')
   })
 
   it('fires injection on a d3d11 proxy dll', () => {
@@ -37,6 +107,16 @@ describe('detect', () => {
     expect(ids({ readme: 'api.guildwars2.com plus a d3d11 hook' })).not.toContain('api_only')
   })
 
+  it('withholds api_only from native code, shipped binaries and cheats', () => {
+    const readme = 'Links api.guildwars2.com for item names'
+    expect(ids({ readme, languages: ['C++'] })).not.toContain('api_only')
+    expect(ids({ readme, languages: ['C#'] })).not.toContain('api_only')
+    expect(ids({ readme, release_assets: ['tool.exe'] })).not.toContain('api_only')
+    expect(ids({ readme, root_files: ['payload.dll'] })).not.toContain('api_only')
+    expect(ids({ readme, full_name: 'x/gw2-trainer' })).not.toContain('api_only')
+    expect(ids({ readme, languages: ['Python'] })).toContain('api_only')
+  })
+
   it('grades staleness into one bucket only', () => {
     expect(ids({ pushed_at: '2023-01-01T00:00:00Z' })).toContain('stale_24m')
     expect(ids({ pushed_at: '2025-03-01T00:00:00Z' })).toContain('stale_12m')
@@ -52,6 +132,25 @@ describe('detect', () => {
   it('records evidence for every detected signal', () => {
     for (const s of detect({ ...base, readme: 'auto-farm bot', archived: true }, NOW)) {
       expect(s.evidence.length).toBeGreaterThan(0)
+    }
+  })
+
+  it('names the matched text in the evidence rather than the regex source', () => {
+    const ev = (facts, id) =>
+      detect({ ...base, ...facts }, NOW).find((s) => s.id === id).evidence[0]
+    expect(ev({ readme: 'built around AutoHotkey macros' }, 'automation'))
+      .toBe('matched "AutoHotkey"')
+    expect(ev({ readme: 'Uses api.guildwars2.com only' }, 'api_only'))
+      .toBe('matched "api.guildwars2.com"')
+    expect(ev({ readme: 'has god mode' }, 'cheat')).toBe('matched "god mode"')
+    for (const s of detect({ ...base, readme: 'a d3d11 hook and a packet sniffer' }, NOW)) {
+      expect(s.evidence[0]).not.toContain('\\b')
+    }
+  })
+
+  it('keeps evidence snippets short', () => {
+    for (const s of detect({ ...base, readme: 'x '.repeat(200) + 'god mode' }, NOW)) {
+      expect(s.evidence[0].length).toBeLessThanOrEqual(80)
     }
   })
 

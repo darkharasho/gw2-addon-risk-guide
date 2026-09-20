@@ -1,7 +1,7 @@
 {
   "clauses": [
     {
-      "applies_to": ["injection", "unsigned_binaries"],
+      "applies_to": ["injection"],
       "id": "ua-third-party-programs",
       "quote": "We do not permit the Use of any third-party software, tools, or programs that interact with the Services that give one player an unintended, unnatural, or unfair advantage over another player. Such prohibited third-party software, tools, or programs include those that alter Game-balance in favor of one player over another, automate actions within the Services, promote unattended gameplay, or have an adverse effect on other users of the Services. Prohibited third-party programs will be determined at our sole discretion.",
       "retrieved": "2026-09-19",
@@ -10,7 +10,7 @@
       "title": "Third-party programs"
     },
     {
-      "applies_to": ["memory", "packet"],
+      "applies_to": ["cheat", "memory", "packet"],
       "id": "ua-modify-client",
       "quote": "Use, obtain, or provide data related to the operation of the Services, including, but not limited to, software that reads areas of computer memory or storage devices; intercepts or otherwise collects data; or redirects, creates, maintains, or emulates the Services.",
       "retrieved": "2026-09-19",
