@@ -15,10 +15,14 @@ export function indexRepos(repos) {
 
 const STALE = new Set(['stale_12m', 'stale_24m', 'archived'])
 
-export function filterRepos(indexed, { query = '', bands = [], signals = [], maintenance = 'any' } = {}) {
+export function filterRepos(indexed, { query = '', bands = [], signals = [], maintenance = 'any', conduct = [] } = {}) {
   const terms = tokenize(query)
   const want = new Set(signals)
   const bandSet = new Set(bands)
+  // Tiers are matched against the verdict only. A repo with no assessment is
+  // unexamined, which is a different claim from one judged to have no bearing
+  // on play - so it never answers a conduct filter, not even for 'none'.
+  const conductSet = new Set(conduct)
   return indexed
     .filter(({ repo, haystack }) => {
       if (!terms.every((t) => haystack.some((h) => h.startsWith(t)))) return false
@@ -28,6 +32,7 @@ export function filterRepos(indexed, { query = '', bands = [], signals = [], mai
       if (maintenance === 'archived' && !repo.archived) return false
       if (maintenance === 'stale' && !(ids.has('stale_12m') || ids.has('stale_24m'))) return false
       if (maintenance === 'active' && [...ids].some((id) => STALE.has(id))) return false
+      if (conductSet.size && !conductSet.has(repo.assessment?.conduct)) return false
       return true
     })
     .map(({ repo }) => repo)

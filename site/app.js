@@ -1,5 +1,6 @@
 import { indexRepos, filterRepos, sortRepos } from './search.js'
 import { repoCard, repoDrawer, escapeHtml } from './render.js'
+import { CONDUCT_TIERS } from './conduct.mjs'
 
 const $ = (id) => document.getElementById(id)
 
@@ -50,6 +51,17 @@ Promise.all([
   $('bands').innerHTML = ordered.map((b) =>
     `<button type="button" class="pill b-${escapeHtml(b)}" data-value="${escapeHtml(b)}" aria-pressed="false">
       <span class="dot" style="background:${colour(b)}"></span>${escapeHtml(b)}</button>`).join('')
+  // Conduct pills are driven by CONDUCT_TIERS rather than by whatever the
+  // data happens to contain, so the order is the ladder's order - benign to
+  // most contentious - and never reshuffles as verdicts are added. A tier
+  // nobody has been judged into is omitted: an always-empty filter is noise.
+  const conductCounts = Object.fromEntries(CONDUCT_TIERS.map((t) =>
+    [t, catalog.repos.filter((r) => r.assessment?.conduct === t).length]))
+  const conductTiers = CONDUCT_TIERS.filter((t) => conductCounts[t] > 0)
+  $('conduct').innerHTML = conductTiers.map((t) =>
+    `<button type="button" class="pill v-pill" data-conduct="${escapeHtml(t)}" aria-pressed="false"
+      >${escapeHtml(t)} <b>${conductCounts[t]}</b></button>`).join('')
+
   $('sigpop').innerHTML = catalog.signal_definitions.map((s) =>
     `<label><input type="checkbox" value="${escapeHtml(s.id)}"> ${escapeHtml(s.label)}</label>`).join('')
 
@@ -69,11 +81,13 @@ Promise.all([
   function render() {
     const bands = pressed($('bands'))
     const signals = checked($('sigpop'))
+    const conduct = [...$('conduct').querySelectorAll('[aria-pressed="true"]')]
+      .map((b) => b.dataset.conduct)
     const matches = sortRepos(filterRepos(indexed, {
-      query: $('q').value, bands, signals, maintenance: $('maintenance').value,
+      query: $('q').value, bands, signals, conduct, maintenance: $('maintenance').value,
     }), $('sort').value)
 
-    const filtered = bands.length || signals.length ||
+    const filtered = bands.length || signals.length || conduct.length ||
       $('q').value.trim() || $('maintenance').value !== 'any'
     $('count').innerHTML = `<b>${matches.length}</b> of ${total} repositories` +
       (filtered ? '<button type="button" class="clear" id="clear">Clear filters</button>' : '')
@@ -134,6 +148,12 @@ Promise.all([
   }
   $('bands').onclick = onToggle
   $('legend').onclick = onToggle
+  $('conduct').onclick = (e) => {
+    const btn = e.target.closest('[data-conduct]')
+    if (!btn) return
+    btn.setAttribute('aria-pressed', String(btn.getAttribute('aria-pressed') !== 'true'))
+    render()
+  }
   $('controls').addEventListener('input', render)
   $('controls').addEventListener('submit', (e) => e.preventDefault())
   $('count').addEventListener('click', (e) => {
@@ -141,6 +161,8 @@ Promise.all([
     $('q').value = ''
     $('maintenance').value = 'any'
     for (const b of ordered) setBand(b, false)
+    $('conduct').querySelectorAll('[data-conduct]')
+      .forEach((b) => b.setAttribute('aria-pressed', 'false'))
     $('sigpop').querySelectorAll('input').forEach((i) => { i.checked = false })
     render()
   })

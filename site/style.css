@@ -415,3 +415,15 @@ a { color: inherit; }
   /* The offset blocks eat horizontal room that a phone does not have. */
   .notice-in, .bar, .card { box-shadow: 4px 4px 0 var(--ink-line); }
 }
+
+/* Conduct filter pills. The assessment axis is the site's one cool ink, so
+   these are outlined in --sky rather than in a band colour: pressed, a
+   conduct pill fills with the same ink the badge on the card is drawn in, and
+   it can never be mistaken for a fifth risk band. */
+.pill.v-pill { border-color: var(--sky); color: var(--sky); }
+.pill.v-pill b { font-weight: 800; opacity: .7; }
+.pill.v-pill:hover { color: var(--sky); box-shadow: 3px 3px 0 var(--sky); }
+.pill.v-pill[aria-pressed="true"] {
+  background: var(--sky); color: var(--ink-line); box-shadow: 3px 3px 0 var(--ink-line);
+}
+.pill.v-pill[aria-pressed="true"] b { opacity: .8; }
