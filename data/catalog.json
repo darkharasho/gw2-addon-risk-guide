@@ -17,212 +17,8 @@
       "min": 70
     }
   ],
-  "generated_at": "2026-09-20T05:19:48.578Z",
+  "generated_at": "2026-09-20T07:21:12.567Z",
   "repos": [
-    {
-      "full_name": "Xydroc-IO/GW2-InGame-Helper",
-      "name": "GW2-InGame-Helper",
-      "owner": "Xydroc-IO",
-      "html_url": "https://github.com/Xydroc-IO/GW2-InGame-Helper",
-      "description": "",
-      "topics": [],
-      "language": "C++",
-      "stars": 2,
-      "archived": false,
-      "pushed_at": "2026-09-18T02:15:29Z",
-      "license": "MIT",
-      "points": 100,
-      "band": "high",
-      "signals": [
-        {
-          "id": "automation",
-          "label": "Gameplay automation",
-          "weight": 40,
-          "policy": "ua-automation",
-          "explain": "Plays the game for you — bots, autofarming, or simulated input.",
-          "evidence": [
-            "matched \"macro\""
-          ]
-        },
-        {
-          "id": "memory",
-          "label": "Game memory access",
-          "weight": 35,
-          "policy": "ua-modify-client",
-          "explain": "Reads or writes the game client’s memory.",
-          "evidence": [
-            "matched \"process memory\""
-          ]
-        },
-        {
-          "id": "injection",
-          "label": "Client injection or hooking",
-          "weight": 25,
-          "policy": "ua-third-party-programs",
-          "explain": "Loads code into the game process, typically via a proxy DLL or graphics hook.",
-          "evidence": [
-            "matched \"D3D11\""
-          ]
-        },
-        {
-          "id": "unsigned_binaries",
-          "label": "Ships prebuilt binaries",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
-          "evidence": [
-            "release asset gw2-ingame-helper.dll"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "2 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "PieOrCake/mission_finder",
-      "name": "mission_finder",
-      "owner": "PieOrCake",
-      "html_url": "https://github.com/PieOrCake/mission_finder",
-      "description": "Guild Wars 2 guild-mission finder addon for Nexus — downloads & releases",
-      "topics": [],
-      "language": null,
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-07-22T03:22:19Z",
-      "license": null,
-      "points": 80,
-      "band": "high",
-      "signals": [
-        {
-          "id": "automation",
-          "label": "Gameplay automation",
-          "weight": 40,
-          "policy": "ua-automation",
-          "explain": "Plays the game for you — bots, autofarming, or simulated input.",
-          "evidence": [
-            "matched \"botting\""
-          ]
-        },
-        {
-          "id": "injection",
-          "label": "Client injection or hooking",
-          "weight": 25,
-          "policy": "ua-third-party-programs",
-          "explain": "Loads code into the game process, typically via a proxy DLL or graphics hook.",
-          "evidence": [
-            "matched \"injection\""
-          ]
-        },
-        {
-          "id": "unsigned_binaries",
-          "label": "Ships prebuilt binaries",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
-          "evidence": [
-            "release asset missionfinder.dll"
-          ]
-        },
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "PieOrCake/pie_ui",
-      "name": "pie_ui",
-      "owner": "PieOrCake",
-      "html_url": "https://github.com/PieOrCake/pie_ui",
-      "description": "Pie UI - Custom user interface widgets for Guild Wars 2",
-      "topics": [],
-      "language": "C",
-      "stars": 5,
-      "archived": false,
-      "pushed_at": "2026-09-19T23:16:53Z",
-      "license": null,
-      "points": 80,
-      "band": "high",
-      "signals": [
-        {
-          "id": "automation",
-          "label": "Gameplay automation",
-          "weight": 40,
-          "policy": "ua-automation",
-          "explain": "Plays the game for you — bots, autofarming, or simulated input.",
-          "evidence": [
-            "matched \"Macro\""
-          ]
-        },
-        {
-          "id": "injection",
-          "label": "Client injection or hooking",
-          "weight": 25,
-          "policy": "ua-third-party-programs",
-          "explain": "Loads code into the game process, typically via a proxy DLL or graphics hook.",
-          "evidence": [
-            "ships pieui.dll"
-          ]
-        },
-        {
-          "id": "unsigned_binaries",
-          "label": "Ships prebuilt binaries",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
-          "evidence": [
-            "release asset pieui.dll"
-          ]
-        },
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "5 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
     {
       "full_name": "x4c1/arcdps_esp",
       "name": "arcdps_esp",
@@ -4450,6 +4246,122 @@
       "override": null
     },
     {
+      "full_name": "PieOrCake/mission_finder",
+      "name": "mission_finder",
+      "owner": "PieOrCake",
+      "html_url": "https://github.com/PieOrCake/mission_finder",
+      "description": "Guild Wars 2 guild-mission finder addon for Nexus — downloads & releases",
+      "topics": [],
+      "language": null,
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-07-22T03:22:19Z",
+      "license": null,
+      "points": 40,
+      "band": "moderate",
+      "signals": [
+        {
+          "id": "injection",
+          "label": "Client injection or hooking",
+          "weight": 25,
+          "policy": "ua-third-party-programs",
+          "explain": "Loads code into the game process, typically via a proxy DLL or graphics hook.",
+          "evidence": [
+            "ships missionfinder.dll"
+          ]
+        },
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset missionfinder.dll"
+          ]
+        },
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "PieOrCake/pie_ui",
+      "name": "pie_ui",
+      "owner": "PieOrCake",
+      "html_url": "https://github.com/PieOrCake/pie_ui",
+      "description": "Pie UI - Custom user interface widgets for Guild Wars 2",
+      "topics": [],
+      "language": "C",
+      "stars": 5,
+      "archived": false,
+      "pushed_at": "2026-09-19T23:16:53Z",
+      "license": null,
+      "points": 40,
+      "band": "moderate",
+      "signals": [
+        {
+          "id": "injection",
+          "label": "Client injection or hooking",
+          "weight": 25,
+          "policy": "ua-third-party-programs",
+          "explain": "Loads code into the game process, typically via a proxy DLL or graphics hook.",
+          "evidence": [
+            "ships pieui.dll"
+          ]
+        },
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset pieui.dll"
+          ]
+        },
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "5 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "PieOrCake/realm_report",
       "name": "realm_report",
       "owner": "PieOrCake",
@@ -4982,7 +4894,7 @@
         "wvw"
       ],
       "language": null,
-      "stars": 2,
+      "stars": 3,
       "archived": false,
       "pushed_at": "2026-09-16T19:36:24Z",
       "license": null,
@@ -5026,7 +4938,7 @@
           "policy": "support-own-risk",
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
-            "2 stars"
+            "3 stars"
           ]
         }
       ],
@@ -7748,6 +7660,54 @@
       "override": null
     },
     {
+      "full_name": "Xydroc-IO/GW2-InGame-Helper",
+      "name": "GW2-InGame-Helper",
+      "owner": "Xydroc-IO",
+      "html_url": "https://github.com/Xydroc-IO/GW2-InGame-Helper",
+      "description": "",
+      "topics": [],
+      "language": "C++",
+      "stars": 2,
+      "archived": false,
+      "pushed_at": "2026-09-18T02:15:29Z",
+      "license": "MIT",
+      "points": 35,
+      "band": "moderate",
+      "signals": [
+        {
+          "id": "injection",
+          "label": "Client injection or hooking",
+          "weight": 25,
+          "policy": "ua-third-party-programs",
+          "explain": "Loads code into the game process, typically via a proxy DLL or graphics hook.",
+          "evidence": [
+            "matched \"D3D11\""
+          ]
+        },
+        {
+          "id": "unsigned_binaries",
+          "label": "Ships prebuilt binaries",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Releases contain executables or DLLs you must trust without building them yourself.",
+          "evidence": [
+            "release asset gw2-ingame-helper.dll"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "2 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "Ydalirsson/gw2-Chatlogger",
       "name": "gw2-Chatlogger",
       "owner": "Ydalirsson",
@@ -10272,6 +10232,44 @@
       "override": null
     },
     {
+      "full_name": "ideka/AugTyr",
+      "name": "AugTyr",
+      "owner": "ideka",
+      "html_url": "https://github.com/ideka/AugTyr",
+      "description": "(Formerly) The ultimate Guild Wars 2 map completion tool.",
+      "topics": [],
+      "language": "C#",
+      "stars": 65,
+      "archived": true,
+      "pushed_at": "2019-09-29T00:10:43Z",
+      "license": "GPL-3.0",
+      "points": 20,
+      "band": "moderate",
+      "signals": [
+        {
+          "id": "archived",
+          "label": "Archived repository",
+          "weight": 10,
+          "policy": "support-own-risk",
+          "explain": "The project is archived and will not be updated after game patches.",
+          "evidence": [
+            "repository is archived on GitHub"
+          ]
+        },
+        {
+          "id": "stale_24m",
+          "label": "Unmaintained (2+ years)",
+          "weight": 10,
+          "policy": "support-own-risk",
+          "explain": "No pushes in over two years.",
+          "evidence": [
+            "last push 84 months ago"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "IronGhost63/gw2-wvw-tools",
       "name": "gw2-wvw-tools",
       "owner": "IronGhost63",
@@ -10437,7 +10435,7 @@
           "policy": "support-own-risk",
           "explain": "No pushes in over two years.",
           "evidence": [
-            "last push 53 months ago"
+            "last push 54 months ago"
           ]
         },
         {
@@ -12623,6 +12621,54 @@
       "override": null
     },
     {
+      "full_name": "al-d3baran/gw2-characters-charts",
+      "name": "gw2-characters-charts",
+      "owner": "al-d3baran",
+      "html_url": "https://github.com/al-d3baran/gw2-characters-charts",
+      "description": "A website that generates charts from Guild Wars 2 Characters API.",
+      "topics": [],
+      "language": "JavaScript",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2024-10-12T22:54:48Z",
+      "license": null,
+      "points": 15,
+      "band": "low",
+      "signals": [
+        {
+          "id": "stale_12m",
+          "label": "Slow maintenance (1-2 years)",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No pushes in over a year.",
+          "evidence": [
+            "last push 23 months ago"
+          ]
+        },
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "aleios/gw2-cursoroverride",
       "name": "gw2-cursoroverride",
       "owner": "aleios",
@@ -12886,6 +12932,44 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "coderedart/jokolay",
+      "name": "jokolay",
+      "owner": "coderedart",
+      "html_url": "https://github.com/coderedart/jokolay",
+      "description": "An Overlay for Guild Wars 2 in Rust",
+      "topics": [],
+      "language": "Rust",
+      "stars": 18,
+      "archived": false,
+      "pushed_at": "2024-05-09T21:09:51Z",
+      "license": null,
+      "points": 15,
+      "band": "low",
+      "signals": [
+        {
+          "id": "stale_24m",
+          "label": "Unmaintained (2+ years)",
+          "weight": 10,
+          "policy": "support-own-risk",
+          "explain": "No pushes in over two years.",
+          "evidence": [
+            "last push 28 months ago"
+          ]
+        },
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
           ]
         }
       ],
@@ -13637,6 +13721,44 @@
           "explain": "No pushes in over two years.",
           "evidence": [
             "last push 92 months ago"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "GuiiDo/Gw2TinyWvwKillCounter",
+      "name": "Gw2TinyWvwKillCounter",
+      "owner": "GuiiDo",
+      "html_url": "https://github.com/GuiiDo/Gw2TinyWvwKillCounter",
+      "description": "A tiny tool which shows the current kills and death for the Guild Wars 2 WvW game mode",
+      "topics": [],
+      "language": null,
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2022-01-17T17:41:03Z",
+      "license": "Apache-2.0",
+      "points": 15,
+      "band": "low",
+      "signals": [
+        {
+          "id": "stale_24m",
+          "label": "Unmaintained (2+ years)",
+          "weight": 10,
+          "policy": "support-own-risk",
+          "explain": "No pushes in over two years.",
+          "evidence": [
+            "last push 56 months ago"
           ]
         },
         {
@@ -14735,6 +14857,51 @@
       "override": null
     },
     {
+      "full_name": "MerlinScheurer/gw2-api-collector",
+      "name": "gw2-api-collector",
+      "owner": "MerlinScheurer",
+      "html_url": "https://github.com/MerlinScheurer/gw2-api-collector",
+      "description": "Worker based api dumping tool for the Guild Wars 2 api",
+      "topics": [
+        "api",
+        "elasticsearch",
+        "guild-wars-2",
+        "nodejs",
+        "rabbitmq",
+        "worker"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2021-05-11T06:58:59Z",
+      "license": "MIT",
+      "points": 15,
+      "band": "low",
+      "signals": [
+        {
+          "id": "stale_24m",
+          "label": "Unmaintained (2+ years)",
+          "weight": 10,
+          "policy": "support-own-risk",
+          "explain": "No pushes in over two years.",
+          "evidence": [
+            "last push 64 months ago"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "MoshiBin/arcdps-autoupdate",
       "name": "arcdps-autoupdate",
       "owner": "MoshiBin",
@@ -15030,6 +15197,44 @@
       "override": null
     },
     {
+      "full_name": "nicholasrobertm/gw2-api",
+      "name": "gw2-api",
+      "owner": "nicholasrobertm",
+      "html_url": "https://github.com/nicholasrobertm/gw2-api",
+      "description": "",
+      "topics": [],
+      "language": "Ruby",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2024-08-01T15:22:04Z",
+      "license": "MIT",
+      "points": 15,
+      "band": "low",
+      "signals": [
+        {
+          "id": "stale_24m",
+          "label": "Unmaintained (2+ years)",
+          "weight": 10,
+          "policy": "support-own-risk",
+          "explain": "No pushes in over two years.",
+          "evidence": [
+            "last push 26 months ago"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "noi-dea/API_GW2",
       "name": "API_GW2",
       "owner": "noi-dea",
@@ -15239,6 +15444,44 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "5 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "RedGlow/TheLegendaryQuest",
+      "name": "TheLegendaryQuest",
+      "owner": "RedGlow",
+      "html_url": "https://github.com/RedGlow/TheLegendaryQuest",
+      "description": "A tool to plan for your legendary weapon in Guild Wars 2",
+      "topics": [],
+      "language": "JavaScript",
+      "stars": 11,
+      "archived": false,
+      "pushed_at": "2015-11-10T14:32:50Z",
+      "license": null,
+      "points": 15,
+      "band": "low",
+      "signals": [
+        {
+          "id": "stale_24m",
+          "label": "Unmaintained (2+ years)",
+          "weight": 10,
+          "policy": "support-own-risk",
+          "explain": "No pushes in over two years.",
+          "evidence": [
+            "last push 130 months ago"
+          ]
+        },
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
           ]
         }
       ],
@@ -16079,7 +16322,7 @@
       "language": "JavaScript",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T01:39:09Z",
+      "pushed_at": "2026-09-20T07:19:28Z",
       "license": null,
       "points": 15,
       "band": "low",
@@ -16906,6 +17149,48 @@
       "override": null
     },
     {
+      "full_name": "api-evangelist/guild-wars-2",
+      "name": "guild-wars-2",
+      "owner": "api-evangelist",
+      "html_url": "https://github.com/api-evangelist/guild-wars-2",
+      "description": "Guild Wars 2 — independent third-party profile of a public API surface, by API Evangelist. Guild Wars 2 Game Information",
+      "topics": [
+        "apis-json",
+        "games-and-comics",
+        "public-apis"
+      ],
+      "language": null,
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-19T15:19:21Z",
+      "license": null,
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "api-evangelist/gw2spidy",
       "name": "gw2spidy",
       "owner": "api-evangelist",
@@ -16970,6 +17255,43 @@
           "explain": "No pushes in over two years.",
           "evidence": [
             "last push 85 months ago"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "Archomeda/Gw2Sharp",
+      "name": "Gw2Sharp",
+      "owner": "Archomeda",
+      "html_url": "https://github.com/Archomeda/Gw2Sharp",
+      "description": "A cross-platform .NET wrapper library for the Guild Wars 2 API written in C#",
+      "topics": [
+        "csharp",
+        "dotnet",
+        "dotnet-core",
+        "dotnet-standard",
+        "guildwars2",
+        "guildwars2-api",
+        "gw2",
+        "gw2-api"
+      ],
+      "language": "C#",
+      "stars": 36,
+      "archived": false,
+      "pushed_at": "2024-09-03T20:58:42Z",
+      "license": "MIT",
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "stale_24m",
+          "label": "Unmaintained (2+ years)",
+          "weight": 10,
+          "policy": "support-own-risk",
+          "explain": "No pushes in over two years.",
+          "evidence": [
+            "last push 25 months ago"
           ]
         }
       ],
@@ -18822,6 +19144,44 @@
       "override": null
     },
     {
+      "full_name": "Georgi-Kalkovski/GW2Geary",
+      "name": "GW2Geary",
+      "owner": "Georgi-Kalkovski",
+      "html_url": "https://github.com/Georgi-Kalkovski/GW2Geary",
+      "description": "Gear Check using the GW2 API",
+      "topics": [],
+      "language": "JavaScript",
+      "stars": 3,
+      "archived": false,
+      "pushed_at": "2024-12-30T21:23:43Z",
+      "license": "MIT",
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "stale_12m",
+          "label": "Slow maintenance (1-2 years)",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No pushes in over a year.",
+          "evidence": [
+            "last push 21 months ago"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "3 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "ghc-cloneRepoStaging-scaAndRenovate3/3929_George-Johnson_0920_050605_ghc_gw2_failed",
       "name": "3929_George-Johnson_0920_050605_ghc_gw2_failed",
       "owner": "ghc-cloneRepoStaging-scaAndRenovate3",
@@ -18870,44 +19230,6 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-09-20T04:38:01Z",
-      "license": null,
-      "points": 10,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "ghc-cloneRepoStaging-scaAndRenovate3/3957_Kristina-Clark_0920_051947_ghc_gw2",
-      "name": "3957_Kristina-Clark_0920_051947_ghc_gw2",
-      "owner": "ghc-cloneRepoStaging-scaAndRenovate3",
-      "html_url": "https://github.com/ghc-cloneRepoStaging-scaAndRenovate3/3957_Kristina-Clark_0920_051947_ghc_gw2",
-      "description": "",
-      "topics": [],
-      "language": null,
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-20T05:19:51Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -20168,6 +20490,46 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2026-09-17T02:36:39Z",
+      "license": null,
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "julianmejio/nevthol-node",
+      "name": "nevthol-node",
+      "owner": "julianmejio",
+      "html_url": "https://github.com/julianmejio/nevthol-node",
+      "description": "A real-time telemetry ingestion and geospatial tracking platform built on Node.js, Kafka, and Redis. Hexagonal architecture, Turborepo monorepo, deployed on AWS MSK and ElastiCache.",
+      "topics": [
+        "guildwars2"
+      ],
+      "language": "TypeScript",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-07-18T03:56:24Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -21480,7 +21842,7 @@
       "language": "CSS",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-19T07:01:12Z",
+      "pushed_at": "2026-09-20T06:11:51Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -21556,7 +21918,7 @@
       "language": "Python",
       "stars": 1,
       "archived": false,
-      "pushed_at": "2026-09-19T06:51:48Z",
+      "pushed_at": "2026-09-20T06:51:39Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -22876,6 +23238,44 @@
       "override": null
     },
     {
+      "full_name": "StupsKiesel/gw2-api-py",
+      "name": "gw2-api-py",
+      "owner": "StupsKiesel",
+      "html_url": "https://github.com/StupsKiesel/gw2-api-py",
+      "description": "",
+      "topics": [],
+      "language": "Python",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-05-23T22:28:53Z",
+      "license": null,
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "SubiqT/GW2QuantifyReleases",
       "name": "GW2QuantifyReleases",
       "owner": "SubiqT",
@@ -22961,7 +23361,7 @@
       "language": "TypeScript",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T03:40:56Z",
+      "pushed_at": "2026-09-20T05:51:57Z",
       "license": null,
       "points": 10,
       "band": "low",
@@ -23166,6 +23566,44 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "4 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "Thryphore/GW2-Combat-Coach",
+      "name": "GW2-Combat-Coach",
+      "owner": "Thryphore",
+      "html_url": "https://github.com/Thryphore/GW2-Combat-Coach",
+      "description": "A coach for GW2 Combat",
+      "topics": [],
+      "language": "TypeScript",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-14T12:19:04Z",
+      "license": null,
+      "points": 10,
+      "band": "low",
+      "signals": [
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        },
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
           ]
         }
       ],
@@ -24335,6 +24773,45 @@
       "override": null
     },
     {
+      "full_name": "ddc/DiscordBot",
+      "name": "DiscordBot",
+      "owner": "ddc",
+      "html_url": "https://github.com/ddc/DiscordBot",
+      "description": "Simple Discord bot written in python",
+      "topics": [
+        "bot",
+        "discord",
+        "discord-bot",
+        "discord-bots",
+        "discord-py",
+        "discordbot",
+        "guildwars2",
+        "python",
+        "python-3",
+        "python3"
+      ],
+      "language": "Python",
+      "stars": 2,
+      "archived": false,
+      "pushed_at": "2026-09-18T17:10:29Z",
+      "license": "MIT",
+      "points": 5,
+      "band": "low",
+      "signals": [
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "2 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "DeltaRaidcore/ArcDPS-Styles",
       "name": "ArcDPS-Styles",
       "owner": "DeltaRaidcore",
@@ -24396,17 +24873,20 @@
       "override": null
     },
     {
-      "full_name": "domwxyz/gw2cc",
-      "name": "gw2cc",
-      "owner": "domwxyz",
-      "html_url": "https://github.com/domwxyz/gw2cc",
-      "description": "Guild Wars 2 Character Console",
-      "topics": [],
-      "language": "TypeScript",
+      "full_name": "dominikcz/gw2helper",
+      "name": "gw2helper",
+      "owner": "dominikcz",
+      "html_url": "https://github.com/dominikcz/gw2helper",
+      "description": "GW2 Helper is an unofficial companion app for Guild Wars 2 that makes everyday gameplay easier by keeping your dailies, achievements, events, inventory, and trading post activity all in one place.",
+      "topics": [
+        "guildwars2",
+        "gw2"
+      ],
+      "language": "HTML",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-08-14T15:35:54Z",
-      "license": "BSD-2-Clause",
+      "pushed_at": "2026-07-24T14:41:32Z",
+      "license": "MIT",
       "points": 5,
       "band": "low",
       "signals": [
@@ -24505,7 +24985,7 @@
       "language": "Go",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-20T03:34:40Z",
+      "pushed_at": "2026-09-20T05:37:08Z",
       "license": "Apache-2.0",
       "points": 5,
       "band": "low",
@@ -24546,6 +25026,71 @@
           "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
             "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "godfat/rest-gw2",
+      "name": "rest-gw2",
+      "owner": "godfat",
+      "html_url": "https://github.com/godfat/rest-gw2",
+      "description": "A simple Guild Wars 2 API client built with rest-core.",
+      "topics": [],
+      "language": "Ruby",
+      "stars": 4,
+      "archived": false,
+      "pushed_at": "2026-02-06T16:20:03Z",
+      "license": "Apache-2.0",
+      "points": 5,
+      "band": "low",
+      "signals": [
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "4 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "guicaulada/gw2-otel-collector",
+      "name": "gw2-otel-collector",
+      "owner": "guicaulada",
+      "html_url": "https://github.com/guicaulada/gw2-otel-collector",
+      "description": "OpenTelemetry collector for Guild Wars 2 — polls the GW2 API v2 and exports metrics, logs, and traces to Grafana (wealth, progression, collections, PvP/WvW).",
+      "topics": [
+        "golang",
+        "grafana",
+        "guild-wars-2",
+        "gw2",
+        "gw2-api",
+        "observability",
+        "opentelemetry",
+        "prometheus"
+      ],
+      "language": "Go",
+      "stars": 1,
+      "archived": false,
+      "pushed_at": "2026-09-17T22:07:09Z",
+      "license": "Apache-2.0",
+      "points": 5,
+      "band": "low",
+      "signals": [
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "1 stars"
           ]
         }
       ],
@@ -24757,7 +25302,7 @@
       "language": "TypeScript",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-09-19T21:06:52Z",
+      "pushed_at": "2026-09-20T06:42:13Z",
       "license": "MIT",
       "points": 5,
       "band": "low",
@@ -24848,7 +25393,7 @@
       "language": "TypeScript",
       "stars": 3,
       "archived": false,
-      "pushed_at": "2026-09-19T10:16:27Z",
+      "pushed_at": "2026-09-20T07:06:05Z",
       "license": "MIT",
       "points": 5,
       "band": "low",
@@ -24992,48 +25537,40 @@
       "override": null
     },
     {
-      "full_name": "ideka/AugTyr",
-      "name": "AugTyr",
-      "owner": "ideka",
-      "html_url": "https://github.com/ideka/AugTyr",
-      "description": "(Formerly) The ultimate Guild Wars 2 map completion tool.",
-      "topics": [],
-      "language": "C#",
-      "stars": 65,
-      "archived": true,
-      "pushed_at": "2019-09-29T00:10:43Z",
-      "license": "GPL-3.0",
+      "full_name": "howar31/gldwrs2",
+      "name": "gldwrs2",
+      "owner": "howar31",
+      "html_url": "https://github.com/howar31/gldwrs2",
+      "description": "Read-only Guild Wars 2 API v2 CLI: token-efficient game data, account, trading post, WvW/PvP lookups for terminals and AI agents.",
+      "topics": [
+        "agent-tools",
+        "ai-agents",
+        "cli",
+        "command-line",
+        "developer-tools",
+        "go",
+        "golang",
+        "guild-wars-2",
+        "gw2",
+        "gw2-api",
+        "llm"
+      ],
+      "language": "Go",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-08-30T06:33:18Z",
+      "license": "MIT",
       "points": 5,
       "band": "low",
       "signals": [
         {
-          "id": "archived",
-          "label": "Archived repository",
-          "weight": 10,
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
           "policy": "support-own-risk",
-          "explain": "The project is archived and will not be updated after game patches.",
+          "explain": "Few stars, so few people have looked at the code.",
           "evidence": [
-            "repository is archived on GitHub"
-          ]
-        },
-        {
-          "id": "stale_24m",
-          "label": "Unmaintained (2+ years)",
-          "weight": 10,
-          "policy": "support-own-risk",
-          "explain": "No pushes in over two years.",
-          "evidence": [
-            "last push 84 months ago"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
+            "0 stars"
           ]
         }
       ],
@@ -25813,7 +26350,7 @@
       "language": "Java",
       "stars": 0,
       "archived": false,
-      "pushed_at": "2026-03-16T14:11:29Z",
+      "pushed_at": "2026-09-20T05:23:53Z",
       "license": "MIT",
       "points": 5,
       "band": "low",
@@ -26539,6 +27076,42 @@
       "override": null
     },
     {
+      "full_name": "Snappey/maps.gw2.io",
+      "name": "maps.gw2.io",
+      "owner": "Snappey",
+      "html_url": "https://github.com/Snappey/maps.gw2.io",
+      "description": "Interactive Guild Wars 2 Map, zoom in across Tyria and the Mists.",
+      "topics": [
+        "angular",
+        "guildwars2",
+        "gw2",
+        "interactive-map",
+        "leaflet",
+        "mqtt",
+        "typescript"
+      ],
+      "language": "TypeScript",
+      "stars": 10,
+      "archived": false,
+      "pushed_at": "2026-07-07T11:20:13Z",
+      "license": null,
+      "points": 5,
+      "band": "low",
+      "signals": [
+        {
+          "id": "no_license",
+          "label": "No license",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "No declared license, so redistribution and auditing terms are unclear.",
+          "evidence": [
+            "no license detected by GitHub"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
       "full_name": "Snowy1794/Arcdps-translation-Chinese-simplified",
       "name": "Arcdps-translation-Chinese-simplified",
       "owner": "Snowy1794",
@@ -26822,6 +27395,34 @@
       "stars": 0,
       "archived": false,
       "pushed_at": "2025-12-23T21:11:47Z",
+      "license": "MIT",
+      "points": 5,
+      "band": "low",
+      "signals": [
+        {
+          "id": "obscure",
+          "label": "Little public scrutiny",
+          "weight": 5,
+          "policy": "support-own-risk",
+          "explain": "Few stars, so few people have looked at the code.",
+          "evidence": [
+            "0 stars"
+          ]
+        }
+      ],
+      "override": null
+    },
+    {
+      "full_name": "voxgig-sdk/guild-wars2-sdk",
+      "name": "guild-wars2-sdk",
+      "owner": "voxgig-sdk",
+      "html_url": "https://github.com/voxgig-sdk/guild-wars2-sdk",
+      "description": "Voxgig SDK for guild-wars-2",
+      "topics": [],
+      "language": "TypeScript",
+      "stars": 0,
+      "archived": false,
+      "pushed_at": "2026-09-18T07:05:22Z",
       "license": "MIT",
       "points": 5,
       "band": "low",
@@ -27136,64 +27737,6 @@
       "override": null
     },
     {
-      "full_name": "al-d3baran/gw2-characters-charts",
-      "name": "gw2-characters-charts",
-      "owner": "al-d3baran",
-      "html_url": "https://github.com/al-d3baran/gw2-characters-charts",
-      "description": "A website that generates charts from Guild Wars 2 Characters API.",
-      "topics": [],
-      "language": "JavaScript",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2024-10-12T22:54:48Z",
-      "license": null,
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "stale_12m",
-          "label": "Slow maintenance (1-2 years)",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No pushes in over a year.",
-          "evidence": [
-            "last push 23 months ago"
-          ]
-        },
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "AlteredM1nd/gw2-guild-login",
       "name": "gw2-guild-login",
       "owner": "AlteredM1nd",
@@ -27242,105 +27785,6 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"api.guildwars2.com\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "api-evangelist/guild-wars-2",
-      "name": "guild-wars-2",
-      "owner": "api-evangelist",
-      "html_url": "https://github.com/api-evangelist/guild-wars-2",
-      "description": "Guild Wars 2 — independent third-party profile of a public API surface, by API Evangelist. Guild Wars 2 Game Information",
-      "topics": [
-        "apis-json",
-        "games-and-comics",
-        "public-apis"
-      ],
-      "language": null,
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-19T15:19:21Z",
-      "license": null,
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "Archomeda/Gw2Sharp",
-      "name": "Gw2Sharp",
-      "owner": "Archomeda",
-      "html_url": "https://github.com/Archomeda/Gw2Sharp",
-      "description": "A cross-platform .NET wrapper library for the Guild Wars 2 API written in C#",
-      "topics": [
-        "csharp",
-        "dotnet",
-        "dotnet-core",
-        "dotnet-standard",
-        "guildwars2",
-        "guildwars2-api",
-        "gw2",
-        "gw2-api"
-      ],
-      "language": "C#",
-      "stars": 36,
-      "archived": false,
-      "pushed_at": "2024-09-03T20:58:42Z",
-      "license": "MIT",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "stale_24m",
-          "label": "Unmaintained (2+ years)",
-          "weight": 10,
-          "policy": "support-own-risk",
-          "explain": "No pushes in over two years.",
-          "evidence": [
-            "last push 25 months ago"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"official Guild Wars 2 API\""
           ]
         }
       ],
@@ -27480,54 +27924,6 @@
       "override": null
     },
     {
-      "full_name": "coderedart/jokolay",
-      "name": "jokolay",
-      "owner": "coderedart",
-      "html_url": "https://github.com/coderedart/jokolay",
-      "description": "An Overlay for Guild Wars 2 in Rust",
-      "topics": [],
-      "language": "Rust",
-      "stars": 18,
-      "archived": false,
-      "pushed_at": "2024-05-09T21:09:51Z",
-      "license": null,
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "stale_24m",
-          "label": "Unmaintained (2+ years)",
-          "weight": 10,
-          "policy": "support-own-risk",
-          "explain": "No pushes in over two years.",
-          "evidence": [
-            "last push 28 months ago"
-          ]
-        },
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "Darconer1/GW2-crafter",
       "name": "GW2-crafter",
       "owner": "Darconer1",
@@ -27576,55 +27972,6 @@
       "override": null
     },
     {
-      "full_name": "ddc/DiscordBot",
-      "name": "DiscordBot",
-      "owner": "ddc",
-      "html_url": "https://github.com/ddc/DiscordBot",
-      "description": "Simple Discord bot written in python",
-      "topics": [
-        "bot",
-        "discord",
-        "discord-bot",
-        "discord-bots",
-        "discord-py",
-        "discordbot",
-        "guildwars2",
-        "python",
-        "python-3",
-        "python3"
-      ],
-      "language": "Python",
-      "stars": 2,
-      "archived": false,
-      "pushed_at": "2026-09-18T17:10:29Z",
-      "license": "MIT",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "2 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "discretize/discretize-gear-optimizer",
       "name": "discretize-gear-optimizer",
       "owner": "discretize",
@@ -27647,47 +27994,6 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
-    },
-    {
-      "full_name": "dominikcz/gw2helper",
-      "name": "gw2helper",
-      "owner": "dominikcz",
-      "html_url": "https://github.com/dominikcz/gw2helper",
-      "description": "GW2 Helper is an unofficial companion app for Guild Wars 2 that makes everyday gameplay easier by keeping your dailies, achievements, events, inventory, and trading post activity all in one place.",
-      "topics": [
-        "guildwars2",
-        "gw2"
-      ],
-      "language": "HTML",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-07-24T14:41:32Z",
-      "license": "MIT",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
-          ]
-        }
-      ],
       "override": null
     },
     {
@@ -27875,54 +28181,6 @@
       "override": null
     },
     {
-      "full_name": "Georgi-Kalkovski/GW2Geary",
-      "name": "GW2Geary",
-      "owner": "Georgi-Kalkovski",
-      "html_url": "https://github.com/Georgi-Kalkovski/GW2Geary",
-      "description": "Gear Check using the GW2 API",
-      "topics": [],
-      "language": "JavaScript",
-      "stars": 3,
-      "archived": false,
-      "pushed_at": "2024-12-30T21:23:43Z",
-      "license": "MIT",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "stale_12m",
-          "label": "Slow maintenance (1-2 years)",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No pushes in over a year.",
-          "evidence": [
-            "last push 21 months ago"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "3 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "giovazz89/gw2-api-event-timers",
       "name": "gw2-api-event-timers",
       "owner": "giovazz89",
@@ -27971,44 +28229,6 @@
       "override": null
     },
     {
-      "full_name": "godfat/rest-gw2",
-      "name": "rest-gw2",
-      "owner": "godfat",
-      "html_url": "https://github.com/godfat/rest-gw2",
-      "description": "A simple Guild Wars 2 API client built with rest-core.",
-      "topics": [],
-      "language": "Ruby",
-      "stars": 4,
-      "archived": false,
-      "pushed_at": "2026-02-06T16:20:03Z",
-      "license": "Apache-2.0",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "4 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "greaka/gw2lib",
       "name": "gw2lib",
       "owner": "greaka",
@@ -28030,101 +28250,6 @@
       "points": 0,
       "band": "low",
       "signals": [],
-      "override": null
-    },
-    {
-      "full_name": "guicaulada/gw2-otel-collector",
-      "name": "gw2-otel-collector",
-      "owner": "guicaulada",
-      "html_url": "https://github.com/guicaulada/gw2-otel-collector",
-      "description": "OpenTelemetry collector for Guild Wars 2 — polls the GW2 API v2 and exports metrics, logs, and traces to Grafana (wealth, progression, collections, PvP/WvW).",
-      "topics": [
-        "golang",
-        "grafana",
-        "guild-wars-2",
-        "gw2",
-        "gw2-api",
-        "observability",
-        "opentelemetry",
-        "prometheus"
-      ],
-      "language": "Go",
-      "stars": 1,
-      "archived": false,
-      "pushed_at": "2026-09-17T22:07:09Z",
-      "license": "Apache-2.0",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "1 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "GuiiDo/Gw2TinyWvwKillCounter",
-      "name": "Gw2TinyWvwKillCounter",
-      "owner": "GuiiDo",
-      "html_url": "https://github.com/GuiiDo/Gw2TinyWvwKillCounter",
-      "description": "A tiny tool which shows the current kills and death for the Guild Wars 2 WvW game mode",
-      "topics": [],
-      "language": null,
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2022-01-17T17:41:03Z",
-      "license": "Apache-2.0",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "stale_24m",
-          "label": "Unmaintained (2+ years)",
-          "weight": 10,
-          "policy": "support-own-risk",
-          "explain": "No pushes in over two years.",
-          "evidence": [
-            "last push 56 months ago"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"official gw2 API\""
-          ]
-        }
-      ],
       "override": null
     },
     {
@@ -28281,7 +28406,7 @@
       "language": "TypeScript",
       "stars": 26,
       "archived": false,
-      "pushed_at": "2026-09-19T20:35:45Z",
+      "pushed_at": "2026-09-20T06:05:07Z",
       "license": "MIT",
       "points": 0,
       "band": "low",
@@ -28369,56 +28494,6 @@
           "explain": "Widely used and pushed recently, so problems surface fast.",
           "evidence": [
             "212 stars, last push 1 months ago"
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "howar31/gldwrs2",
-      "name": "gldwrs2",
-      "owner": "howar31",
-      "html_url": "https://github.com/howar31/gldwrs2",
-      "description": "Read-only Guild Wars 2 API v2 CLI: token-efficient game data, account, trading post, WvW/PvP lookups for terminals and AI agents.",
-      "topics": [
-        "agent-tools",
-        "ai-agents",
-        "cli",
-        "command-line",
-        "developer-tools",
-        "go",
-        "golang",
-        "guild-wars-2",
-        "gw2",
-        "gw2-api",
-        "llm"
-      ],
-      "language": "Go",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-08-30T06:33:18Z",
-      "license": "MIT",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -28517,7 +28592,7 @@
           "policy": "api-terms",
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
+            "matched \"api.guildwars2.com\""
           ]
         }
       ],
@@ -28566,56 +28641,6 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"api.guildwars2.com\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "julianmejio/nevthol-node",
-      "name": "nevthol-node",
-      "owner": "julianmejio",
-      "html_url": "https://github.com/julianmejio/nevthol-node",
-      "description": "A real-time telemetry ingestion and geospatial tracking platform built on Node.js, Kafka, and Redis. Hexagonal architecture, Turborepo monorepo, deployed on AWS MSK and ElastiCache.",
-      "topics": [
-        "guildwars2"
-      ],
-      "language": "TypeScript",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-07-18T03:56:24Z",
-      "license": null,
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -28802,61 +28827,6 @@
       "override": null
     },
     {
-      "full_name": "MerlinScheurer/gw2-api-collector",
-      "name": "gw2-api-collector",
-      "owner": "MerlinScheurer",
-      "html_url": "https://github.com/MerlinScheurer/gw2-api-collector",
-      "description": "Worker based api dumping tool for the Guild Wars 2 api",
-      "topics": [
-        "api",
-        "elasticsearch",
-        "guild-wars-2",
-        "nodejs",
-        "rabbitmq",
-        "worker"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2021-05-11T06:58:59Z",
-      "license": "MIT",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "stale_24m",
-          "label": "Unmaintained (2+ years)",
-          "weight": 10,
-          "policy": "support-own-risk",
-          "explain": "No pushes in over two years.",
-          "evidence": [
-            "last push 64 months ago"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"api.guildwars2.com\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "MisterWalky/gw2-command-center",
       "name": "gw2-command-center",
       "owner": "MisterWalky",
@@ -28979,54 +28949,6 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"official Guild Wars 2 API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "nicholasrobertm/gw2-api",
-      "name": "gw2-api",
-      "owner": "nicholasrobertm",
-      "html_url": "https://github.com/nicholasrobertm/gw2-api",
-      "description": "",
-      "topics": [],
-      "language": "Ruby",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2024-08-01T15:22:04Z",
-      "license": "MIT",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "stale_24m",
-          "label": "Unmaintained (2+ years)",
-          "weight": 10,
-          "policy": "support-own-risk",
-          "explain": "No pushes in over two years.",
-          "evidence": [
-            "last push 26 months ago"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -29227,7 +29149,7 @@
           "policy": "api-terms",
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
+            "matched \"api.guildwars2.com\""
           ]
         }
       ],
@@ -29265,54 +29187,6 @@
       "override": null
     },
     {
-      "full_name": "RedGlow/TheLegendaryQuest",
-      "name": "TheLegendaryQuest",
-      "owner": "RedGlow",
-      "html_url": "https://github.com/RedGlow/TheLegendaryQuest",
-      "description": "A tool to plan for your legendary weapon in Guild Wars 2",
-      "topics": [],
-      "language": "JavaScript",
-      "stars": 11,
-      "archived": false,
-      "pushed_at": "2015-11-10T14:32:50Z",
-      "license": null,
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "stale_24m",
-          "label": "Unmaintained (2+ years)",
-          "weight": 10,
-          "policy": "support-own-risk",
-          "explain": "No pushes in over two years.",
-          "evidence": [
-            "last push 130 months ago"
-          ]
-        },
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
       "full_name": "sliekens/gw2sdk",
       "name": "gw2sdk",
       "owner": "sliekens",
@@ -29336,53 +29210,7 @@
           "policy": "api-terms",
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
-            "matched \"api.guildwars2.com\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "Snappey/maps.gw2.io",
-      "name": "maps.gw2.io",
-      "owner": "Snappey",
-      "html_url": "https://github.com/Snappey/maps.gw2.io",
-      "description": "Interactive Guild Wars 2 Map, zoom in across Tyria and the Mists.",
-      "topics": [
-        "angular",
-        "guildwars2",
-        "gw2",
-        "interactive-map",
-        "leaflet",
-        "mqtt",
-        "typescript"
-      ],
-      "language": "TypeScript",
-      "stars": 10,
-      "archived": false,
-      "pushed_at": "2026-07-07T11:20:13Z",
-      "license": null,
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"Official Guild Wars 2 API\""
+            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -29421,54 +29249,6 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"api.guildwars2.com\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "StupsKiesel/gw2-api-py",
-      "name": "gw2-api-py",
-      "owner": "StupsKiesel",
-      "html_url": "https://github.com/StupsKiesel/gw2-api-py",
-      "description": "",
-      "topics": [],
-      "language": "Python",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-05-23T22:28:53Z",
-      "license": null,
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],
@@ -29530,92 +29310,6 @@
           "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
           "evidence": [
             "matched \"official GW2 API\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "Thryphore/GW2-Combat-Coach",
-      "name": "GW2-Combat-Coach",
-      "owner": "Thryphore",
-      "html_url": "https://github.com/Thryphore/GW2-Combat-Coach",
-      "description": "A coach for GW2 Combat",
-      "topics": [],
-      "language": "TypeScript",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-14T12:19:04Z",
-      "license": null,
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "no_license",
-          "label": "No license",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "No declared license, so redistribution and auditing terms are unclear.",
-          "evidence": [
-            "no license detected by GitHub"
-          ]
-        },
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"api.guildwars2.com\""
-          ]
-        }
-      ],
-      "override": null
-    },
-    {
-      "full_name": "voxgig-sdk/guild-wars2-sdk",
-      "name": "guild-wars2-sdk",
-      "owner": "voxgig-sdk",
-      "html_url": "https://github.com/voxgig-sdk/guild-wars2-sdk",
-      "description": "Voxgig SDK for guild-wars-2",
-      "topics": [],
-      "language": "TypeScript",
-      "stars": 0,
-      "archived": false,
-      "pushed_at": "2026-09-18T07:05:22Z",
-      "license": "MIT",
-      "points": 0,
-      "band": "low",
-      "signals": [
-        {
-          "id": "obscure",
-          "label": "Little public scrutiny",
-          "weight": 5,
-          "policy": "support-own-risk",
-          "explain": "Few stars, so few people have looked at the code.",
-          "evidence": [
-            "0 stars"
-          ]
-        },
-        {
-          "id": "api_only",
-          "label": "Official API only",
-          "weight": -15,
-          "policy": "api-terms",
-          "explain": "Appears to use only the official Guild Wars 2 API, outside the game process.",
-          "evidence": [
-            "matched \"wiki.guildwars2.com/wiki/API\""
           ]
         }
       ],

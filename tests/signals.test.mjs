@@ -171,6 +171,72 @@ describe('detect', () => {
     expect(ids({ description: 'Multibox launcher' })).not.toContain('cheat')
   })
 
+  // The three disclaimer false positives from the second live catalog. Each
+  // scored 80-100/high on text that lists what the addon refuses to do.
+  it('does not fire on a denial written as a bullet point', () => {
+    // PieOrCake/mission_finder, 80/high on its own two-line disclaimer.
+    const mf = ids({
+      readme: '- \u274c No code injection, function hooking, or patching of the game client.\n' +
+        '- \u274c No automation or botting \u2014 it never moves your character.',
+    })
+    expect(mf).not.toContain('injection')
+    expect(mf).not.toContain('automation')
+  })
+
+  it('does not fire on bullets under a heading that denies them', () => {
+    // Xydroc-IO/GW2-InGame-Helper, 100/high \u2014 the highest score in the
+    // catalog \u2014 built almost entirely from its "Does not" section, where
+    // no individual bullet carries a negation cue of its own.
+    const helper = ids({
+      readme: '### Does **not**\n\n' +
+        '- Read or write Guild Wars 2 process memory\n' +
+        '- Bot, macro unattended play, or spoof packets\n',
+    })
+    expect(helper).not.toContain('memory')
+    expect(helper).not.toContain('automation')
+    expect(helper).not.toContain('packet')
+  })
+
+  it('resumes firing at the next heading', () => {
+    expect(ids({
+      readme: '### Does not\n\n- Read process memory\n\n### Does\n\n- Ship a d3d11 proxy dll\n',
+    })).toContain('injection')
+  })
+
+  it('limits a denying heading to the text just beneath it', () => {
+    // "Not affiliated with ArenaNet" is one of the most common headings in
+    // this corpus. It must not mute an entire document that happens to have
+    // no further headings.
+    expect(ids({
+      readme: '## Not affiliated with ArenaNet\n\n' + 'Filler prose. '.repeat(160) +
+        '\nShips an aimbot and god mode.',
+    })).toContain('cheat')
+  })
+
+  it('does not fire on a quoted ArenaNet policy title', () => {
+    // PieOrCake/pie_ui, 80/high for citing the rule it complies with.
+    expect(ids({
+      readme: "It is designed to operate within ArenaNet's [Third-Party Programs]" +
+        '(https://help.guildwars2.com/hc/en-us/articles/360013625034-Policy-Third-Party-Programs)' +
+        ' and [Macros & Macro Use](https://help.guildwars2.com/hc/en-us/articles/' +
+        '360013762153-Policy-Macros-and-Macro-Use) policies.',
+    })).not.toContain('automation')
+  })
+
+  it('still reads a bare "no" in running prose as a feature, not a denial', () => {
+    // A trainer advertising "no cooldowns" is describing its cheat. Only a
+    // list item may treat bare "no" as a disclaimer.
+    expect(ids({ readme: 'No cooldowns, no recoil, god mode.' })).toContain('cheat')
+  })
+
+  it('still fires automation on a genuine playback tool', () => {
+    // PieOrCake/serenade, correctly scored 75/high and must stay there.
+    expect(ids({
+      description: 'Automate your Guild Wars 2 piano',
+      readme: 'AutoHotkey scripts with explicit SendInput and Sleep commands.',
+    })).toContain('automation')
+  })
+
   it('fires injection on a d3d11 proxy dll', () => {
     expect(ids({ readme: 'drop d3d11.dll next to the exe', root_files: ['d3d11.dll'] }))
       .toContain('injection')
