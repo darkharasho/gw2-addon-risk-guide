@@ -107,13 +107,15 @@ describe('detect', () => {
     expect(ids({ readme: 'api.guildwars2.com plus a d3d11 hook' })).not.toContain('api_only')
   })
 
-  it('withholds api_only from native code, shipped binaries and cheats', () => {
+  it('withholds api_only from shipped binaries and cheats, but not by language', () => {
     const readme = 'Links api.guildwars2.com for item names'
-    expect(ids({ readme, languages: ['C++'] })).not.toContain('api_only')
-    expect(ids({ readme, languages: ['C#'] })).not.toContain('api_only')
     expect(ids({ readme, release_assets: ['tool.exe'] })).not.toContain('api_only')
     expect(ids({ readme, root_files: ['payload.dll'] })).not.toContain('api_only')
     expect(ids({ readme, full_name: 'x/gw2-trainer' })).not.toContain('api_only')
+    // Language is not evidence of touching the client: the official-API
+    // client libraries are themselves written in C#.
+    expect(ids({ readme, languages: ['C#'] })).toContain('api_only')
+    expect(ids({ readme, languages: ['C++'] })).toContain('api_only')
     expect(ids({ readme, languages: ['Python'] })).toContain('api_only')
   })
 
@@ -161,5 +163,30 @@ describe('detect', () => {
     expect(found).not.toContain('stale_12m')
     expect(found).not.toContain('stale_24m')
     expect(found).not.toContain('popular_maintained')
+  })
+})
+
+describe('api_only gating is not language-based', () => {
+  const NOW = new Date('2026-09-19T00:00:00Z')
+  const ids = (f) => detect({ pushed_at: NOW.toISOString(), stars: 50, license: 'MIT', ...f }, NOW)
+    .map((s) => s.id)
+
+  it('keeps the mitigator for a C# official-API client library', () => {
+    expect(ids({
+      full_name: 'sliekens/gw2sdk',
+      description: 'A .NET client for the official Guild Wars 2 API.',
+      readme: 'Fetches data from https://api.guildwars2.com/v2/items.',
+      language: 'C#',
+      languages: ['C#'],
+    })).toContain('api_only')
+  })
+
+  it('withholds the mitigator from a repo shipping a Windows binary', () => {
+    expect(ids({
+      full_name: 'someone/gw2-overlay',
+      description: 'Overlay built on api.guildwars2.com data.',
+      readme: 'Uses api.guildwars2.com.',
+      release_assets: ['gw2overlay.exe'],
+    })).not.toContain('api_only')
   })
 })

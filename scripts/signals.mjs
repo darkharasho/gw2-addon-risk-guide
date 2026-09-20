@@ -152,12 +152,17 @@ export function detect(facts, now) {
   if ((facts.stars ?? 0) < 10) push('obscure', [`${facts.stars ?? 0} stars`])
 
   // A mention of the official API only earns the mitigator when nothing
-  // suggests the repo also touches the client: no invasive/cheat signal, no
-  // native language, and no shipped Windows binary.
+  // suggests the repo also touches the client: no invasive/cheat signal and
+  // no shipped Windows binary.
+  //
+  // Implementation language is deliberately NOT part of this test. C# is the
+  // usual language for official-API client libraries (Gw2Sharp, gw2sdk,
+  // gw2cli), so gating on it stripped the mitigator from exactly the repos it
+  // exists to reward. Shipping a .dll/.exe is the signal that a repo runs
+  // against the client; the language it is written in is not.
   const invasive = ['cheat', 'automation', 'memory', 'packet', 'injection'].some((id) => fired.has(id))
-  const native = (facts.languages ?? []).some((l) => /^(c|c\+\+|c#)$/i.test(String(l))) ||
-    [...(facts.root_files ?? []), ...(facts.release_assets ?? [])]
-      .some((n) => /\.(dll|exe)$/i.test(String(n)))
+  const native = [...(facts.root_files ?? []), ...(facts.release_assets ?? [])]
+    .some((n) => /\.(dll|exe)$/i.test(String(n)))
   const api = matchFor('api_only', body)
   if (api && !invasive && !native) push('api_only', [`matched "${snippet(api)}"`])
   if ((facts.stars ?? 0) >= 200 && months < 6) {
