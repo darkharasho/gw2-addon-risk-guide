@@ -51,18 +51,31 @@ describe('filterRepos', () => {
 
 describe('sortRepos', () => {
   const repos = [
-    { full_name: 'b/two', points: 10, stars: 5, pushed_at: '2026-01-01T00:00:00Z' },
-    { full_name: 'a/one', points: 40, stars: 1, pushed_at: '2026-06-01T00:00:00Z' },
-    { full_name: 'c/three', points: 10, stars: 90, pushed_at: '2025-01-01T00:00:00Z' },
+    { full_name: 'b/two', points: 10, band: 'low', stars: 5, pushed_at: '2026-01-01T00:00:00Z' },
+    { full_name: 'a/one', points: 40, band: 'elevated', stars: 1, pushed_at: '2026-06-01T00:00:00Z' },
+    { full_name: 'c/three', points: 10, band: 'low', stars: 90, pushed_at: '2025-01-01T00:00:00Z' },
   ]
   const names = (order) => sortRepos(repos, order).map((r) => r.full_name)
 
-  it('orders by risk, then by name so equal scores are stable', () => {
-    expect(names('risk')).toEqual(['a/one', 'b/two', 'c/three'])
+  it('defaults to safest first, most-starred within a band', () => {
+    expect(names()).toEqual(['c/three', 'b/two', 'a/one'])
   })
 
-  it('reverses for lowest risk first', () => {
-    expect(names('risk-asc')).toEqual(['b/two', 'c/three', 'a/one'])
+  it('ranks by band rather than by raw points, so stars order the whole band', () => {
+    // c/three has fewer points than nothing here, but it outranks b/two purely
+    // on stars - the two share a band, so the band comparison is a tie.
+    const [first, second] = sortRepos(repos, 'safest')
+    expect([first.band, second.band]).toEqual(['low', 'low'])
+    expect(first.stars).toBeGreaterThan(second.stars)
+  })
+
+  it('sorts an unrecognised band last instead of to the top of the page', () => {
+    const withNew = [...repos, { full_name: 'z/new', points: 0, band: 'unrated', stars: 999 }]
+    expect(sortRepos(withNew, 'safest').at(-1).full_name).toBe('z/new')
+  })
+
+  it('orders by risk, then by name so equal scores are stable', () => {
+    expect(names('risk')).toEqual(['a/one', 'b/two', 'c/three'])
   })
 
   it('orders by stars and by recency', () => {
@@ -70,8 +83,8 @@ describe('sortRepos', () => {
     expect(names('recent')).toEqual(['a/one', 'b/two', 'c/three'])
   })
 
-  it('falls back to the risk ordering for an unknown sort key', () => {
-    expect(names('nonsense')).toEqual(names('risk'))
+  it('falls back to the safest ordering for an unknown sort key', () => {
+    expect(names('nonsense')).toEqual(names('safest'))
   })
 
   it('does not mutate the array it was given', () => {

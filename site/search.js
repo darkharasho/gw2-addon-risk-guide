@@ -38,14 +38,30 @@ export function filterRepos(indexed, { query = '', bands = [], signals = [], mai
 // always fall back to name, so a given filter+sort pair renders identically
 // on every load rather than depending on the engine's sort stability.
 const BY_NAME = (a, b) => a.full_name.localeCompare(b.full_name)
+const BY_STARS = (a, b) => (b.stars ?? 0) - (a.stars ?? 0)
+
+// Band ids are the scorer's own point thresholds in ascending order, so a
+// repo's rank is its index here. An unrecognised band sorts last: a band added
+// to the scorer should never silently land at the top of the default view.
+const BAND_RANK = ['low', 'moderate', 'elevated', 'high']
+const bandRank = (r) => {
+  const i = BAND_RANK.indexOf(r.band)
+  return i < 0 ? BAND_RANK.length : i
+}
+
 const ORDERINGS = {
+  // The default. Leading with the highest scores turned the front page into a
+  // list of the most invasive things anyone has written for the game, which
+  // reads as a directory of them rather than a warning about them. Safest
+  // first, most-used first within a band: the things a player is most likely
+  // to already be running are what they see.
+  safest: (a, b) => bandRank(a) - bandRank(b) || BY_STARS(a, b) || BY_NAME(a, b),
   risk: (a, b) => b.points - a.points || BY_NAME(a, b),
-  'risk-asc': (a, b) => a.points - b.points || BY_NAME(a, b),
-  stars: (a, b) => (b.stars ?? 0) - (a.stars ?? 0) || BY_NAME(a, b),
+  stars: (a, b) => BY_STARS(a, b) || BY_NAME(a, b),
   recent: (a, b) => String(b.pushed_at ?? '').localeCompare(String(a.pushed_at ?? '')) || BY_NAME(a, b),
   name: BY_NAME,
 }
 
-export function sortRepos(repos, order = 'risk') {
-  return repos.slice().sort(ORDERINGS[order] ?? ORDERINGS.risk)
+export function sortRepos(repos, order = 'safest') {
+  return repos.slice().sort(ORDERINGS[order] ?? ORDERINGS.safest)
 }
