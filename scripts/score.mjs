@@ -15,7 +15,7 @@ export function bandFor(points) {
   return band
 }
 
-export function score(facts, { now = new Date(), override = null } = {}) {
+export function score(facts, { now, override = null }) {
   let signals = detect(facts, now)
   if (override) {
     const drop = new Set(override.suppress ?? [])
