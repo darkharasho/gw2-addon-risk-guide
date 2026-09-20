@@ -20,7 +20,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # workflow_run reports github.sha as the head commit from when the
+      # triggering run STARTED, i.e. before its own "chore: refresh catalog"
+      # commit. Check out the branch tip so the deploy ships the new catalog.
       - uses: actions/checkout@v4
+        with: { ref: main }
       - name: Stage site
         run: |
           mkdir -p _site/data
