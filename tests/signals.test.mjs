@@ -123,6 +123,54 @@ describe('detect', () => {
     expect(ids({ readme: 'discord-botting utilities' })).not.toContain('automation')
   })
 
+  // Both of these are real READMEs from the first live catalog run. They
+  // scored 100/high and 80/high respectively, on text that says the opposite
+  // of what the pattern read into it.
+  it('does not fire a signal on prose that denies the behaviour', () => {
+    expect(ids({
+      readme: 'The dot is a quick party-frame readout of that visible spacing, ' +
+        'not wallhacks or fog-of-war reveal.',
+    })).not.toContain('cheat')
+    expect(ids({
+      readme: "ArcDPS is explicitly tolerated by ArenaNet (it's not an " +
+        'automation/cheat tool - it only reads combat data).',
+    })).not.toContain('cheat')
+    expect(ids({ readme: 'This addon does not use ReadProcessMemory.' })).not.toContain('memory')
+    expect(ids({ readme: "It doesn't inject anything into the game process." }))
+      .not.toContain('injection')
+  })
+
+  it('still fires when the denial is in a different sentence', () => {
+    expect(ids({ readme: 'This is not a virus. Includes aimbot and god mode.' }))
+      .toContain('cheat')
+  })
+
+  it('fires multibox on launchers rather than on mentions of multiboxing', () => {
+    expect(ids({ full_name: 'Coding-Dev-Tools/gw2-multibox' })).toContain('multibox')
+    expect(ids({ description: 'Multibox launcher for Guild Wars 2' })).toContain('multibox')
+    expect(ids({ description: 'All-in-One Overlay Manager - Multi-box launcher, TacO' }))
+      .toContain('multibox')
+  })
+
+  it('does not fire multibox or cheat on a compatibility note', () => {
+    // RaidcoreGG/GW2-RangeIndicators and Maselkov/GW2RPC, both scored as
+    // cheats for documenting that they work alongside a multibox launcher.
+    const note = ids({
+      readme: '## Note for multiboxing\nIf you are using gw2launcher to multibox, ' +
+        'set the Mumble link name.',
+    })
+    expect(note).not.toContain('multibox')
+    expect(note).not.toContain('cheat')
+    const rpc = ids({ description: 'Supports multiple accounts and multiboxing' })
+    expect(rpc).not.toContain('multibox')
+    expect(rpc).not.toContain('cheat')
+  })
+
+  it('no longer reports multiboxing as cheating', () => {
+    expect(ids({ full_name: 'x/gw2-multibox' })).not.toContain('cheat')
+    expect(ids({ description: 'Multibox launcher' })).not.toContain('cheat')
+  })
+
   it('fires injection on a d3d11 proxy dll', () => {
     expect(ids({ readme: 'drop d3d11.dll next to the exe', root_files: ['d3d11.dll'] }))
       .toContain('injection')

@@ -5,6 +5,8 @@ export const SIGNALS = [
     explain: 'Presents itself as a cheat, trainer, or exploit — the category ArenaNet bans outright.' },
   { id: 'automation', label: 'Gameplay automation', weight: 40, policy: 'ua-automation',
     explain: 'Plays the game for you — bots, autofarming, or simulated input.' },
+  { id: 'multibox', label: 'Multiboxing tooling', weight: 20, policy: 'ua-third-party-programs',
+    explain: 'Launches or drives several game clients at once. ArenaNet allows running multiple accounts but judges input-broadcasting tools at its own discretion.' },
   { id: 'memory', label: 'Game memory access', weight: 35, policy: 'ua-modify-client',
     explain: 'Reads or writes the game client’s memory.' },
   { id: 'packet', label: 'Network/packet handling', weight: 30, policy: 'ua-modify-client',
@@ -42,10 +44,16 @@ const byId = Object.fromEntries(SIGNALS.map((s) => [s.id, s]))
 // `exploit` is only matched adjacent to a game-context word: security repos
 // legitimately talk about exploiting a vulnerability, which is not cheating.
 const PATTERNS = {
-  cheat: /\b(trainers? (features?|menu|mode|hacks?)|(cheat|game|memory|hack) trainer|aim[- ]?bot|wall[- ]?hacks?|speed[- ]?hacks?|god[- ]?mode|item spawner|teleport hacks?|(unlimited|infinite) (health|hp|money|gold|mana)|cooldown hacks?|multi[- ]?box(ing)?|cheat (engine|table|menu|client|tool)|(gw2|guild ?wars ?2?) hacks?|hacks? for (gw2|guild ?wars)|exploits? (gw2|guild ?wars|the game|in-?game)|(gw2|guild ?wars ?2?|in-?game) exploits?)\b/i,
+  cheat: /\b(trainers? (features?|menu|mode|hacks?)|(cheat|game|memory|hack) trainer|aim[- ]?bot|wall[- ]?hacks?|speed[- ]?hacks?|god[- ]?mode|item spawner|teleport hacks?|(unlimited|infinite) (health|hp|money|gold|mana)|cooldown hacks?|cheat (engine|table|menu|client|tool)|(gw2|guild ?wars ?2?) hacks?|hacks? for (gw2|guild ?wars)|exploits? (gw2|guild ?wars|the game|in-?game)|(gw2|guild ?wars ?2?|in-?game) exploits?)\b/i,
   // Botting must be game-context: a bare `bot` matched every Discord/Twitch
   // bot built on the public API (~20 repos) plus repos merely named *Bot.
   automation: /\b((game|farm|play|raid|gather|fish|combat|chat)?[- ]?botting|(farm|farming|gameplay|combat|gathering|grind|grinding)[- ]?bots?|auto-?farm|auto-?play|auto-?cast|auto-?loot|macro|autohotkey|sendinput|input simulation|clicker)\b/i,
+  // Multiboxing is a category of its own, not cheating. Merely MENTIONING it
+  // is not a signal: the first live catalog scored a Discord Rich Presence
+  // addon and a range-indicator overlay as cheats for documenting that they
+  // work alongside a multibox launcher. Only self-description as such a tool
+  // counts, which is why every alternative here names the artifact.
+  multibox: /\b(multi[- ]?box(ing|er)?[- ](launcher|manager|tool|client|helper|script)|(launcher|manager|tool|client|helper) for multi[- ]?box(ing)?)\b/i,
   memory: /\b(readprocessmemory|writeprocessmemory|memory (read|scan|edit)|pattern scan|mumble link offsets|process memory)\b/i,
   packet: /\b(packet|pcap|sniff(er|ing)?|man-in-the-middle|mitm|intercept(s|ing)? traffic)\b/i,
   injection: /\b(inject(ion|or|s|ed)?|dll hook|hooks? (d3d|directx|the client)|d3d9|d3d11|dxgi|detour|proxy dll|addon loader)\b/i,
@@ -66,8 +74,10 @@ const CASE_SENSITIVE_PATTERNS = {
 const CHEAT_NAME_TOKENS = new Set([
   'trainer', 'trainers', 'aimbot', 'aimbots', 'wallhack', 'wallhacks',
   'speedhack', 'speedhacks', 'godmode', 'cheats', 'cheater', 'cheatengine',
-  'hacktool', 'multibox', 'multiboxing',
+  'hacktool',
 ])
+
+const MULTIBOX_NAME_TOKENS = new Set(['multibox', 'multiboxing', 'multiboxer'])
 
 // These read as cheating on their own but have common innocent neighbours:
 // "cheat sheet", "anti-cheat", "hack day", "exploit-db", "gw2-esp" as a
@@ -89,8 +99,13 @@ const DEFUSING_TOKENS = new Set([
   'es', 'lang', 'language', 'locale', 'i18n', 'l10n', 'translation', 'translations', 'docs',
 ])
 
+const nameTokens = (fullName) =>
+  String(fullName ?? '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean)
+
+const multiboxName = (fullName) => nameTokens(fullName).find((t) => MULTIBOX_NAME_TOKENS.has(t)) ?? null
+
 const cheatName = (fullName) => {
-  const tokens = String(fullName ?? '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean)
+  const tokens = nameTokens(fullName)
   for (let i = 0; i < tokens.length; i++) {
     const t = tokens[i]
     if (CHEAT_NAME_TOKENS.has(t)) return t
@@ -104,6 +119,19 @@ const cheatName = (fullName) => {
 const CHAT_PLATFORM_BEFORE = /\b(discord|twitch|telegram|slack|matrix|irc)[ \t\-_/]*$/i
 const CHAT_PLATFORM_AFTER = /^[ \t\-_/]*(discord|twitch|telegram|slack|matrix|irc)\b/i
 const CREDITS = /\b(acknowledge?ments?|credits?|thanks to|thank you to|inspired by|see also)\b/i
+
+// Prose that explicitly DENIES a behaviour is not evidence of it. The two
+// worst false positives in the first live catalog were repos going out of
+// their way to say what they are NOT:
+//   "...readout of that visible spacing, not wallhacks"  -> cheat, 100/high
+//   "it's not an automation/cheat tool"                  -> cheat,  80/high
+// The cue must sit in the same clause as the match, so "This is not a virus.
+// Includes aimbot." still fires. Bare `no` is deliberately absent: a trainer
+// advertising "no cooldowns" is describing its cheat, not disclaiming one.
+const NEGATION = /\b(not|never|neither|nor|nothing|without|rather than|instead of)\b|n['’]t\b/i
+const CLAUSE = 80
+
+const negated = (before) => NEGATION.test(before.split(/[.!?;:\n]/).pop().slice(-CLAUSE))
 
 // How much text on either side of a match a guard gets to look at.
 const BEFORE = 200
@@ -133,6 +161,7 @@ function firstMatch(re, body, guard) {
     if (m[0] === '') { g.lastIndex += 1; continue }
     const before = body.slice(Math.max(0, m.index - BEFORE), m.index)
     const after = body.slice(m.index + m[0].length, m.index + m[0].length + AFTER)
+    if (negated(before)) continue
     if (guard && guard(before, after)) continue
     return m[0]
   }
@@ -161,13 +190,12 @@ export function detect(facts, now) {
   const fired = new Set()
   const push = (id, ev) => { out.push(hit(id, ev)); fired.add(id) }
 
-  for (const id of ['cheat', 'automation', 'memory', 'packet', 'injection']) {
+  const NAME_FALLBACK = { cheat: cheatName, multibox: multiboxName }
+  for (const id of ['cheat', 'automation', 'multibox', 'memory', 'packet', 'injection']) {
     const m = matchFor(id, body)
     if (m) { push(id, [`matched "${snippet(m)}"`]); continue }
-    if (id === 'cheat') {
-      const t = cheatName(facts.full_name)
-      if (t) push(id, [`repository name contains "${t}"`])
-    }
+    const t = NAME_FALLBACK[id]?.(facts.full_name)
+    if (t) push(id, [`repository name contains "${t}"`])
   }
   const dlls = [...(facts.root_files ?? []), ...(facts.release_assets ?? [])]
     .filter((n) => /\.dll$/i.test(String(n)))
