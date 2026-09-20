@@ -25,7 +25,16 @@ npm run catalog   # rebuild data/catalog.json from GitHub (needs a token)
 GITHUB_TOKEN=ghp_xxx npm run catalog
 ```
 
-The site itself has no build step — open `site/index.html` through any static file server (it fetches `data/*.json` with page-relative paths, so `data/` must be served as a sibling of `index.html`).
+The site itself has no build step, but `data/` is not a sibling of `site/index.html` in this repo layout, and the pages fetch `data/*.json` with page-relative paths (no `../`). Stage a directory first, then serve that:
+
+```bash
+mkdir -p /tmp/site-preview/data
+cp -r site/* /tmp/site-preview/
+cp data/*.json /tmp/site-preview/data/
+python3 -m http.server 8000 --directory /tmp/site-preview
+```
+
+Then open `http://localhost:8000/index.html`.
 
 ## Proposing an override
 
@@ -33,5 +42,5 @@ Signals are detected automatically; overrides are a thin manual layer for the ra
 
 ## CI
 
-- `.github/workflows/refresh-catalog.yml` runs weekly (and on demand via `workflow_dispatch`) to rebuild `data/catalog.json` and commit it if it changed.
-- `.github/workflows/pages.yml` deploys `site/` and `data/` to GitHub Pages on every push to `main`.
+- `.github/workflows/refresh-catalog.yml` runs weekly (and on demand via `workflow_dispatch`) to rebuild `data/catalog.json` and commit it to `main` if it changed, guarding against a catastrophically shrunken catalog before committing.
+- `.github/workflows/pages.yml` deploys `site/` and `data/` to GitHub Pages on every push to `main`, and also runs automatically when the refresh workflow above completes (a commit made with the default `GITHUB_TOKEN` does not itself trigger `push` events, so this second trigger is what gets the refreshed catalog live). The deploy is skipped if the refresh run failed.
