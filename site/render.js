@@ -49,7 +49,7 @@ export function breakdown(repo, policies) {
   return `<div class="breakdown">${ov}<ul class="signals">${rows}</ul></div>`
 }
 
-export function repoCard(repo, policies, now = new Date()) {
+export function repoCard(repo, policies, now) {
   return `<article class="card band-${escapeHtml(repo.band)}">
     <header>
       <h3><a href="${escapeHtml(safeUrl(repo.html_url))}" rel="noopener">${escapeHtml(repo.full_name)}</a></h3>
