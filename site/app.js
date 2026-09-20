@@ -40,14 +40,11 @@ Promise.all([
 
   const colour = (b) => `var(--band-${b}, var(--dim))`
 
-  // The distribution strip doubles as a legend and a filter: it is the one
-  // place the catalog's overall shape (overwhelmingly low risk) is visible.
+  // The distribution strip is the one place the catalog's overall shape
+  // (overwhelmingly low risk) is visible. It is decorative: the band pills
+  // below it carry the same colours and do the filtering.
   $('distro').innerHTML = ordered.slice().reverse().map((b) =>
     `<i style="flex:${counts[b]};background:${colour(b)}"></i>`).join('')
-  $('legend').innerHTML = ordered.slice().reverse().map((b) =>
-    `<button type="button" data-value="${escapeHtml(b)}" aria-pressed="false">
-      <span class="dot" style="background:${colour(b)}"></span>${escapeHtml(b)}
-      <b>${counts[b]}</b></button>`).join('')
   $('bands').innerHTML = ordered.map((b) =>
     `<button type="button" class="pill b-${escapeHtml(b)}" data-value="${escapeHtml(b)}" aria-pressed="false">
       <span class="dot" style="background:${colour(b)}"></span>${escapeHtml(b)}</button>`).join('')
@@ -70,13 +67,9 @@ Promise.all([
   $('generated').textContent = `Updated ${new Date(catalog.generated_at).toISOString().slice(0, 10)} · refreshed weekly`
   $('results').removeAttribute('aria-busy')
 
-  // The band pills and the legend are two controls over one piece of state,
-  // so every toggle writes to both rather than each keeping its own.
   const setBand = (band, on) => {
-    for (const host of [$('bands'), $('legend')]) {
-      const el = host.querySelector(`[data-value="${CSS.escape(band)}"]`)
-      if (el) el.setAttribute('aria-pressed', String(on))
-    }
+    const el = $('bands').querySelector(`[data-value="${CSS.escape(band)}"]`)
+    if (el) el.setAttribute('aria-pressed', String(on))
   }
 
   function render() {
@@ -161,7 +154,6 @@ Promise.all([
     render()
   }
   $('bands').onclick = onToggle
-  $('legend').onclick = onToggle
   $('controls').addEventListener('input', render)
   $('controls').addEventListener('submit', (e) => e.preventDefault())
   $('count').addEventListener('click', (e) => {

@@ -117,24 +117,13 @@ a { color: inherit; }
 .ov .gen { font: 600 12px/1 var(--sans); color: var(--faint); margin-left: auto; }
 
 .distro {
-  display: flex; height: 16px; gap: 3px; margin-bottom: 12px; overflow: hidden;
+  display: flex; height: 16px; gap: 3px; overflow: hidden;
   border: 4px solid var(--ink-line); border-radius: 8px; background: var(--ink-line);
 }
 .distro i { display: block; }
-.legend { display: flex; gap: 8px; flex-wrap: wrap; }
-.legend button {
-  font: 800 12.5px/1 var(--sans); background: var(--panel); border: 3px solid var(--ink-line);
-  cursor: pointer; color: var(--dim); display: flex; align-items: center; gap: 8px;
-  padding: 7px 11px; border-radius: 8px; text-transform: uppercase; letter-spacing: .04em;
-}
-.legend button:hover,
-.legend button[aria-pressed="true"] {
-  color: var(--ink); box-shadow: 3px 3px 0 var(--ink-line); transform: translate(-2px, -2px);
-}
-.legend .dot, .pill .dot {
+.pill .dot {
   width: 9px; height: 9px; transform: rotate(45deg); flex: none; border: 3px solid var(--ink-line);
 }
-.legend b { color: var(--ink); font-variant-numeric: tabular-nums; }
 
 /* ---------- toolbar ---------- */
 .bar {
