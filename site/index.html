@@ -1,79 +1,16 @@
 <!doctype html>
 <html lang="en">
-<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GW2 Addon Risk Guide</title>
-<meta name="description" content="Risk signals for Guild Wars 2 addons, scored from public repository data and mapped to ArenaNet policy.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css">
-</head>
+<title>Moved — GW2 Addon Risk Guide</title>
+<meta http-equiv="refresh" content="0;url=https://axi.wiki/addon-checker/">
+<link rel="canonical" href="https://axi.wiki/addon-checker/">
+<style>
+  body { background:#0e1116; color:#c9d1d9; font:16px/1.6 system-ui, sans-serif;
+         display:grid; place-content:center; min-height:100vh; margin:0; text-align:center }
+  a { color:#7ab7ff }
+</style>
 <body>
-<header class="mast"><div class="mast-in">
-  <a class="brand" href="index.html"><span class="sigil" aria-hidden="true">&#9670;</span>
-    <span>GW2 Addon Risk Guide<small>Risk signals from public repository data</small></span></a>
-  <nav class="tabs" aria-label="Sections">
-    <a href="index.html" aria-current="page">Catalog</a>
-    <a href="policy.html">Policy</a>
-  </nav>
-  <a class="ghlink" href="https://github.com/darkharasho/gw2-addon-risk-guide" rel="noopener">Source &#8599;</a>
-</div></header>
-<div class="notice"><div class="notice-in"><span class="ic" aria-hidden="true">&#9888;</span><p>
-  <b>Risk information, not approval.</b> ArenaNet does not review, approve, or endorse any third-party
-  program. A low score is not permission &mdash; it only means fewer risk signals were observable in
-  public repository data. Nothing here is legal advice, and running any third-party program may put
-  your account at risk.
-  <cite>&ldquo;Each use of such a program is made at the account holder&rsquo;s own risk.&rdquo; &mdash;
-  <a href="https://help.guildwars2.com/hc/en-us/articles/360013625034-Policy-Third-Party-Programs" rel="noopener"
-    >ArenaNet Support, Policy: Third-Party Programs</a>, retrieved
-  <time datetime="2026-09-19">2026-09-19</time></cite>
-</p></div></div>
-<main class="wrap">
-  <div class="ov">
-    <h1>Catalog <span id="total"></span></h1>
-    <span class="gen" id="generated"></span>
-  </div>
-  <div class="distro" id="distro" aria-hidden="true"></div>
-
-  <form class="bar" id="controls" role="search" autocomplete="off">
-    <div class="srch">
-      <span class="mag" aria-hidden="true">&#8981;</span>
-      <label class="sr-only" for="q">Search addons</label>
-      <input id="q" type="search" placeholder="Search by name, description, or topic&hellip;">
-    </div>
-    <div class="pills" id="bands" role="group" aria-label="Filter by risk band"></div>
-    <div class="menu">
-      <button type="button" class="menubtn v-btn" id="conductbtn" aria-expanded="false" aria-controls="conduct">Conduct</button>
-      <div class="menupop v-pop" id="conduct" role="group" aria-label="Filter by conduct assessment" hidden></div>
-    </div>
-    <div class="menu">
-      <button type="button" class="menubtn" id="sigbtn" aria-expanded="false" aria-controls="sigpop">Signals</button>
-      <div class="menupop" id="sigpop" role="group" aria-label="Filter by signal" hidden></div>
-    </div>
-    <label class="sr-only" for="maintenance">Maintenance</label>
-    <select class="sel" id="maintenance">
-      <option value="any">Any maintenance</option>
-      <option value="active">Actively maintained</option>
-      <option value="stale">Stale</option>
-      <option value="archived">Archived</option>
-    </select>
-    <label class="sr-only" for="sort">Sort</label>
-    <select class="sel" id="sort">
-      <option value="safest">Safest first</option>
-      <option value="stars">Most stars</option>
-      <option value="recent">Recently updated</option>
-      <option value="name">Name (A&ndash;Z)</option>
-      <option value="risk">Highest risk first</option>
-    </select>
-  </form>
-
-  <p class="resline" id="count" aria-live="polite">Loading catalog&hellip;</p>
-  <div class="grid" id="results" aria-busy="true"><p class="loading">Loading repositories&hellip;</p></div>
-</main>
-
-<button type="button" class="scrim" id="scrim" tabindex="-1" aria-label="Close details" hidden></button>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Addon details" hidden></aside>
-
-<script type="module" src="app.js"></script>
+  <p>The GW2 Addon Risk Guide has moved.</p>
+  <p><a href="https://axi.wiki/addon-checker/">axi.wiki/addon-checker</a></p>
 </body>
 </html>

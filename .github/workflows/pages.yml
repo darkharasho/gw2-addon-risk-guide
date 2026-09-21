@@ -2,9 +2,6 @@ name: Deploy Pages
 on:
   push: { branches: [main] }
   workflow_dispatch:
-  workflow_run:
-    workflows: [Refresh catalog]
-    types: [completed]
 permissions:
   contents: read
   pages: write
@@ -15,35 +12,19 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # workflow_run reports github.sha as the head commit from when the
-      # triggering run STARTED, i.e. before its own "chore: refresh catalog"
-      # commit. Check out the branch tip so the deploy ships the new catalog.
       - uses: actions/checkout@v4
-        with: { ref: main }
+      # All that is left to publish is the forwarding page. The catalog it
+      # used to carry, and the asset stamping that kept that catalog's
+      # modules consistent across deploys, moved to axisite along with the
+      # site itself.
       - name: Stage site
         run: |
-          mkdir -p _site/data
+          mkdir -p _site
           cp -r site/* _site/
-          cp data/*.json _site/data/
-      # Browsers hold on to style.css and the JS modules far longer than
-      # they hold on to index.html, so a deploy can pair fresh HTML with a
-      # stale module - and a module that reaches for an element the new HTML
-      # no longer has takes the whole page down. Stamping every internal
-      # reference with the deployed commit gives each deploy its own asset
-      # URLs, so the set a browser loads is always internally consistent.
-      # Only the staged copy is rewritten; the checked-in sources stay clean.
-      - name: Stamp assets with the deployed commit
-        run: |
-          v=$(git rev-parse --short HEAD)
-          find _site \( -name '*.html' -o -name '*.js' -o -name '*.mjs' \) -print0 |
-            xargs -0 sed -i -E \
-              -e "s/(href|src)=\"([A-Za-z0-9_.-]+\.(css|js|mjs))\"/\\1=\"\\2?v=$v\"/g" \
-              -e "s/from '\\.\/([A-Za-z0-9_.-]+\.(js|mjs))'/from '.\/\\1?v=$v'/g"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: _site }

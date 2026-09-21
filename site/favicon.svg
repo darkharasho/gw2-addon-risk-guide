@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="GW2 Addon Risk Guide">
-  <!-- The masthead sigil redrawn as geometry: a flat gold diamond with the
-       same near-black outline every panel on the site is drawn with. Tracks
-       .sigil in style.css, so a palette change there wants one here too. -->
-  <rect width="32" height="32" rx="7" fill="#0c0e12"/>
-  <path d="M16 4 28 16 16 28 4 16Z" fill="#ffc53d" stroke="#0c0e12" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M16 11 21 16 16 21 11 16Z" fill="#0c0e12"/>
-</svg>
